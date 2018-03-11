@@ -59,7 +59,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb140_support/meshes/irb140/collision/link_2_whole.stl"/>
+        <mesh filename="package://abb_irb140_support/meshes/irb140/collision/link_2.stl"/>
       </geometry>
       <material name="">
         <color rgba="1 1 0 1"/>
@@ -154,42 +154,42 @@
     <parent link="base_link"/>
     <child link="link_1"/>
     <axis xyz="0 0 1"/>
-    <limit effort="0" lower="-3.1416" upper="3.1416" velocity="2.618"/>
+    <limit effort="0" lower="-3.1416" upper="3.1416" velocity="3.4907"/>
   </joint>
   <joint name="joint_2" type="revolute">
-    <origin rpy="0 0 0" xyz="0.381 0.16 0.352"/>
+    <origin rpy="0 0 0" xyz="0.070 -0.041 0.352"/>
     <parent link="link_1"/>
     <child link="link_2"/>
     <axis xyz="0 1 0"/>
-    <limit effort="0" lower="-1.7453" upper="1.9199" velocity="2.618"/>
+    <limit effort="0" lower="-1.5708" upper="1.9199" velocity="3.4907"/>
   </joint>
   <joint name="joint_3" type="revolute">
     <origin rpy="0 0 0" xyz="0 -0.023 0.360"/>
     <parent link="link_2"/>
     <child link="link_3"/>
     <axis xyz="0 1 0"/>
-    <limit effort="0" lower="-1.0472" upper="1.1345" velocity="2.618"/>
+    <limit effort="0" lower="-4.0143" upper="0.8727" velocity="4.5379"/>
   </joint>
   <joint name="joint_4" type="revolute">
     <origin rpy="0 0 0" xyz="0.243 0.066 0"/>
     <parent link="link_3"/>
     <child link="link_4"/>
     <axis xyz="1 0 0"/>
-    <limit effort="0" lower="-3.49" upper="3.49" velocity="6.2832"/>
+    <limit effort="0" lower="-2.8798" upper="2.8798" velocity="6.2832"/>
   </joint>
   <joint name="joint_5" type="revolute">
     <origin rpy="0 0 0" xyz="0.1425 0 0"/>
     <parent link="link_4"/>
     <child link="link_5"/>
     <axis xyz="0 1 0"/>
-    <limit effort="0" lower="-2.0944" upper="2.0944" velocity="6.2832"/>
+    <limit effort="0" lower="-2.0071" upper="2.0071" velocity="6.2832"/>
   </joint>
   <joint name="joint_6" type="revolute">
     <origin rpy="0 0 0" xyz="0.065 0 0"/>
     <parent link="link_5"/>
     <child link="link_6"/>
     <axis xyz="1 0 0"/>
-    <limit effort="0" lower="-6.9813" upper="6.9813" velocity="7.854"/>
+    <limit effort="0" lower="-2.8449" upper="2.8449" velocity="7.8540"/>
   </joint>
   <joint name="joint_6-tool0" type="fixed">
     <parent link="link_6"/>
