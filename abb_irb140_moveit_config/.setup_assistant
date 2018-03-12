@@ -1,10 +1,10 @@
 moveit_setup_assistant_config:
   URDF:
     package: abb_irb140_support
-    relative_path: urdf/irb140.urdf
+    relative_path: urdf/irb140.xacro
   SRDF:
     relative_path: config/abb_irb140.srdf
   CONFIG:
     author_name: Yifei Xiong
     author_email: yifei.xiong@tu-dortmund.de
-    generated_timestamp: 1520788716
+    generated_timestamp: 1520897409
