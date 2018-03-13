@@ -3,7 +3,7 @@
   <!-- using the ROS-Industrial interface. -->
  
   <!-- Non-standard joint names:
-       - Create a file [robot_moveit_config]/config/joint_names.yaml
+       - Create a file [robot_support]/config/joint_names.yaml
            controller_joint_names: [joint_1, joint_2, ... joint_N] 
        - Update with joint names for your robot (in order expected by rbt controller)
        - and uncomment the following line: -->
