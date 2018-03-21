@@ -1,15 +1,15 @@
 <!--
   Manipulator specific version of abb_driver's 'robot_interface.launch'.
 
-  Defaults provided for IRB 2400:
-   - J23_coupled = true
+  Defaults provided for IRB 140:
+   - J23_coupled = false
 
   Usage:
-    robot_interface_download_irb2400.launch robot_ip:=<value>
+    robot_interface_download_irb140.launch robot_ip:=<value>
 -->
 <launch>
   <arg name="robot_ip" />
-  <arg name="J23_coupled" default="true" />
+  <arg name="J23_coupled" default="false" />
 
   <rosparam command="load" file="$(find abb_irb140_support)/config/joint_names_irb140.yaml" />
 
