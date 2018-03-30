@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AsstMainWindow</class>
+ <widget class="QMainWindow" name="AsstMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>730</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AsstMainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QListWidget::item {
+    height: 40px;
+    border: 1px solid silver;
+}
+QListWidget::item:hover {
+	border: 1px solid grey;
+}
+QListWidget::item:selected {
+	background-color: rgb(240, 120, 70);
+	color: white;
+    border: 1px solid rgb(240, 120, 70);
+}
+QListWidget::item:selected:!active {
+	background-color: silver;
+	color: black;
+    border: 1px solid grey;
+}
+
+QLabel#label_title_1, #label_title_2, #label_title_3, #label_title_4, #label_title_5, #label_title_6, #label_title_7, #label_title_8, #label_title_9 {
+    font: 75 16pt &quot;DejaVu Sans&quot;;
+    font-weight: bold;
+}
+
+QGroupBox#groupBox_ChLst_Ubt, #groupBox_ChLst_Win, #groupBox_Btn {
+    font: 16px;
+    font-weight: bold;
+    border: 2px solid gray;
+    border-radius: 6px;
+    margin-top: 6px;
+}
+
+QGroupBox#groupBox_ChLst_Ubt::title, #groupBox_ChLst_Win::title{
+    subcontrol-origin: margin;
+    /*subcontrol-position: middle;*/
+    left: 40px;
+    padding: 0px 5px 0px 5px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_8">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QListWidget" name="listWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>256</width>
+          <height>419</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Ubuntu&quot;;</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>1. 说明</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2. Install ROS (Indigo)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3. Install ROS-Industrial (Indigo)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>4. Create catkin_ws</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>5. Add abb_driver</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>6. Create Support Package</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7. Create MoveIt Config Package</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>8. Robot Studio 配置Solution</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Prepair the RobotStudio</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QStackedWidget" name="stackedWidget">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="page_1">
+         <widget class="QLabel" name="label_title_1">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>291</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>说明</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_1_2">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>64</y>
+            <width>651</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 13pt &quot;Ubuntu&quot;;</string>
+          </property>
+          <property name="text">
+           <string>说明一下本助手的目的、一句话介绍一下ROS-I和RS、使用的ROS和RS的版本号等</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_1_3">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>190</y>
+            <width>381</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 13pt &quot;Ubuntu&quot;;</string>
+          </property>
+          <property name="text">
+           <string>You can get its documents and 3D Models here:</string>
+          </property>
+         </widget>
+         <widget class="QTextBrowser" name="textBrowser">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>250</y>
+            <width>561</width>
+            <height>61</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_2">
+         <widget class="QLabel" name="label_title_2">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>311</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Build Meshes from Model</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_3">
+         <widget class="QLabel" name="label_title_3">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>291</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Create Support Package</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_3_2">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>80</y>
+            <width>651</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 13pt &quot;Ubuntu&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Before creating the URDF file for the robot, let's create a ROS package in the catkin
+workspace so that the robot model keeps using the following command:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_3_3">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>160</y>
+            <width>491</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(44, 94, 230);
+font: 12pt &quot;Ubuntu Mono&quot; bold;</string>
+          </property>
+          <property name="text">
+           <string>$ catkin_create_pkg mastering_ros_robot_description_pkg roscpp tf 
+geometry_msgs urdf rviz xacro</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_3_4">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>260</y>
+            <width>661</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 13pt &quot;Ubuntu&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Before creating the urdf file for this robot, let's create three folders called urdf,
+meshes, and launch inside the package folder. The urdf folder can be used to keep the 
+urdf/xacro files that we are going to create. The meshes folder keeps the meshes that 
+we need to include in the urdf file and the launch folder keeps the ROS launch files.</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_4">
+         <widget class="QLabel" name="label_title_4">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>291</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Build URDF Description</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_5">
+         <widget class="QLabel" name="label_title_5">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>291</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Build Launch Files</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboBox">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>90</y>
+            <width>481</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>ABB IRB 120</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ABB IRB 1200</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ABB IRB 140</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ABB IRB 1410</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ABB IRB 1600</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ABB IRB 2400</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ABB IRB 260</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ABB IRB 2600</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ABB IRB 4400</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ABB IRB 460</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ABB IRB 4600</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ABB IRB 660</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ABB IRB 6620</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ABB IRB 6640</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ABB IRB 760</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ABB IRB 8700</string>
+           </property>
+          </item>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_6">
+         <widget class="QLabel" name="label_title_6">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>291</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Create MoveIt Config Package</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_7">
+         <widget class="QLabel" name="label_title_7">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>291</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Test</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_8">
+         <widget class="QLabel" name="label_title_8">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>291</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Prepair the RobotStudio</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_9">
+         <widget class="QLabel" name="label_title_9">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>291</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Execute Integration</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">font: 16pt &quot;Ubuntu&quot;;
+font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Checklist:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QGroupBox" name="groupBox_ChLst_Ubt">
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="title">
+           <string>Ubuntu</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>10</number>
+           </property>
+           <property name="bottomMargin">
+            <number>10</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <item>
+              <widget class="QGroupBox" name="groupBox_ChLst_Prp">
+               <property name="minimumSize">
+                <size>
+                 <width>221</width>
+                 <height>181</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border: 0px;</string>
+               </property>
+               <property name="title">
+                <string>Enviroment:</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <property name="leftMargin">
+                 <number>5</number>
+                </property>
+                <property name="topMargin">
+                 <number>15</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout">
+                  <property name="spacing">
+                   <number>10</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>5</number>
+                  </property>
+                  <item>
+                   <widget class="QCheckBox" name="checkBox_1">
+                    <property name="text">
+                     <string>Install ROS</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="checkBox_2">
+                    <property name="text">
+                     <string>Install ROS-I</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="checkBox_3">
+                    <property name="text">
+                     <string>Create Workspace</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="checkBox_4">
+                    <property name="text">
+                     <string>Add ABB Driver Package</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="checkBox_5">
+                    <property name="text">
+                     <string>CheckBox</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="groupBox_ChLst_Pkg">
+               <property name="minimumSize">
+                <size>
+                 <width>221</width>
+                 <height>181</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border: 0px ;</string>
+               </property>
+               <property name="title">
+                <string>ABB ROS-I Packages:</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_4">
+                <property name="leftMargin">
+                 <number>5</number>
+                </property>
+                <property name="topMargin">
+                 <number>15</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_3">
+                  <property name="spacing">
+                   <number>10</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>5</number>
+                  </property>
+                  <item>
+                   <widget class="QCheckBox" name="checkBox_7">
+                    <property name="text">
+                     <string>Support Package</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="checkBox_9">
+                    <property name="text">
+                     <string>MoveIt Config Package</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="checkBox_8">
+                    <property name="text">
+                     <string>Create Workspace</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="checkBox_10">
+                    <property name="text">
+                     <string>Add ABB Driver Package</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="checkBox_6">
+                    <property name="text">
+                     <string>CheckBox</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_ChLst_Win">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="title">
+           <string>Windows</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>15</number>
+           </property>
+           <property name="rightMargin">
+            <number>10</number>
+           </property>
+           <property name="bottomMargin">
+            <number>10</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="groupBox_ChLst_Rs">
+             <property name="minimumSize">
+              <size>
+               <width>221</width>
+               <height>181</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 0px;</string>
+             </property>
+             <property name="title">
+              <string>RobotStudio Solution:</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>20</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>5</number>
+                </property>
+                <property name="topMargin">
+                 <number>5</number>
+                </property>
+                <property name="rightMargin">
+                 <number>5</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>5</number>
+                </property>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_12">
+                  <property name="text">
+                   <string>Create Sloution</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_14">
+                  <property name="text">
+                   <string>Add RAPID</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_13">
+                  <property name="text">
+                   <string>Set Robot IP Address</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_15">
+                  <property name="text">
+                   <string>Add ABB Driver Package</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_11">
+                  <property name="text">
+                   <string>CheckBox</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_Btn">
+        <property name="minimumSize">
+         <size>
+          <width>213</width>
+          <height>235</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>213</width>
+          <height>235</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    border: 3px solid silver;
+    border-radius: 6px;
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(214, 214, 214), stop:0.50001 rgb(236, 236, 236));
+}
+
+QPushButton:hover {
+    border: 3px solid rgb(255, 157, 68);
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(255, 174, 120), stop:0.50001 rgb(255, 220, 196));
+ }
+ QPushButton:pressed {
+    font-weight: bold;
+    border: 3px solid rgb(255, 102, 0);
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(240, 120, 70), stop:0.50001 rgb(255, 202, 146));
+ }
+</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <property name="leftMargin">
+          <number>15</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>15</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="btn_to_support">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Create Support Pkg</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_to_moveit">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="text">
+              <string>Create MoveIt! Pkg</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_to_rs">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="text">
+              <string>Create Solution in RS</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>stackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>219</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>547</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
