@@ -111,7 +111,21 @@ public:
             AsstMainWindow->setObjectName(QStringLiteral("AsstMainWindow"));
         AsstMainWindow->resize(1003, 735);
         AsstMainWindow->setStyleSheet(QLatin1String("QListWidget::item {\n"
-"    height: 30px;\n"
+"    height: 40px;\n"
+"    border: 1px solid silver;\n"
+"}\n"
+"QListWidget::item:hover {\n"
+"	border: 1px solid grey;\n"
+"}\n"
+"QListWidget::item:selected {\n"
+"	background-color: rgb(240, 120, 70);\n"
+"	color: white;\n"
+"    border: 1px solid rgb(240, 120, 70);\n"
+"}\n"
+"QListWidget::item:selected:!active {\n"
+"	background-color: silver;\n"
+"	color: black;\n"
+"    border: 1px solid grey;\n"
 "}\n"
 "\n"
 "QLabel#label_title_1, #label_title_2, #label_title_3, #label_title_4, #label_title_5, #label_title_6, #label_title_7, #label_title_8, #label_title_9 {\n"
@@ -130,7 +144,8 @@ public:
 "QGroupBox#groupBox_ChLst_Ubt::title, #groupBox_ChLst_Win::title{\n"
 "    subcontrol-origin: margin;\n"
 "    /*subcontrol-position: middle;*/\n"
-"    left: 40px;\n"
+"    "
+                        "left: 40px;\n"
 "    padding: 0px 5px 0px 5px;\n"
 "}"));
         centralWidget = new QWidget(AsstMainWindow);
@@ -170,11 +185,7 @@ public:
         sizePolicy.setHeightForWidth(listWidget->sizePolicy().hasHeightForWidth());
         listWidget->setSizePolicy(sizePolicy);
         listWidget->setMinimumSize(QSize(256, 419));
-        listWidget->setStyleSheet(QLatin1String("font: 12pt \"Ubuntu\";\n"
-"selected {\n"
-"    border: 1px solid #6a6ea9;\n"
-"}\n"
-""));
+        listWidget->setStyleSheet(QStringLiteral("font: 12pt \"Ubuntu\";"));
 
         horizontalLayout->addWidget(listWidget);
 
@@ -453,9 +464,20 @@ public:
         groupBox_Btn = new QGroupBox(layoutWidget_1);
         groupBox_Btn->setObjectName(QStringLiteral("groupBox_Btn"));
         groupBox_Btn->setStyleSheet(QLatin1String("QPushButton {\n"
-"    border: 2px solid gray;\n"
+"    border: 3px solid silver;\n"
 "    border-radius: 6px;\n"
-"}"));
+"    background-color: gray;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    font-weight: bold;\n"
+" }\n"
+" QPushButton:pressed {\n"
+"	background-color: rgb(240, 120, 70);\n"
+"    color: black;\n"
+"    border: 3px solid black;\n"
+" }"));
         gridLayout = new QGridLayout(groupBox_Btn);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);

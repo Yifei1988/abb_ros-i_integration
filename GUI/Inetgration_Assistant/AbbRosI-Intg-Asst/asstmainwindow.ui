@@ -15,7 +15,21 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QListWidget::item {
-    height: 30px;
+    height: 40px;
+    border: 1px solid silver;
+}
+QListWidget::item:hover {
+	border: 1px solid grey;
+}
+QListWidget::item:selected {
+	background-color: rgb(240, 120, 70);
+	color: white;
+    border: 1px solid rgb(240, 120, 70);
+}
+QListWidget::item:selected:!active {
+	background-color: silver;
+	color: black;
+    border: 1px solid grey;
 }
 
 QLabel#label_title_1, #label_title_2, #label_title_3, #label_title_4, #label_title_5, #label_title_6, #label_title_7, #label_title_8, #label_title_9 {
@@ -94,11 +108,7 @@ font-weight: bold;</string>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;Ubuntu&quot;;
-selected {
-    border: 1px solid #6a6ea9;
-}
-</string>
+        <string notr="true">font: 12pt &quot;Ubuntu&quot;;</string>
        </property>
        <item>
         <property name="text">
@@ -853,9 +863,20 @@ we need to include in the urdf file and the launch folder keeps the ROS launch f
       <widget class="QGroupBox" name="groupBox_Btn">
        <property name="styleSheet">
         <string notr="true">QPushButton {
-    border: 2px solid gray;
+    border: 3px solid silver;
     border-radius: 6px;
-}</string>
+    background-color: gray;
+    color: white;
+}
+
+QPushButton:hover {
+    font-weight: bold;
+ }
+ QPushButton:pressed {
+	background-color: rgb(240, 120, 70);
+    color: black;
+    border: 3px solid black;
+ }</string>
        </property>
        <property name="title">
         <string/>
