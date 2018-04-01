@@ -61,7 +61,6 @@ public:
     QLabel *label_title_7;
     QWidget *page_8;
     QLabel *label_title_8;
-    QPushButton *BtnTest;
     QFrame *line;
     QLabel *label;
     QHBoxLayout *horizontalLayout_6;
@@ -243,9 +242,6 @@ public:
         label_title_8->setObjectName(QStringLiteral("label_title_8"));
         label_title_8->setGeometry(QRect(40, 10, 291, 31));
         label_title_8->setStyleSheet(QStringLiteral(""));
-        BtnTest = new QPushButton(page_8);
-        BtnTest->setObjectName(QStringLiteral("BtnTest"));
-        BtnTest->setGeometry(QRect(130, 90, 99, 27));
         stackedWidget->addWidget(page_8);
 
         horizontalLayout->addWidget(stackedWidget);
@@ -503,7 +499,6 @@ public:
         label_title_6->setText(QApplication::translate("Dialog_Pkg_Support", "Create MoveIt Config Package", 0));
         label_title_7->setText(QApplication::translate("Dialog_Pkg_Support", "Test", 0));
         label_title_8->setText(QApplication::translate("Dialog_Pkg_Support", "Prepair the RobotStudio", 0));
-        BtnTest->setText(QApplication::translate("Dialog_Pkg_Support", "Test", 0));
         label->setText(QApplication::translate("Dialog_Pkg_Support", "Checklist:", 0));
         groupBox_ChLst_Ubt->setTitle(QApplication::translate("Dialog_Pkg_Support", "Support Package", 0));
         groupBox_ChLst_Prp->setTitle(QApplication::translate("Dialog_Pkg_Support", "Meshes & URDF:", 0));

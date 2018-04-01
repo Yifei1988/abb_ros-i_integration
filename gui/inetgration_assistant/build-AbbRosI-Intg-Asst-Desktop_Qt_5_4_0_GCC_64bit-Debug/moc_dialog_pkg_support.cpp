@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_Dialog_Pkg_Support_t {
     QByteArrayData data[4];
-    char stringdata[37];
+    char stringdata[60];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,10 +32,11 @@ static const qt_meta_stringdata_Dialog_Pkg_Support_t qt_meta_stringdata_Dialog_P
 QT_MOC_LITERAL(0, 0, 18), // "Dialog_Pkg_Support"
 QT_MOC_LITERAL(1, 19, 8), // "sendData"
 QT_MOC_LITERAL(2, 28, 0), // ""
-QT_MOC_LITERAL(3, 29, 7) // "clickOk"
+QT_MOC_LITERAL(3, 29, 30) // "on_Dialog_Pkg_Support_finished"
 
     },
-    "Dialog_Pkg_Support\0sendData\0\0clickOk"
+    "Dialog_Pkg_Support\0sendData\0\0"
+    "on_Dialog_Pkg_Support_finished"
 };
 #undef QT_MOC_LITERAL
 
@@ -56,7 +57,7 @@ static const uint qt_meta_data_Dialog_Pkg_Support[] = {
        1,    1,   24,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       3,    0,   27,    2, 0x0a /* Public */,
+       3,    0,   27,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Bool,    2,
@@ -73,7 +74,7 @@ void Dialog_Pkg_Support::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         Dialog_Pkg_Support *_t = static_cast<Dialog_Pkg_Support *>(_o);
         switch (_id) {
         case 0: _t->sendData((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 1: _t->clickOk(); break;
+        case 1: _t->on_Dialog_Pkg_Support_finished(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {

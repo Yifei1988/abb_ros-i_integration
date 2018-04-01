@@ -50,11 +50,13 @@ OBJECTS_DIR   = ./
 
 SOURCES       = ../AbbRosI-Intg-Asst/main.cpp \
 		../AbbRosI-Intg-Asst/asstmainwindow.cpp \
-		../AbbRosI-Intg-Asst/dialog_pkg_support.cpp moc_asstmainwindow.cpp \
+		../AbbRosI-Intg-Asst/dialog_pkg_support.cpp qrc_style.cpp \
+		moc_asstmainwindow.cpp \
 		moc_dialog_pkg_support.cpp
 OBJECTS       = main.o \
 		asstmainwindow.o \
 		dialog_pkg_support.o \
+		qrc_style.o \
 		moc_asstmainwindow.o \
 		moc_dialog_pkg_support.o
 DIST          = /opt/Qt/5.4/gcc_64/mkspecs/features/spec_pre.prf \
@@ -330,6 +332,7 @@ Makefile: ../AbbRosI-Intg-Asst/AbbRosI-Intg-Asst.pro /opt/Qt/5.4/gcc_64/mkspecs/
 		/opt/Qt/5.4/gcc_64/mkspecs/features/yacc.prf \
 		/opt/Qt/5.4/gcc_64/mkspecs/features/lex.prf \
 		../AbbRosI-Intg-Asst/AbbRosI-Intg-Asst.pro \
+		../AbbRosI-Intg-Asst/style.qrc \
 		/opt/Qt/5.4/gcc_64/lib/libQt5Widgets.prl \
 		/opt/Qt/5.4/gcc_64/lib/libQt5Gui.prl \
 		/opt/Qt/5.4/gcc_64/lib/libQt5Core.prl
@@ -454,6 +457,7 @@ Makefile: ../AbbRosI-Intg-Asst/AbbRosI-Intg-Asst.pro /opt/Qt/5.4/gcc_64/mkspecs/
 /opt/Qt/5.4/gcc_64/mkspecs/features/yacc.prf:
 /opt/Qt/5.4/gcc_64/mkspecs/features/lex.prf:
 ../AbbRosI-Intg-Asst/AbbRosI-Intg-Asst.pro:
+../AbbRosI-Intg-Asst/style.qrc:
 /opt/Qt/5.4/gcc_64/lib/libQt5Widgets.prl:
 /opt/Qt/5.4/gcc_64/lib/libQt5Gui.prl:
 /opt/Qt/5.4/gcc_64/lib/libQt5Core.prl:
@@ -471,6 +475,7 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
+	$(COPY_FILE) --parents ../AbbRosI-Intg-Asst/style.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../AbbRosI-Intg-Asst/asstmainwindow.h ../AbbRosI-Intg-Asst/dialog_pkg_support.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../AbbRosI-Intg-Asst/main.cpp ../AbbRosI-Intg-Asst/asstmainwindow.cpp ../AbbRosI-Intg-Asst/dialog_pkg_support.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../AbbRosI-Intg-Asst/asstmainwindow.ui ../AbbRosI-Intg-Asst/dialog_pkg_support.ui $(DISTDIR)/
@@ -494,8 +499,13 @@ mocables: compiler_moc_header_make_all compiler_moc_source_make_all
 
 check: first
 
-compiler_rcc_make_all:
+compiler_rcc_make_all: qrc_style.cpp
 compiler_rcc_clean:
+	-$(DEL_FILE) qrc_style.cpp
+qrc_style.cpp: ../AbbRosI-Intg-Asst/style.qrc \
+		../AbbRosI-Intg-Asst/qss/stylesheet_btn.qss
+	/opt/Qt/5.4/gcc_64/bin/rcc -name style ../AbbRosI-Intg-Asst/style.qrc -o qrc_style.cpp
+
 compiler_moc_header_make_all: moc_asstmainwindow.cpp moc_dialog_pkg_support.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_asstmainwindow.cpp moc_dialog_pkg_support.cpp
@@ -604,6 +614,9 @@ moc_asstmainwindow.cpp: /opt/Qt/5.4/gcc_64/include/QtWidgets/QMainWindow \
 		/opt/Qt/5.4/gcc_64/include/QtGui/qtouchdevice.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt/5.4/gcc_64/include/QtGui/qicon.h \
+		../AbbRosI-Intg-Asst/dialog_pkg_support.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QDialog \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qdialog.h \
 		../AbbRosI-Intg-Asst/asstmainwindow.h
 	/opt/Qt/5.4/gcc_64/bin/moc $(DEFINES) -I/opt/Qt/5.4/gcc_64/mkspecs/linux-g++ -I/home/exbot/UI/AbbRosI-Intg-Asst -I/opt/Qt/5.4/gcc_64/include -I/opt/Qt/5.4/gcc_64/include/QtWidgets -I/opt/Qt/5.4/gcc_64/include/QtGui -I/opt/Qt/5.4/gcc_64/include/QtCore -I. ../AbbRosI-Intg-Asst/asstmainwindow.h -o moc_asstmainwindow.cpp
 
@@ -730,7 +743,7 @@ compiler_yacc_impl_make_all:
 compiler_yacc_impl_clean:
 compiler_lex_make_all:
 compiler_lex_clean:
-compiler_clean: compiler_moc_header_clean compiler_uic_clean 
+compiler_clean: compiler_rcc_clean compiler_moc_header_clean compiler_uic_clean 
 
 ####### Compile
 
@@ -840,6 +853,9 @@ main.o: ../AbbRosI-Intg-Asst/main.cpp ../AbbRosI-Intg-Asst/asstmainwindow.h \
 		/opt/Qt/5.4/gcc_64/include/QtGui/qtouchdevice.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt/5.4/gcc_64/include/QtGui/qicon.h \
+		../AbbRosI-Intg-Asst/dialog_pkg_support.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QDialog \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qdialog.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QApplication \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qapplication.h \
 		/opt/Qt/5.4/gcc_64/include/QtCore/qcoreapplication.h \
@@ -955,10 +971,75 @@ asstmainwindow.o: ../AbbRosI-Intg-Asst/asstmainwindow.cpp ../AbbRosI-Intg-Asst/a
 		/opt/Qt/5.4/gcc_64/include/QtGui/qtouchdevice.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt/5.4/gcc_64/include/QtGui/qicon.h \
-		ui_asstmainwindow.h \
 		../AbbRosI-Intg-Asst/dialog_pkg_support.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QDialog \
-		/opt/Qt/5.4/gcc_64/include/QtWidgets/qdialog.h
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qdialog.h \
+		ui_asstmainwindow.h \
+		/opt/Qt/5.4/gcc_64/include/QtCore/QVariant \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt/5.4/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt/5.4/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QCheckBox \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QComboBox \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qcombobox.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt/5.4/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt/5.4/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QFrame \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QGridLayout \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QGroupBox \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qgroupbox.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt/5.4/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QListWidget \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlistwidget.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlistview.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QStackedWidget \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qstackedwidget.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QTextBrowser \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qtextbrowser.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qtextedit.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qtextdocument.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QVBoxLayout \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QWidget \
+		/opt/Qt/5.4/gcc_64/include/QtCore/QFileInfo \
+		/opt/Qt/5.4/gcc_64/include/QtCore/qfileinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o asstmainwindow.o ../AbbRosI-Intg-Asst/asstmainwindow.cpp
 
 dialog_pkg_support.o: ../AbbRosI-Intg-Asst/dialog_pkg_support.cpp ../AbbRosI-Intg-Asst/dialog_pkg_support.h \
@@ -1065,8 +1146,76 @@ dialog_pkg_support.o: ../AbbRosI-Intg-Asst/dialog_pkg_support.cpp ../AbbRosI-Int
 		/opt/Qt/5.4/gcc_64/include/QtCore/qfiledevice.h \
 		/opt/Qt/5.4/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt/5.4/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_dialog_pkg_support.h
+		ui_dialog_pkg_support.h \
+		/opt/Qt/5.4/gcc_64/include/QtCore/QVariant \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QAction \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qicon.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt/5.4/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt/5.4/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QButtonGroup \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QCheckBox \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qcheckbox.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QComboBox \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qcombobox.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt/5.4/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qtabwidget.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt/5.4/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QFrame \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QGridLayout \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QGroupBox \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qgroupbox.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QHBoxLayout \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QHeaderView \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qheaderview.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt/5.4/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QListWidget \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlistwidget.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlistview.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QStackedWidget \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qstackedwidget.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QTextBrowser \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qtextbrowser.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qtextedit.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qtextdocument.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QVBoxLayout \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dialog_pkg_support.o ../AbbRosI-Intg-Asst/dialog_pkg_support.cpp
+
+qrc_style.o: qrc_style.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_style.o qrc_style.cpp
 
 moc_asstmainwindow.o: moc_asstmainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_asstmainwindow.o moc_asstmainwindow.cpp

@@ -21,3 +21,6 @@ HEADERS  += asstmainwindow.h \
 
 FORMS    += asstmainwindow.ui \
     dialog_pkg_support.ui
+
+RESOURCES += \
+    style.qrc
