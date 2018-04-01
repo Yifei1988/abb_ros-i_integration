@@ -5,6 +5,8 @@
 
 #include <QDialog>
 #include <QFileInfo>
+#include <QDesktopServices>
+#include <QUrl>
 //#include <qdebug.h>//找bug用的输出工具，正式时可以去除
 
 AsstMainWindow::AsstMainWindow(QWidget *parent) :
@@ -50,4 +52,14 @@ void AsstMainWindow::setBtnStyleForDlgState(bool state)
         ui->btn_to_support->setStyleSheet(qss.readAll());
         qss.close();
     }
+}
+
+void AsstMainWindow::on_btnToRosWiki_clicked()
+{
+    QDesktopServices::openUrl(QUrl("http://wiki.ros.org/indigo/Installation/Ubuntu"));
+}
+
+void AsstMainWindow::on_btnToRosiWiki_clicked()
+{
+    QDesktopServices::openUrl(QUrl("http://wiki.ros.org/indigo/Installation/Ubuntu"));
 }

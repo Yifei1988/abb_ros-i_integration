@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icon/ros_logo.png</file>
+        <file>icon/rosi_logo.png</file>
+        <file>icon/indigoigloo.png</file>
+        <file>icon/indigo.png</file>
+    </qresource>
+</RCC>

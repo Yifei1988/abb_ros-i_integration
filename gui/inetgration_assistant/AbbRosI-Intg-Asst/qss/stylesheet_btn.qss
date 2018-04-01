@@ -8,7 +8,7 @@ QPushButton:hover {
     border: 3px solid rgb(255, 157, 68);
     background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(255, 174, 120), stop:0.50001 rgb(255, 220, 196));
  }
- QPushButton:pressed {
+QPushButton:pressed {
     font-weight: bold;
     border: 3px solid rgb(255, 102, 0);
     background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(240, 120, 70), stop:0.50001 rgb(255, 202, 146));

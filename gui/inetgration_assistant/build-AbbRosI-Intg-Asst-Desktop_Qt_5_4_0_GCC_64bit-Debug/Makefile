@@ -51,12 +51,14 @@ OBJECTS_DIR   = ./
 SOURCES       = ../AbbRosI-Intg-Asst/main.cpp \
 		../AbbRosI-Intg-Asst/asstmainwindow.cpp \
 		../AbbRosI-Intg-Asst/dialog_pkg_support.cpp qrc_style.cpp \
+		qrc_image.cpp \
 		moc_asstmainwindow.cpp \
 		moc_dialog_pkg_support.cpp
 OBJECTS       = main.o \
 		asstmainwindow.o \
 		dialog_pkg_support.o \
 		qrc_style.o \
+		qrc_image.o \
 		moc_asstmainwindow.o \
 		moc_dialog_pkg_support.o
 DIST          = /opt/Qt/5.4/gcc_64/mkspecs/features/spec_pre.prf \
@@ -333,6 +335,7 @@ Makefile: ../AbbRosI-Intg-Asst/AbbRosI-Intg-Asst.pro /opt/Qt/5.4/gcc_64/mkspecs/
 		/opt/Qt/5.4/gcc_64/mkspecs/features/lex.prf \
 		../AbbRosI-Intg-Asst/AbbRosI-Intg-Asst.pro \
 		../AbbRosI-Intg-Asst/style.qrc \
+		../AbbRosI-Intg-Asst/image.qrc \
 		/opt/Qt/5.4/gcc_64/lib/libQt5Widgets.prl \
 		/opt/Qt/5.4/gcc_64/lib/libQt5Gui.prl \
 		/opt/Qt/5.4/gcc_64/lib/libQt5Core.prl
@@ -458,6 +461,7 @@ Makefile: ../AbbRosI-Intg-Asst/AbbRosI-Intg-Asst.pro /opt/Qt/5.4/gcc_64/mkspecs/
 /opt/Qt/5.4/gcc_64/mkspecs/features/lex.prf:
 ../AbbRosI-Intg-Asst/AbbRosI-Intg-Asst.pro:
 ../AbbRosI-Intg-Asst/style.qrc:
+../AbbRosI-Intg-Asst/image.qrc:
 /opt/Qt/5.4/gcc_64/lib/libQt5Widgets.prl:
 /opt/Qt/5.4/gcc_64/lib/libQt5Gui.prl:
 /opt/Qt/5.4/gcc_64/lib/libQt5Core.prl:
@@ -475,7 +479,7 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../AbbRosI-Intg-Asst/style.qrc $(DISTDIR)/
+	$(COPY_FILE) --parents ../AbbRosI-Intg-Asst/style.qrc ../AbbRosI-Intg-Asst/image.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../AbbRosI-Intg-Asst/asstmainwindow.h ../AbbRosI-Intg-Asst/dialog_pkg_support.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../AbbRosI-Intg-Asst/main.cpp ../AbbRosI-Intg-Asst/asstmainwindow.cpp ../AbbRosI-Intg-Asst/dialog_pkg_support.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../AbbRosI-Intg-Asst/asstmainwindow.ui ../AbbRosI-Intg-Asst/dialog_pkg_support.ui $(DISTDIR)/
@@ -499,12 +503,19 @@ mocables: compiler_moc_header_make_all compiler_moc_source_make_all
 
 check: first
 
-compiler_rcc_make_all: qrc_style.cpp
+compiler_rcc_make_all: qrc_style.cpp qrc_image.cpp
 compiler_rcc_clean:
-	-$(DEL_FILE) qrc_style.cpp
+	-$(DEL_FILE) qrc_style.cpp qrc_image.cpp
 qrc_style.cpp: ../AbbRosI-Intg-Asst/style.qrc \
 		../AbbRosI-Intg-Asst/qss/stylesheet_btn.qss
 	/opt/Qt/5.4/gcc_64/bin/rcc -name style ../AbbRosI-Intg-Asst/style.qrc -o qrc_style.cpp
+
+qrc_image.cpp: ../AbbRosI-Intg-Asst/image.qrc \
+		../AbbRosI-Intg-Asst/icon/ros_logo.png \
+		../AbbRosI-Intg-Asst/icon/rosi_logo.png \
+		../AbbRosI-Intg-Asst/icon/indigoigloo.png \
+		../AbbRosI-Intg-Asst/icon/indigo.png
+	/opt/Qt/5.4/gcc_64/bin/rcc -name image ../AbbRosI-Intg-Asst/image.qrc -o qrc_image.cpp
 
 compiler_moc_header_make_all: moc_asstmainwindow.cpp moc_dialog_pkg_support.cpp
 compiler_moc_header_clean:
@@ -1005,7 +1016,18 @@ asstmainwindow.o: ../AbbRosI-Intg-Asst/asstmainwindow.cpp ../AbbRosI-Intg-Asst/a
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qrubberband.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt/5.4/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QCommandLinkButton \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qcommandlinkbutton.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QFrame \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QGraphicsView \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qgraphicsview.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qpainter.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qscrollarea.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qgraphicsscene.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QGridLayout \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qgridlayout.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlayout.h \
@@ -1017,7 +1039,6 @@ asstmainwindow.o: ../AbbRosI-Intg-Asst/asstmainwindow.cpp ../AbbRosI-Intg-Asst/a
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/opt/Qt/5.4/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		/opt/Qt/5.4/gcc_64/include/QtCore/qitemselectionmodel.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QLabel \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlabel.h \
@@ -1025,17 +1046,14 @@ asstmainwindow.o: ../AbbRosI-Intg-Asst/asstmainwindow.cpp ../AbbRosI-Intg-Asst/a
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlistwidget.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlistview.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QStackedWidget \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qstackedwidget.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QTextBrowser \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qtextbrowser.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qtextedit.h \
 		/opt/Qt/5.4/gcc_64/include/QtGui/qtextdocument.h \
-		/opt/Qt/5.4/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt/5.4/gcc_64/include/QtGui/qtextcursor.h \
 		/opt/Qt/5.4/gcc_64/include/QtGui/qtextformat.h \
-		/opt/Qt/5.4/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt/5.4/gcc_64/include/QtCore/QFileInfo \
@@ -1216,6 +1234,9 @@ dialog_pkg_support.o: ../AbbRosI-Intg-Asst/dialog_pkg_support.cpp ../AbbRosI-Int
 
 qrc_style.o: qrc_style.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_style.o qrc_style.cpp
+
+qrc_image.o: qrc_image.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_image.o qrc_image.cpp
 
 moc_asstmainwindow.o: moc_asstmainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_asstmainwindow.o moc_asstmainwindow.cpp
