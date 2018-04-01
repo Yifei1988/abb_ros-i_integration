@@ -846,6 +846,9 @@ font-weight: bold;</string>
           <height>235</height>
          </size>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="styleSheet">
          <string notr="true">QPushButton {
     border: 3px solid silver;

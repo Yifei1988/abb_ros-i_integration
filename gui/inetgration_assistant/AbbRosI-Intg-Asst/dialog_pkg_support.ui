@@ -448,6 +448,19 @@ we need to include in the urdf file and the launch folder keeps the ROS launch f
           <string>Prepair the RobotStudio</string>
          </property>
         </widget>
+        <widget class="QPushButton" name="BtnTest">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>90</y>
+           <width>99</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Test</string>
+         </property>
+        </widget>
        </widget>
       </widget>
      </item>
@@ -718,18 +731,19 @@ font-weight: bold;</string>
         <string notr="true">QPushButton {
     border: 3px solid silver;
     border-radius: 6px;
-    background-color: gray;
-    color: white;
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(214, 214, 214), stop:0.50001 rgb(236, 236, 236));
 }
 
 QPushButton:hover {
-    font-weight: bold;
+    border: 3px solid rgb(255, 157, 68);
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(255, 174, 120), stop:0.50001 rgb(255, 220, 196));
  }
  QPushButton:pressed {
-	background-color: rgb(240, 120, 70);
-    color: black;
-    border: 3px solid black;
- }</string>
+    font-weight: bold;
+    border: 3px solid rgb(255, 102, 0);
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(240, 120, 70), stop:0.50001 rgb(255, 202, 146));
+ }
+</string>
        </property>
        <property name="title">
         <string/>
@@ -760,6 +774,9 @@ QPushButton:hover {
               <height>50</height>
              </size>
             </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
             <property name="text">
              <string>PushButton</string>
             </property>
@@ -773,6 +790,9 @@ QPushButton:hover {
               <height>50</height>
              </size>
             </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
             <property name="text">
              <string>PushButton</string>
             </property>
@@ -785,6 +805,9 @@ QPushButton:hover {
               <width>100</width>
               <height>50</height>
              </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
             </property>
             <property name="text">
              <string>PushButton</string>

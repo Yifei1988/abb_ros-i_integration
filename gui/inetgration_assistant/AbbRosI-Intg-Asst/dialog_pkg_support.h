@@ -17,6 +17,12 @@ public:
 
 private:
     Ui::Dialog_Pkg_Support *ui;
+
+signals:
+   void  sendData(bool); //只用声明不用定义
+
+public slots:
+   void clickOk();//需要定义，点击按钮的槽函数
 };
 
 #endif // DIALOG_PKG_SUPPORT_H

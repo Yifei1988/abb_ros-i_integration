@@ -466,6 +466,7 @@ public:
         groupBox_Btn->setObjectName(QStringLiteral("groupBox_Btn"));
         groupBox_Btn->setMinimumSize(QSize(213, 235));
         groupBox_Btn->setMaximumSize(QSize(213, 235));
+        groupBox_Btn->setFocusPolicy(Qt::NoFocus);
         groupBox_Btn->setStyleSheet(QLatin1String("QPushButton {\n"
 "    border: 3px solid silver;\n"
 "    border-radius: 6px;\n"

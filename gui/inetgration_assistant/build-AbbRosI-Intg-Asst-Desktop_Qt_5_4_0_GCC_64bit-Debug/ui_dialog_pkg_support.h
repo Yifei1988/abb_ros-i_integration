@@ -61,6 +61,7 @@ public:
     QLabel *label_title_7;
     QWidget *page_8;
     QLabel *label_title_8;
+    QPushButton *BtnTest;
     QFrame *line;
     QLabel *label;
     QHBoxLayout *horizontalLayout_6;
@@ -242,6 +243,9 @@ public:
         label_title_8->setObjectName(QStringLiteral("label_title_8"));
         label_title_8->setGeometry(QRect(40, 10, 291, 31));
         label_title_8->setStyleSheet(QStringLiteral(""));
+        BtnTest = new QPushButton(page_8);
+        BtnTest->setObjectName(QStringLiteral("BtnTest"));
+        BtnTest->setGeometry(QRect(130, 90, 99, 27));
         stackedWidget->addWidget(page_8);
 
         horizontalLayout->addWidget(stackedWidget);
@@ -380,18 +384,19 @@ public:
         groupBox_Btn->setStyleSheet(QLatin1String("QPushButton {\n"
 "    border: 3px solid silver;\n"
 "    border-radius: 6px;\n"
-"    background-color: gray;\n"
-"    color: white;\n"
+"    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(214, 214, 214), stop:0.50001 rgb(236, 236, 236));\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    font-weight: bold;\n"
+"    border: 3px solid rgb(255, 157, 68);\n"
+"    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(255, 174, 120), stop:0.50001 rgb(255, 220, 196));\n"
 " }\n"
 " QPushButton:pressed {\n"
-"	background-color: rgb(240, 120, 70);\n"
-"    color: black;\n"
-"    border: 3px solid black;\n"
-" }"));
+"    font-weight: bold;\n"
+"    border: 3px solid rgb(255, 102, 0);\n"
+"    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(240, 120, 70), stop:0.50001 rgb(255, 202, 146));\n"
+" }\n"
+""));
         gridLayout = new QGridLayout(groupBox_Btn);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         gridLayout->setContentsMargins(15, 0, 15, 0);
@@ -401,18 +406,21 @@ public:
         pushButton_1 = new QPushButton(groupBox_Btn);
         pushButton_1->setObjectName(QStringLiteral("pushButton_1"));
         pushButton_1->setMinimumSize(QSize(100, 50));
+        pushButton_1->setFocusPolicy(Qt::NoFocus);
 
         verticalLayout_7->addWidget(pushButton_1);
 
         pushButton_2 = new QPushButton(groupBox_Btn);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
         pushButton_2->setMinimumSize(QSize(100, 50));
+        pushButton_2->setFocusPolicy(Qt::NoFocus);
 
         verticalLayout_7->addWidget(pushButton_2);
 
         pushButton_3 = new QPushButton(groupBox_Btn);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
         pushButton_3->setMinimumSize(QSize(100, 50));
+        pushButton_3->setFocusPolicy(Qt::NoFocus);
 
         verticalLayout_7->addWidget(pushButton_3);
 
@@ -495,6 +503,7 @@ public:
         label_title_6->setText(QApplication::translate("Dialog_Pkg_Support", "Create MoveIt Config Package", 0));
         label_title_7->setText(QApplication::translate("Dialog_Pkg_Support", "Test", 0));
         label_title_8->setText(QApplication::translate("Dialog_Pkg_Support", "Prepair the RobotStudio", 0));
+        BtnTest->setText(QApplication::translate("Dialog_Pkg_Support", "Test", 0));
         label->setText(QApplication::translate("Dialog_Pkg_Support", "Checklist:", 0));
         groupBox_ChLst_Ubt->setTitle(QApplication::translate("Dialog_Pkg_Support", "Support Package", 0));
         groupBox_ChLst_Prp->setTitle(QApplication::translate("Dialog_Pkg_Support", "Meshes & URDF:", 0));
