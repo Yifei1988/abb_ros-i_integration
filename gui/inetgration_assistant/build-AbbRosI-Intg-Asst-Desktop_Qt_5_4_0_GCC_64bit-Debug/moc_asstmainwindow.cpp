@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_AsstMainWindow_t {
     QByteArrayData data[5];
-    char stringdata[60];
+    char stringdata[61];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,12 +32,12 @@ static const qt_meta_stringdata_AsstMainWindow_t qt_meta_stringdata_AsstMainWind
 QT_MOC_LITERAL(0, 0, 14), // "AsstMainWindow"
 QT_MOC_LITERAL(1, 15, 25), // "on_btn_to_support_clicked"
 QT_MOC_LITERAL(2, 41, 0), // ""
-QT_MOC_LITERAL(3, 42, 11), // "receiveData"
-QT_MOC_LITERAL(4, 54, 5) // "state"
+QT_MOC_LITERAL(3, 42, 12), // "receiveState"
+QT_MOC_LITERAL(4, 55, 5) // "state"
 
     },
     "AsstMainWindow\0on_btn_to_support_clicked\0"
-    "\0receiveData\0state"
+    "\0receiveState\0state"
 };
 #undef QT_MOC_LITERAL
 
@@ -71,7 +71,7 @@ void AsstMainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         AsstMainWindow *_t = static_cast<AsstMainWindow *>(_o);
         switch (_id) {
         case 0: _t->on_btn_to_support_clicked(); break;
-        case 1: _t->receiveData((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 1: _t->receiveState((*reinterpret_cast< bool(*)>(_a[1]))); break;
         default: ;
         }
     }

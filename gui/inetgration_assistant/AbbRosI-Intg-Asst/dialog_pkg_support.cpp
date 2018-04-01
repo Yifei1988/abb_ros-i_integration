@@ -16,5 +16,5 @@ Dialog_Pkg_Support::~Dialog_Pkg_Support()
 void Dialog_Pkg_Support::on_Dialog_Pkg_Support_finished() //绑定信号发射源是Dialog的关闭的槽函数
 {
     bool state = false;
-    emit sendData(state);//使用emit关键词，发射数据
+    emit sendState(state);//使用emit关键词，发射数据
 }

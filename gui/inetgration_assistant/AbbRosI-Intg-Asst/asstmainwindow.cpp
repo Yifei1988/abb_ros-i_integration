@@ -13,8 +13,8 @@ AsstMainWindow::AsstMainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    stateDlgSppt = false;
-    setBtnStyle(stateDlgSppt);
+    //stateDlgSppt = false;
+    setBtnStyleForDlgState(false);
 }
 
 AsstMainWindow::~AsstMainWindow()
@@ -29,24 +29,24 @@ void AsstMainWindow::on_btn_to_support_clicked() //绑定信号发射源是btn_t
     dialog_sppt->setModal(true);
     dialog_sppt->show();
 
-    stateDlgSppt = true;
-    setBtnStyle(stateDlgSppt);
+    //stateDlgSppt = true;
+    setBtnStyleForDlgState(true);
 
-    connect(dialog_sppt,SIGNAL(sendData(bool)),this,SLOT(receiveData(bool)));//发射信号和接收槽函数连接  //跨cpp的连接
+    connect(dialog_sppt,SIGNAL(sendState(bool)),this,SLOT(receiveState(bool)));//发射信号和接收槽函数连接  //跨cpp的连接
 }
 
-void AsstMainWindow::receiveData(bool state)
+void AsstMainWindow::receiveState(bool state)
 {
-    stateDlgSppt = state;
-    setBtnStyle(stateDlgSppt);
+    //stateDlgSppt = state;
+    setBtnStyleForDlgState(state);
     //qDebug("%d", stateDlgSppt);//找bug用，正式时可以去除
 }
-void AsstMainWindow::setBtnStyle(bool state)
+void AsstMainWindow::setBtnStyleForDlgState(bool state)
 {
-    if(state){ ui->btn_to_support->setStyleSheet("QPushButton{background-color: grey; color: white;}");    }
+    if(state){ ui->btn_to_support->setStyleSheet("QPushButton{background-color: grey; color: white; border: 3px solid silver;}");    }
     else{
         QFile qss(":/qss/stylesheet_btn.qss");
-        qss.open(QFile::ReadOnly); // qss 也要讲究是什么格式的文件读取
+        qss.open(QFile::ReadOnly); // 以只读方式打开qss文件
         ui->btn_to_support->setStyleSheet(qss.readAll());
         qss.close();
     }

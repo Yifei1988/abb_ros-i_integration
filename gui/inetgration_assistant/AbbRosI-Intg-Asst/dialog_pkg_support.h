@@ -19,7 +19,7 @@ private:
     Ui::Dialog_Pkg_Support *ui;
 
 signals:
-   void  sendData(bool); //只用声明不用定义
+   void  sendState(bool); //只需声明，无需实现，因为后面在cpp中会被直接连接到槽函数
 
 private slots:
    void on_Dialog_Pkg_Support_finished();
