@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1000</width>
-    <height>730</height>
+    <height>731</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -85,7 +85,7 @@ QGroupBox#groupBox_ChLst_Ubt::title, #groupBox_ChLst_Win::title{
         </item>
         <item>
          <property name="text">
-          <string>3. Create catkin_ws</string>
+          <string>3. Create a Workspace</string>
          </property>
         </item>
         <item>
@@ -318,7 +318,7 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt;&quot;&gt;For the purpose of the itegration of ABB&lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt; font-style:italic;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt;&quot;&gt;Robot and ROS-Industrial, a Linux-Ubuntu machine with &lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt; font-weight:600;&quot;&gt;ROS&lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt; font-weight:600;&quot;&gt;ROS-Industrial&lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt;&quot;&gt; installed is required. Within the frame of this project, ROS Indigo Igloo is the selected ROS distribution release and is primarily targeted at the Ubuntu 14.04 LTS &lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt; font-style:italic;&quot;&gt;Trusty&lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt;&quot;&gt; release.&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans';&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt;&quot;&gt;If you have not yet installed the ROS &lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt; font-weight:600; vertical-align:super;&quot;&gt;Indigo&lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt;&quot;&gt;and ROS-I &lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt; font-weight:600; vertical-align:super;&quot;&gt;Indigo&lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt;&quot;&gt; in your Ubuntu machine, you are able to click the right two buttons and follow the official guide to install them. &lt;/span&gt;&lt;img src=&quot;:/icon/indigo.png&quot; width=&quot;22&quot; height=&quot;22&quot; /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt;&quot;&gt;If you have not yet installed the ROS &lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt; font-weight:600; vertical-align:super;&quot;&gt;Indigo&lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt;&quot;&gt;and ROS-I &lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt; font-weight:600; vertical-align:super;&quot;&gt;Indigo&lt;/span&gt;&lt;span style=&quot; font-family:'DejaVu Sans'; font-size:12pt;&quot;&gt; in your Ubuntu machine, you are able to click the right two buttons and follow the official guide to install them.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
                 </item>
@@ -345,7 +345,7 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="styleSheet">
                    <string notr="true">border-radius: 6px;
-border-image: url(:/icon/indigoigloo.png);</string>
+border-image: url(:/pic/indigoigloo.png);</string>
                   </property>
                  </widget>
                 </item>
@@ -371,13 +371,13 @@ QPushButton:hover {
                   </property>
                   <layout class="QGridLayout" name="gridLayout_2">
                    <property name="leftMargin">
-                    <number>0</number>
+                    <number>2</number>
                    </property>
                    <property name="topMargin">
                     <number>0</number>
                    </property>
                    <property name="rightMargin">
-                    <number>0</number>
+                    <number>2</number>
                    </property>
                    <property name="bottomMargin">
                     <number>0</number>
@@ -396,10 +396,10 @@ QPushButton:hover {
                         </size>
                        </property>
                        <property name="toolTip">
-                        <string/>
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Go To &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Guide to Install &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;color:lightblue;&quot;&gt;ROS &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; vertical-align:super; color:lightblue;&quot;&gt;Indigo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">border-image: url(:/icon/ros_logo.png);</string>
+                        <string notr="true">QPushButton {border-image: url(:/icon/ros_logo.png);}</string>
                        </property>
                        <property name="text">
                         <string/>
@@ -415,10 +415,10 @@ QPushButton:hover {
                         </size>
                        </property>
                        <property name="toolTip">
-                        <string/>
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Go To &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Guide to Install &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;color:lightblue;&quot;&gt;ROS-Industrial &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; vertical-align:super; color:lightblue;&quot;&gt;Indigo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">border-image: url(:/icon/rosi_logo.png);</string>
+                        <string notr="true">QPushButton {border-image: url(:/icon/rosi_logo.png);}</string>
                        </property>
                        <property name="text">
                         <string/>
@@ -452,62 +452,167 @@ QPushButton:hover {
            <string notr="true"/>
           </property>
           <property name="text">
-           <string>Create Support Package</string>
+           <string>Create a Workspace</string>
           </property>
          </widget>
-         <widget class="QLabel" name="label_3_2">
+         <widget class="QTextBrowser" name="textBrowser_3">
           <property name="geometry">
            <rect>
-            <x>40</x>
-            <y>80</y>
-            <width>651</width>
-            <height>61</height>
+            <x>30</x>
+            <y>140</y>
+            <width>441</width>
+            <height>161</height>
            </rect>
           </property>
           <property name="styleSheet">
-           <string notr="true">font: 13pt &quot;Ubuntu&quot;;</string>
+           <string notr="true">background-color: transparent;
+border: 0px;</string>
           </property>
-          <property name="text">
-           <string>Before creating the URDF file for the robot, let's create a ROS package in the catkin
-workspace so that the robot model keeps using the following command:</string>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;In the ROS distribution Indigo, we are using the &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;catkin&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; build system to build ROS packages. This build system is responsible for generating 'targets' (executable/libraries) from a raw source code that can be used by an end user. The first requirement in creating ROS packages is to create a ROS workspace. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;A catkin workspace is a folder where you modify, build, and install catkin packages. The right picture shows a typical layout of a catkin workspace.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;If you have not yet create a workspace, you can click the button follows to read the official guide:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
-         <widget class="QLabel" name="label_3_3">
+         <widget class="QGraphicsView" name="graphic_wsLayout">
           <property name="geometry">
            <rect>
-            <x>90</x>
-            <y>160</y>
-            <width>491</width>
-            <height>61</height>
+            <x>480</x>
+            <y>40</y>
+            <width>222</width>
+            <height>362</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>222</width>
+            <height>362</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 6px;
+border-image: url(:/pic/catkin_ws_layout.png);</string>
+          </property>
+         </widget>
+         <widget class="QCommandLinkButton" name="commandLinkButton_3">
+          <property name="geometry">
+           <rect>
+            <x>330</x>
+            <y>10</y>
+            <width>339</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>111</width>
+            <height>41</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: italic 13pt &quot;Ubuntu&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Next Step</string>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>60</y>
+            <width>372</width>
+            <height>70</height>
            </rect>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(44, 94, 230);
-font: 12pt &quot;Ubuntu Mono&quot; bold;</string>
+           <string notr="true">font: 75 14pt &quot;Droid Arabic Naskh&quot;;</string>
           </property>
-          <property name="text">
-           <string>$ catkin_create_pkg mastering_ros_robot_description_pkg roscpp tf 
-geometry_msgs urdf rviz xacro</string>
+          <property name="title">
+           <string/>
           </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <property name="leftMargin">
+            <number>5</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>5</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QCheckBox" name="checkBox_17">
+             <property name="minimumSize">
+              <size>
+               <width>350</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>I have created a catkin workspace</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
-         <widget class="QLabel" name="label_3_4">
+         <widget class="QGroupBox" name="groupBox_4">
           <property name="geometry">
            <rect>
-            <x>40</x>
-            <y>260</y>
-            <width>661</width>
-            <height>111</height>
+            <x>110</x>
+            <y>310</y>
+            <width>144</width>
+            <height>110</height>
            </rect>
           </property>
           <property name="styleSheet">
-           <string notr="true">font: 13pt &quot;Ubuntu&quot;;</string>
+           <string notr="true">QPushButton {
+    border-radius: 6px;
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(214, 214, 214), stop:0.50001 rgb(236, 236, 236));
+}
+
+QPushButton:hover {
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(255, 174, 120), stop:0.50001 rgb(255, 220, 196));
+ }
+ QPushButton:pressed {
+    font-weight: bold;
+    border: 3px solid rgb(255, 102, 0);
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(240, 120, 70), stop:0.50001 rgb(255, 202, 146));
+ }</string>
           </property>
-          <property name="text">
-           <string>Before creating the urdf file for this robot, let's create three folders called urdf,
-meshes, and launch inside the package folder. The urdf folder can be used to keep the 
-urdf/xacro files that we are going to create. The meshes folder keeps the meshes that 
-we need to include in the urdf file and the launch folder keeps the ROS launch files.</string>
+          <property name="title">
+           <string/>
           </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="btnToRosCatkinWs">
+             <property name="minimumSize">
+              <size>
+               <width>122</width>
+               <height>82</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Go To &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Guide to Install &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;color:lightblue;&quot;&gt;ROS &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; vertical-align:super; color:lightblue;&quot;&gt;Indigo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {border-image: url(:/icon/btn_catkinws.png)}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </widget>
         <widget class="QWidget" name="page_4">
@@ -651,6 +756,60 @@ we need to include in the urdf file and the launch folder keeps the ROS launch f
           </property>
           <property name="text">
            <string>Create MoveIt Config Package</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_3_5">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>250</y>
+            <width>661</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 13pt &quot;Ubuntu&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Before creating the urdf file for this robot, let's create three folders called urdf,
+meshes, and launch inside the package folder. The urdf folder can be used to keep the 
+urdf/xacro files that we are going to create. The meshes folder keeps the meshes that 
+we need to include in the urdf file and the launch folder keeps the ROS launch files.</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_3_6">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>150</y>
+            <width>491</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(44, 94, 230);
+font: 12pt &quot;Ubuntu Mono&quot; bold;</string>
+          </property>
+          <property name="text">
+           <string>$ catkin_create_pkg mastering_ros_robot_description_pkg roscpp tf 
+geometry_msgs urdf rviz xacro</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_3_7">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>70</y>
+            <width>651</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 13pt &quot;Ubuntu&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Before creating the URDF file for the robot, let's create a ROS package in the catkin
+workspace so that the robot model keeps using the following command:</string>
           </property>
          </widget>
         </widget>
@@ -842,7 +1001,7 @@ font-weight: bold;</string>
                   <item>
                    <widget class="QCheckBox" name="checkBox_3">
                     <property name="text">
-                     <string>Create Workspace</string>
+                     <string>Create catkin Workspace</string>
                     </property>
                    </widget>
                   </item>

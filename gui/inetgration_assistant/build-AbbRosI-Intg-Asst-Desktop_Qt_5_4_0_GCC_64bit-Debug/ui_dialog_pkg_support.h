@@ -432,7 +432,7 @@ public:
 
         retranslateUi(Dialog_Pkg_Support);
 
-        stackedWidget->setCurrentIndex(7);
+        stackedWidget->setCurrentIndex(6);
 
 
         QMetaObject::connectSlotsByName(Dialog_Pkg_Support);

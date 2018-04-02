@@ -511,10 +511,12 @@ qrc_style.cpp: ../AbbRosI-Intg-Asst/style.qrc \
 	/opt/Qt/5.4/gcc_64/bin/rcc -name style ../AbbRosI-Intg-Asst/style.qrc -o qrc_style.cpp
 
 qrc_image.cpp: ../AbbRosI-Intg-Asst/image.qrc \
+		../AbbRosI-Intg-Asst/pic/catkin_ws_layout.png \
+		../AbbRosI-Intg-Asst/pic/indigoigloo.png \
 		../AbbRosI-Intg-Asst/icon/ros_logo.png \
 		../AbbRosI-Intg-Asst/icon/rosi_logo.png \
-		../AbbRosI-Intg-Asst/icon/indigoigloo.png \
-		../AbbRosI-Intg-Asst/icon/indigo.png
+		../AbbRosI-Intg-Asst/icon/indigo.png \
+		../AbbRosI-Intg-Asst/icon/btn_catkinws.png
 	/opt/Qt/5.4/gcc_64/bin/rcc -name image ../AbbRosI-Intg-Asst/image.qrc -o qrc_image.cpp
 
 compiler_moc_header_make_all: moc_asstmainwindow.cpp moc_dialog_pkg_support.cpp
@@ -1057,7 +1059,11 @@ asstmainwindow.o: ../AbbRosI-Intg-Asst/asstmainwindow.cpp ../AbbRosI-Intg-Asst/a
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt/5.4/gcc_64/include/QtCore/QFileInfo \
-		/opt/Qt/5.4/gcc_64/include/QtCore/qfileinfo.h
+		/opt/Qt/5.4/gcc_64/include/QtCore/qfileinfo.h \
+		/opt/Qt/5.4/gcc_64/include/QtGui/QDesktopServices \
+		/opt/Qt/5.4/gcc_64/include/QtGui/qdesktopservices.h \
+		/opt/Qt/5.4/gcc_64/include/QtCore/qstandardpaths.h \
+		/opt/Qt/5.4/gcc_64/include/QtCore/QUrl
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o asstmainwindow.o ../AbbRosI-Intg-Asst/asstmainwindow.cpp
 
 dialog_pkg_support.o: ../AbbRosI-Intg-Asst/dialog_pkg_support.cpp ../AbbRosI-Intg-Asst/dialog_pkg_support.h \

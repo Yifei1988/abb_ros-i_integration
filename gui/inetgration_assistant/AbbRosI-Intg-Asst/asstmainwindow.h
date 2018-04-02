@@ -30,6 +30,7 @@ private slots:
     void receiveState(bool state);//接受数据
     void on_btnToRosWiki_clicked();
     void on_btnToRosiWiki_clicked();
+    void on_btnToRosCatkinWs_clicked();
 };
 
 #endif // ASSTMAINWINDOW_H

@@ -2,7 +2,9 @@
     <qresource prefix="/">
         <file>icon/ros_logo.png</file>
         <file>icon/rosi_logo.png</file>
-        <file>icon/indigoigloo.png</file>
         <file>icon/indigo.png</file>
+        <file>pic/catkin_ws_layout.png</file>
+        <file>icon/btn_catkinws.png</file>
+        <file>pic/indigoigloo.png</file>
     </qresource>
 </RCC>

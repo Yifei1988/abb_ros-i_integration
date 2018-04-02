@@ -117,7 +117,7 @@ QGroupBox#groupBox_ChLst_Ubt::title, #groupBox_ChLst_Win::title{
      <item>
       <widget class="QStackedWidget" name="stackedWidget">
        <property name="currentIndex">
-        <number>7</number>
+        <number>6</number>
        </property>
        <widget class="QWidget" name="page_1">
         <widget class="QLabel" name="label_title_1">
