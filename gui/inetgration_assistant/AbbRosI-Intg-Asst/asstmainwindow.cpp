@@ -9,7 +9,8 @@
 #include <QUrl>
 #include <QProcess>
 #include <QStringList>
-//#include <qdebug.h>//找bug用的输出工具，正式时可以去除
+#include <qdebug.h>//找bug用的输出工具，正式时可以去除
+#include <QDir>
 
 AsstMainWindow::AsstMainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -74,16 +75,14 @@ void AsstMainWindow::on_btnToRosCatkinWs_clicked()
 
 void AsstMainWindow::on_btnToDldPkgAbb_clicked()
 {
-    //QString scriptPath="qrc:/shell_script/pkg_download_abb.sh";
-    //QString scriptPath="~/UI/AbbRosI-Intg-Asst/shell_script/pkg_download_abb.sh";
-    //QProcess *exec=new QProcess(this);
-    //exec->start(scriptPath);
-    //exec->start("~/UI/AbbRosI-Intg-Asst/shell_script/pkg_download_abb.sh");
-    //exec->startDetached("bash", QStringList()<< "~/UI/AbbRosI-Intg-Asst/shell_script/pkg_download_abb.sh");
+    //留存，以后或许有用
+    //QString scriptPath="launch_moveit_asst.sh";
+
+    //法一:QProcess,阻塞调用
+    //QProcess::execute("shell_script/launch_moveit_asst.sh");
+
     QProcess *process = new QProcess();
-    //process->setWorkingDirectory("/home/exbot/UI/AbbRosI-Intg-Asst/shell_script/");
-    //process->startDetached("bash", QStringList() << "pkg_download_abb.sh");
-    process->startDetached("bash", QStringList()<< "/home/exbot/UI/AbbRosI-Intg-Asst/shell_script/pkg_download_abb.sh");
-    //process->startDetached("bash", QStringList()<< "AbbRosI-Intg-Asst/shell_script/pkg_download_abb.sh");
+    process->startDetached("bash", QStringList()<< "shell_script/pkg_download_abb.sh");
     qDebug("haha");  //找bug用，正式时可以去除
+    qDebug()<<QDir::currentPath(); //可以打印出当前编译可执行文件的目录，留存待用
 }
