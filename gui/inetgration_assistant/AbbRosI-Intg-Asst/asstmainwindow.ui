@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>736</height>
+    <width>1158</width>
+    <height>738</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -288,6 +288,9 @@ QGroupBox#groupBox_ChLst_Ubt::title, #groupBox_ChLst_Win::title{
                          <height>30</height>
                         </size>
                        </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::NoFocus</enum>
+                       </property>
                        <property name="text">
                         <string>I have installed ROS Indigo</string>
                        </property>
@@ -300,6 +303,9 @@ QGroupBox#groupBox_ChLst_Ubt::title, #groupBox_ChLst_Win::title{
                          <width>350</width>
                          <height>30</height>
                         </size>
+                       </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::NoFocus</enum>
                        </property>
                        <property name="text">
                         <string>I have installed ROS-Industrial Indigo</string>
@@ -535,6 +541,9 @@ QPushButton:hover {
                        <height>30</height>
                       </size>
                      </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
                      <property name="text">
                       <string>I have created a catkin workspace</string>
                      </property>
@@ -594,35 +603,62 @@ QPushButton:hover {
                     <number>2</number>
                    </property>
                    <property name="rightMargin">
-                    <number>2</number>
+                    <number>5</number>
                    </property>
                    <property name="bottomMargin">
                     <number>2</number>
                    </property>
+                   <property name="spacing">
+                    <number>5</number>
+                   </property>
                    <item row="0" column="0">
-                    <widget class="QPushButton" name="btnToRosCatkinWs">
-                     <property name="minimumSize">
-                      <size>
-                       <width>111</width>
-                       <height>61</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>111</width>
-                       <height>61</height>
-                      </size>
-                     </property>
-                     <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Go To &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Guide to Install &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;color:lightblue;&quot;&gt;ROS &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; vertical-align:super; color:lightblue;&quot;&gt;Indigo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QPushButton {border-image: url(:/icon/btn_catkinws.png)}</string>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                    </widget>
+                    <layout class="QHBoxLayout" name="horizontalLayout_14">
+                     <item>
+                      <widget class="QTextBrowser" name="textBrowser_5">
+                       <property name="minimumSize">
+                        <size>
+                         <width>342</width>
+                         <height>95</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: transparent;
+border: 0px;</string>
+                       </property>
+                       <property name="html">
+                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/icon/attention.png&quot; style=&quot;float: left;&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; In order to simplify the process of the follow steps, we would here just name the workspace folder &amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;catkin_ws&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;&amp;quot; and it's location should be &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;/home/&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&amp;lt;username&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, so if you login as a root user, it may lead to unpredicted issues.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="btnToRosCatkinWs">
+                       <property name="minimumSize">
+                        <size>
+                         <width>120</width>
+                         <height>70</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>130</width>
+                         <height>85</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border-image: url(:/icon/btn_catkinws.png);</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
                    </item>
                   </layout>
                  </widget>
@@ -639,8 +675,8 @@ QPushButton:hover {
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>230</width>
-                  <height>370</height>
+                  <width>240</width>
+                  <height>400</height>
                  </size>
                 </property>
                 <property name="styleSheet">
@@ -656,135 +692,116 @@ border-image: url(:/pic/catkin_ws_layout.png);</string>
          </layout>
         </widget>
         <widget class="QWidget" name="page_4">
-         <widget class="QGroupBox" name="groupBox_5">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>50</y>
-            <width>466</width>
-            <height>52</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">font: 75 14pt &quot;Droid Arabic Naskh&quot;;</string>
-          </property>
-          <property name="title">
-           <string/>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_8">
-           <property name="leftMargin">
-            <number>5</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>5</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item row="0" column="0">
-            <widget class="QCheckBox" name="checkBox_18">
-             <property name="minimumSize">
-              <size>
-               <width>350</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>I have installed abb_driver into catkin_ws/src</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="layoutWidget">
-          <property name="geometry">
-           <rect>
-            <x>40</x>
-            <y>0</y>
-            <width>556</width>
-            <height>43</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_12">
-           <item>
-            <widget class="QLabel" name="label_title_4">
-             <property name="minimumSize">
-              <size>
-               <width>380</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <property name="text">
-              <string>Install Package abb_driver</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCommandLinkButton" name="commandLinkButton_4">
-             <property name="minimumSize">
-              <size>
-               <width>111</width>
-               <height>41</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font: italic 13pt &quot;Ubuntu&quot;;</string>
-             </property>
-             <property name="text">
-              <string>Next Step</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QTextBrowser" name="textBrowser_4">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>120</y>
-            <width>641</width>
-            <height>192</height>
-           </rect>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>452</width>
-            <height>192</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: transparent;
+         <layout class="QGridLayout" name="gridLayout_10">
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_16">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_12">
+              <item>
+               <widget class="QLabel" name="label_title_4">
+                <property name="minimumSize">
+                 <size>
+                  <width>380</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string>Install Package abb_driver</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCommandLinkButton" name="commandLinkButton_4">
+                <property name="minimumSize">
+                 <size>
+                  <width>111</width>
+                  <height>41</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: italic 13pt &quot;Ubuntu&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>Next Step</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_5">
+              <property name="styleSheet">
+               <string notr="true">font: 75 14pt &quot;Droid Arabic Naskh&quot;;</string>
+              </property>
+              <property name="title">
+               <string/>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_8">
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QCheckBox" name="checkBox_18">
+                 <property name="minimumSize">
+                  <size>
+                   <width>350</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="text">
+                  <string>I have installed abb_driver into catkin_ws/src</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_13">
+              <item>
+               <widget class="QTextBrowser" name="textBrowser_4">
+                <property name="minimumSize">
+                 <size>
+                  <width>452</width>
+                  <height>192</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
 border: 0px;</string>
-          </property>
-          <property name="html">
-           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                </property>
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;The industrial robot driver package for ABB robot called abb_driver. This package is responsible for interfacing with ABB industrial robot controllers. The package contains industrial robot clients and launches the file to start communicating with the controller.&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;If you have not yet install abb_driver, now you have two ways to select: &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;1. Click the XXX button to download the whole abb packages which inclusive abb_driver, and copy it into &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;~/(your catkin workspace)/src&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;2. Click the YYY button to install abb_driver into &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;~/(your catkin workspace)/src &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-          </property>
-         </widget>
-         <widget class="QGroupBox" name="groupBox_6">
-          <property name="geometry">
-           <rect>
-            <x>90</x>
-            <y>310</y>
-            <width>285</width>
-            <height>115</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;If you have not yet install abb_driver, now you have two ways to accomplish it: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;1. Click the &amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#21314e;&quot;&gt;Download Official &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff5222;&quot;&gt;abb&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#21314e;&quot;&gt; Package&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;&amp;quot; button to download the whole abb packages (inclusive abb_driver) to &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;~/&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, and then you can copy it into &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;~/catkin_ws/src&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; .&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;2. Click the &amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#21314e;&quot;&gt;Local Install &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff5222;&quot;&gt;abb_driver&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;&amp;quot; button to install abb_driver into &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;~/catkin_ws/src &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;locally.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox_6">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
     border: 3px solid silver;
     border-radius: 6px;
     background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(214, 214, 214), stop:0.50001 rgb(236, 236, 236));
@@ -799,64 +816,70 @@ QPushButton:hover {
     border: 3px solid rgb(255, 102, 0);
     background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(240, 120, 70), stop:0.50001 rgb(255, 202, 146));
  }</string>
-          </property>
-          <property name="title">
-           <string/>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_9">
-           <property name="leftMargin">
-            <number>2</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>2</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item row="0" column="0">
-            <layout class="QHBoxLayout" name="horizontalLayout_13">
-             <property name="spacing">
-              <number>10</number>
-             </property>
-             <item>
-              <widget class="QPushButton" name="btnToDldPkgAbb">
-               <property name="minimumSize">
-                <size>
-                 <width>122</width>
-                 <height>82</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
-               <property name="text">
-                <string>XXX</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="btnToRosiWiki_2">
-               <property name="minimumSize">
-                <size>
-                 <width>122</width>
-                 <height>82</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
-               <property name="text">
-                <string>YYY</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </widget>
+                </property>
+                <property name="title">
+                 <string/>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_9">
+                 <property name="leftMargin">
+                  <number>2</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>2</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item row="0" column="0">
+                  <layout class="QVBoxLayout" name="verticalLayout_15">
+                   <property name="spacing">
+                    <number>10</number>
+                   </property>
+                   <item>
+                    <widget class="QPushButton" name="btnToDldPkgAbb">
+                     <property name="minimumSize">
+                      <size>
+                       <width>122</width>
+                       <height>82</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {border-image: url(:/icon/btn_dl_pkg_abb.png)}</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="btnToCpPkgAbbdriver">
+                     <property name="minimumSize">
+                      <size>
+                       <width>122</width>
+                       <height>82</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {border-image: url(:/icon/btn_cp_pkg_abbdriver.png)}</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
         </widget>
         <widget class="QWidget" name="page_5">
          <widget class="QLabel" name="label_title_5">
@@ -1226,7 +1249,7 @@ font-weight: bold;</string>
                   <item>
                    <widget class="QCheckBox" name="checkBox_3">
                     <property name="text">
-                     <string>Create catkin Workspace</string>
+                     <string>Create Workspace: catkin_ws</string>
                     </property>
                    </widget>
                   </item>

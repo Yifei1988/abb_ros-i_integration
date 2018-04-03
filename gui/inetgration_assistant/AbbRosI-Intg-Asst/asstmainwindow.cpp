@@ -86,3 +86,19 @@ void AsstMainWindow::on_btnToDldPkgAbb_clicked()
     qDebug("haha");  //找bug用，正式时可以去除
     qDebug()<<QDir::currentPath(); //可以打印出当前编译可执行文件的目录，留存待用
 }
+
+void AsstMainWindow::on_btnToCpPkgAbbdriver_clicked()
+{
+    //QProcess *process = new QProcess();
+    QStringList arg;
+    QString path = QDir::currentPath();
+    arg.append(path);
+    //process->start("shell_script/test.sh",arg);
+    //qDebug("haha");  //找bug用，正式时可以去除
+    qDebug()<<arg; //可以打印出当前编译可执行文件的目录，留存待用
+
+    QProcess *process = new QProcess;
+    process->start("shell_script/test.sh", QStringList() << arg);
+    process->waitForFinished();
+    qDebug () << process->readAllStandardOutput();
+}

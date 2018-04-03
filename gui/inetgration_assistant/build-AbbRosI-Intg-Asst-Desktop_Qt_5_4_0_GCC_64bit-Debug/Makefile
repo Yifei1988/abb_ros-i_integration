@@ -516,7 +516,10 @@ qrc_image.cpp: ../AbbRosI-Intg-Asst/image.qrc \
 		../AbbRosI-Intg-Asst/icon/ros_logo.png \
 		../AbbRosI-Intg-Asst/icon/rosi_logo.png \
 		../AbbRosI-Intg-Asst/icon/indigo.png \
-		../AbbRosI-Intg-Asst/icon/btn_catkinws.png
+		../AbbRosI-Intg-Asst/icon/btn_cp_pkg_abbdriver.png \
+		../AbbRosI-Intg-Asst/icon/btn_dl_pkg_abb.png \
+		../AbbRosI-Intg-Asst/icon/btn_catkinws.png \
+		../AbbRosI-Intg-Asst/icon/attention.png
 	/opt/Qt/5.4/gcc_64/bin/rcc -name image ../AbbRosI-Intg-Asst/image.qrc -o qrc_image.cpp
 
 compiler_moc_header_make_all: moc_asstmainwindow.cpp moc_dialog_pkg_support.cpp
@@ -1066,7 +1069,9 @@ asstmainwindow.o: ../AbbRosI-Intg-Asst/asstmainwindow.cpp ../AbbRosI-Intg-Asst/a
 		/opt/Qt/5.4/gcc_64/include/QtCore/QUrl \
 		/opt/Qt/5.4/gcc_64/include/QtCore/QProcess \
 		/opt/Qt/5.4/gcc_64/include/QtCore/qprocess.h \
-		/opt/Qt/5.4/gcc_64/include/QtCore/QStringList
+		/opt/Qt/5.4/gcc_64/include/QtCore/QStringList \
+		/opt/Qt/5.4/gcc_64/include/QtCore/QDir \
+		/opt/Qt/5.4/gcc_64/include/QtCore/qdir.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o asstmainwindow.o ../AbbRosI-Intg-Asst/asstmainwindow.cpp
 
 dialog_pkg_support.o: ../AbbRosI-Intg-Asst/dialog_pkg_support.cpp ../AbbRosI-Intg-Asst/dialog_pkg_support.h \

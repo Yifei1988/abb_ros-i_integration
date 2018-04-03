@@ -6,5 +6,8 @@
         <file>pic/catkin_ws_layout.png</file>
         <file>icon/btn_catkinws.png</file>
         <file>pic/indigoigloo.png</file>
+        <file>icon/btn_dl_pkg_abb.png</file>
+        <file>icon/btn_cp_pkg_abbdriver.png</file>
+        <file>icon/attention.png</file>
     </qresource>
 </RCC>
