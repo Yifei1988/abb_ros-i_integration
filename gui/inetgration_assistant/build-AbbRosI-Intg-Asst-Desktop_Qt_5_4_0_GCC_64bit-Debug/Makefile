@@ -1063,7 +1063,10 @@ asstmainwindow.o: ../AbbRosI-Intg-Asst/asstmainwindow.cpp ../AbbRosI-Intg-Asst/a
 		/opt/Qt/5.4/gcc_64/include/QtGui/QDesktopServices \
 		/opt/Qt/5.4/gcc_64/include/QtGui/qdesktopservices.h \
 		/opt/Qt/5.4/gcc_64/include/QtCore/qstandardpaths.h \
-		/opt/Qt/5.4/gcc_64/include/QtCore/QUrl
+		/opt/Qt/5.4/gcc_64/include/QtCore/QUrl \
+		/opt/Qt/5.4/gcc_64/include/QtCore/QProcess \
+		/opt/Qt/5.4/gcc_64/include/QtCore/qprocess.h \
+		/opt/Qt/5.4/gcc_64/include/QtCore/QStringList
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o asstmainwindow.o ../AbbRosI-Intg-Asst/asstmainwindow.cpp
 
 dialog_pkg_support.o: ../AbbRosI-Intg-Asst/dialog_pkg_support.cpp ../AbbRosI-Intg-Asst/dialog_pkg_support.h \

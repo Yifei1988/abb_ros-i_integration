@@ -7,6 +7,8 @@
 #include <QFileInfo>
 #include <QDesktopServices>
 #include <QUrl>
+#include <QProcess>
+#include <QStringList>
 //#include <qdebug.h>//找bug用的输出工具，正式时可以去除
 
 AsstMainWindow::AsstMainWindow(QWidget *parent) :
@@ -68,4 +70,20 @@ void AsstMainWindow::on_btnToRosiWiki_clicked()
 void AsstMainWindow::on_btnToRosCatkinWs_clicked()
 {
     QDesktopServices::openUrl(QUrl("http://wiki.ros.org/catkin/Tutorials/create_a_workspace"));
+}
+
+void AsstMainWindow::on_btnToDldPkgAbb_clicked()
+{
+    //QString scriptPath="qrc:/shell_script/pkg_download_abb.sh";
+    //QString scriptPath="~/UI/AbbRosI-Intg-Asst/shell_script/pkg_download_abb.sh";
+    //QProcess *exec=new QProcess(this);
+    //exec->start(scriptPath);
+    //exec->start("~/UI/AbbRosI-Intg-Asst/shell_script/pkg_download_abb.sh");
+    //exec->startDetached("bash", QStringList()<< "~/UI/AbbRosI-Intg-Asst/shell_script/pkg_download_abb.sh");
+    QProcess *process = new QProcess();
+    //process->setWorkingDirectory("/home/exbot/UI/AbbRosI-Intg-Asst/shell_script/");
+    //process->startDetached("bash", QStringList() << "pkg_download_abb.sh");
+    process->startDetached("bash", QStringList()<< "/home/exbot/UI/AbbRosI-Intg-Asst/shell_script/pkg_download_abb.sh");
+    //process->startDetached("bash", QStringList()<< "AbbRosI-Intg-Asst/shell_script/pkg_download_abb.sh");
+    qDebug("haha");  //找bug用，正式时可以去除
 }

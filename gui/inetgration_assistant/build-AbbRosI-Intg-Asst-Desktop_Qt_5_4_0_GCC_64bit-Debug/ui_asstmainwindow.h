@@ -68,18 +68,35 @@ public:
     QPushButton *btnToRosWiki;
     QPushButton *btnToRosiWiki;
     QWidget *page_3;
+    QGridLayout *gridLayout_7;
+    QVBoxLayout *verticalLayout_14;
+    QHBoxLayout *horizontalLayout_11;
     QLabel *label_title_3;
-    QTextBrowser *textBrowser_3;
-    QGraphicsView *graphic_wsLayout;
     QCommandLinkButton *commandLinkButton_3;
+    QHBoxLayout *horizontalLayout_10;
+    QVBoxLayout *verticalLayout_13;
     QGroupBox *groupBox_3;
     QGridLayout *gridLayout_5;
     QCheckBox *checkBox_17;
+    QTextBrowser *textBrowser_3;
     QGroupBox *groupBox_4;
     QGridLayout *gridLayout_6;
     QPushButton *btnToRosCatkinWs;
+    QGraphicsView *graphic_wsLayout;
     QWidget *page_4;
+    QGroupBox *groupBox_5;
+    QGridLayout *gridLayout_8;
+    QCheckBox *checkBox_18;
+    QWidget *layoutWidget;
+    QHBoxLayout *horizontalLayout_12;
     QLabel *label_title_4;
+    QCommandLinkButton *commandLinkButton_4;
+    QTextBrowser *textBrowser_4;
+    QGroupBox *groupBox_6;
+    QGridLayout *gridLayout_9;
+    QHBoxLayout *horizontalLayout_13;
+    QPushButton *btnToDldPkgAbb;
+    QPushButton *btnToRosiWiki_2;
     QWidget *page_5;
     QLabel *label_title_5;
     QComboBox *comboBox;
@@ -138,7 +155,7 @@ public:
     {
         if (AsstMainWindow->objectName().isEmpty())
             AsstMainWindow->setObjectName(QStringLiteral("AsstMainWindow"));
-        AsstMainWindow->resize(1000, 731);
+        AsstMainWindow->resize(1000, 736);
         AsstMainWindow->setStyleSheet(QLatin1String("QListWidget::item {\n"
 "    height: 40px;\n"
 "    border: 1px solid silver;\n"
@@ -238,6 +255,7 @@ public:
         gridLayout_4->setSpacing(6);
         gridLayout_4->setContentsMargins(11, 11, 11, 11);
         gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
+        gridLayout_4->setContentsMargins(5, 5, 5, 5);
         verticalLayout_12 = new QVBoxLayout();
         verticalLayout_12->setSpacing(6);
         verticalLayout_12->setObjectName(QStringLiteral("verticalLayout_12"));
@@ -246,7 +264,7 @@ public:
         horizontalLayout_9->setObjectName(QStringLiteral("horizontalLayout_9"));
         label_title_2 = new QLabel(page_2);
         label_title_2->setObjectName(QStringLiteral("label_title_2"));
-        label_title_2->setMinimumSize(QSize(351, 31));
+        label_title_2->setMinimumSize(QSize(380, 30));
         label_title_2->setStyleSheet(QStringLiteral(""));
 
         horizontalLayout_9->addWidget(label_title_2);
@@ -374,29 +392,42 @@ public:
         stackedWidget->addWidget(page_2);
         page_3 = new QWidget();
         page_3->setObjectName(QStringLiteral("page_3"));
+        gridLayout_7 = new QGridLayout(page_3);
+        gridLayout_7->setSpacing(6);
+        gridLayout_7->setContentsMargins(11, 11, 11, 11);
+        gridLayout_7->setObjectName(QStringLiteral("gridLayout_7"));
+        gridLayout_7->setContentsMargins(5, 5, 5, 5);
+        verticalLayout_14 = new QVBoxLayout();
+        verticalLayout_14->setSpacing(6);
+        verticalLayout_14->setObjectName(QStringLiteral("verticalLayout_14"));
+        horizontalLayout_11 = new QHBoxLayout();
+        horizontalLayout_11->setSpacing(6);
+        horizontalLayout_11->setObjectName(QStringLiteral("horizontalLayout_11"));
         label_title_3 = new QLabel(page_3);
         label_title_3->setObjectName(QStringLiteral("label_title_3"));
-        label_title_3->setGeometry(QRect(40, 10, 291, 31));
+        label_title_3->setMinimumSize(QSize(380, 30));
         label_title_3->setStyleSheet(QStringLiteral(""));
-        textBrowser_3 = new QTextBrowser(page_3);
-        textBrowser_3->setObjectName(QStringLiteral("textBrowser_3"));
-        textBrowser_3->setGeometry(QRect(30, 140, 441, 161));
-        textBrowser_3->setStyleSheet(QLatin1String("background-color: transparent;\n"
-"border: 0px;"));
-        graphic_wsLayout = new QGraphicsView(page_3);
-        graphic_wsLayout->setObjectName(QStringLiteral("graphic_wsLayout"));
-        graphic_wsLayout->setGeometry(QRect(480, 40, 222, 362));
-        graphic_wsLayout->setMinimumSize(QSize(222, 362));
-        graphic_wsLayout->setStyleSheet(QLatin1String("border-radius: 6px;\n"
-"border-image: url(:/pic/catkin_ws_layout.png);"));
+
+        horizontalLayout_11->addWidget(label_title_3);
+
         commandLinkButton_3 = new QCommandLinkButton(page_3);
         commandLinkButton_3->setObjectName(QStringLiteral("commandLinkButton_3"));
-        commandLinkButton_3->setGeometry(QRect(330, 10, 339, 41));
         commandLinkButton_3->setMinimumSize(QSize(111, 41));
         commandLinkButton_3->setStyleSheet(QStringLiteral("font: italic 13pt \"Ubuntu\";"));
+
+        horizontalLayout_11->addWidget(commandLinkButton_3);
+
+
+        verticalLayout_14->addLayout(horizontalLayout_11);
+
+        horizontalLayout_10 = new QHBoxLayout();
+        horizontalLayout_10->setSpacing(6);
+        horizontalLayout_10->setObjectName(QStringLiteral("horizontalLayout_10"));
+        verticalLayout_13 = new QVBoxLayout();
+        verticalLayout_13->setSpacing(6);
+        verticalLayout_13->setObjectName(QStringLiteral("verticalLayout_13"));
         groupBox_3 = new QGroupBox(page_3);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
-        groupBox_3->setGeometry(QRect(30, 60, 372, 70));
         groupBox_3->setStyleSheet(QStringLiteral("font: 75 14pt \"Droid Arabic Naskh\";"));
         gridLayout_5 = new QGridLayout(groupBox_3);
         gridLayout_5->setSpacing(6);
@@ -409,9 +440,19 @@ public:
 
         gridLayout_5->addWidget(checkBox_17, 0, 0, 1, 1);
 
+
+        verticalLayout_13->addWidget(groupBox_3);
+
+        textBrowser_3 = new QTextBrowser(page_3);
+        textBrowser_3->setObjectName(QStringLiteral("textBrowser_3"));
+        textBrowser_3->setMinimumSize(QSize(452, 192));
+        textBrowser_3->setStyleSheet(QLatin1String("background-color: transparent;\n"
+"border: 0px;"));
+
+        verticalLayout_13->addWidget(textBrowser_3);
+
         groupBox_4 = new QGroupBox(page_3);
         groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
-        groupBox_4->setGeometry(QRect(110, 310, 144, 110));
         groupBox_4->setStyleSheet(QLatin1String("QPushButton {\n"
 "    border-radius: 6px;\n"
 "    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(214, 214, 214), stop:0.50001 rgb(236, 236, 236));\n"
@@ -429,20 +470,125 @@ public:
         gridLayout_6->setSpacing(6);
         gridLayout_6->setContentsMargins(11, 11, 11, 11);
         gridLayout_6->setObjectName(QStringLiteral("gridLayout_6"));
+        gridLayout_6->setContentsMargins(2, 2, 2, 2);
         btnToRosCatkinWs = new QPushButton(groupBox_4);
         btnToRosCatkinWs->setObjectName(QStringLiteral("btnToRosCatkinWs"));
-        btnToRosCatkinWs->setMinimumSize(QSize(122, 82));
+        btnToRosCatkinWs->setMinimumSize(QSize(111, 61));
+        btnToRosCatkinWs->setMaximumSize(QSize(111, 61));
         btnToRosCatkinWs->setStyleSheet(QStringLiteral("QPushButton {border-image: url(:/icon/btn_catkinws.png)}"));
 
         gridLayout_6->addWidget(btnToRosCatkinWs, 0, 0, 1, 1);
 
+
+        verticalLayout_13->addWidget(groupBox_4);
+
+
+        horizontalLayout_10->addLayout(verticalLayout_13);
+
+        graphic_wsLayout = new QGraphicsView(page_3);
+        graphic_wsLayout->setObjectName(QStringLiteral("graphic_wsLayout"));
+        graphic_wsLayout->setMinimumSize(QSize(222, 362));
+        graphic_wsLayout->setMaximumSize(QSize(230, 370));
+        graphic_wsLayout->setStyleSheet(QLatin1String("border-radius: 6px;\n"
+"border-image: url(:/pic/catkin_ws_layout.png);"));
+
+        horizontalLayout_10->addWidget(graphic_wsLayout);
+
+
+        verticalLayout_14->addLayout(horizontalLayout_10);
+
+
+        gridLayout_7->addLayout(verticalLayout_14, 0, 0, 1, 1);
+
         stackedWidget->addWidget(page_3);
         page_4 = new QWidget();
         page_4->setObjectName(QStringLiteral("page_4"));
-        label_title_4 = new QLabel(page_4);
+        groupBox_5 = new QGroupBox(page_4);
+        groupBox_5->setObjectName(QStringLiteral("groupBox_5"));
+        groupBox_5->setGeometry(QRect(0, 50, 466, 52));
+        groupBox_5->setStyleSheet(QStringLiteral("font: 75 14pt \"Droid Arabic Naskh\";"));
+        gridLayout_8 = new QGridLayout(groupBox_5);
+        gridLayout_8->setSpacing(6);
+        gridLayout_8->setContentsMargins(11, 11, 11, 11);
+        gridLayout_8->setObjectName(QStringLiteral("gridLayout_8"));
+        gridLayout_8->setContentsMargins(5, 0, 5, 0);
+        checkBox_18 = new QCheckBox(groupBox_5);
+        checkBox_18->setObjectName(QStringLiteral("checkBox_18"));
+        checkBox_18->setMinimumSize(QSize(350, 30));
+
+        gridLayout_8->addWidget(checkBox_18, 0, 0, 1, 1);
+
+        layoutWidget = new QWidget(page_4);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(40, 0, 556, 43));
+        horizontalLayout_12 = new QHBoxLayout(layoutWidget);
+        horizontalLayout_12->setSpacing(6);
+        horizontalLayout_12->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_12->setObjectName(QStringLiteral("horizontalLayout_12"));
+        horizontalLayout_12->setContentsMargins(0, 0, 0, 0);
+        label_title_4 = new QLabel(layoutWidget);
         label_title_4->setObjectName(QStringLiteral("label_title_4"));
-        label_title_4->setGeometry(QRect(40, 10, 291, 31));
+        label_title_4->setMinimumSize(QSize(380, 30));
         label_title_4->setStyleSheet(QStringLiteral(""));
+
+        horizontalLayout_12->addWidget(label_title_4);
+
+        commandLinkButton_4 = new QCommandLinkButton(layoutWidget);
+        commandLinkButton_4->setObjectName(QStringLiteral("commandLinkButton_4"));
+        commandLinkButton_4->setMinimumSize(QSize(111, 41));
+        commandLinkButton_4->setStyleSheet(QStringLiteral("font: italic 13pt \"Ubuntu\";"));
+
+        horizontalLayout_12->addWidget(commandLinkButton_4);
+
+        textBrowser_4 = new QTextBrowser(page_4);
+        textBrowser_4->setObjectName(QStringLiteral("textBrowser_4"));
+        textBrowser_4->setGeometry(QRect(20, 120, 641, 192));
+        textBrowser_4->setMinimumSize(QSize(452, 192));
+        textBrowser_4->setStyleSheet(QLatin1String("background-color: transparent;\n"
+"border: 0px;"));
+        groupBox_6 = new QGroupBox(page_4);
+        groupBox_6->setObjectName(QStringLiteral("groupBox_6"));
+        groupBox_6->setGeometry(QRect(90, 310, 285, 115));
+        groupBox_6->setStyleSheet(QLatin1String("QPushButton {\n"
+"    border: 3px solid silver;\n"
+"    border-radius: 6px;\n"
+"    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(214, 214, 214), stop:0.50001 rgb(236, 236, 236));\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 3px solid rgb(255, 157, 68);\n"
+"    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(255, 174, 120), stop:0.50001 rgb(255, 220, 196));\n"
+" }\n"
+" QPushButton:pressed {\n"
+"    font-weight: bold;\n"
+"    border: 3px solid rgb(255, 102, 0);\n"
+"    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(240, 120, 70), stop:0.50001 rgb(255, 202, 146));\n"
+" }"));
+        gridLayout_9 = new QGridLayout(groupBox_6);
+        gridLayout_9->setSpacing(6);
+        gridLayout_9->setContentsMargins(11, 11, 11, 11);
+        gridLayout_9->setObjectName(QStringLiteral("gridLayout_9"));
+        gridLayout_9->setContentsMargins(2, 0, 2, 0);
+        horizontalLayout_13 = new QHBoxLayout();
+        horizontalLayout_13->setSpacing(10);
+        horizontalLayout_13->setObjectName(QStringLiteral("horizontalLayout_13"));
+        btnToDldPkgAbb = new QPushButton(groupBox_6);
+        btnToDldPkgAbb->setObjectName(QStringLiteral("btnToDldPkgAbb"));
+        btnToDldPkgAbb->setMinimumSize(QSize(122, 82));
+        btnToDldPkgAbb->setStyleSheet(QStringLiteral(""));
+
+        horizontalLayout_13->addWidget(btnToDldPkgAbb);
+
+        btnToRosiWiki_2 = new QPushButton(groupBox_6);
+        btnToRosiWiki_2->setObjectName(QStringLiteral("btnToRosiWiki_2"));
+        btnToRosiWiki_2->setMinimumSize(QSize(122, 82));
+        btnToRosiWiki_2->setStyleSheet(QStringLiteral(""));
+
+        horizontalLayout_13->addWidget(btnToRosiWiki_2);
+
+
+        gridLayout_9->addLayout(horizontalLayout_13, 0, 0, 1, 1);
+
         stackedWidget->addWidget(page_4);
         page_5 = new QWidget();
         page_5->setObjectName(QStringLiteral("page_5"));
@@ -751,7 +897,7 @@ public:
         retranslateUi(AsstMainWindow);
         QObject::connect(listWidget, SIGNAL(currentRowChanged(int)), stackedWidget, SLOT(setCurrentIndex(int)));
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(AsstMainWindow);
@@ -770,7 +916,7 @@ public:
         QListWidgetItem *___qlistwidgetitem2 = listWidget->item(2);
         ___qlistwidgetitem2->setText(QApplication::translate("AsstMainWindow", "3. Create a Workspace", 0));
         QListWidgetItem *___qlistwidgetitem3 = listWidget->item(3);
-        ___qlistwidgetitem3->setText(QApplication::translate("AsstMainWindow", "4. Add abb_driver", 0));
+        ___qlistwidgetitem3->setText(QApplication::translate("AsstMainWindow", "4. Install Package abb_driver", 0));
         QListWidgetItem *___qlistwidgetitem4 = listWidget->item(4);
         ___qlistwidgetitem4->setText(QApplication::translate("AsstMainWindow", "5. Create Support Package", 0));
         QListWidgetItem *___qlistwidgetitem5 = listWidget->item(5);
@@ -810,25 +956,39 @@ public:
 #endif // QT_NO_TOOLTIP
         btnToRosiWiki->setText(QString());
         label_title_3->setText(QApplication::translate("AsstMainWindow", "Create a Workspace", 0));
+        commandLinkButton_3->setText(QApplication::translate("AsstMainWindow", "Next Step", 0));
+        groupBox_3->setTitle(QString());
+        checkBox_17->setText(QApplication::translate("AsstMainWindow", "I have created a catkin workspace", 0));
         textBrowser_3->setHtml(QApplication::translate("AsstMainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">In the ROS distribution Indigo, we are using the </span><span style=\" font-size:12pt; font-style:italic;\">catkin</span><span style=\" font-size:12pt;\"> build system to build ROS packages. This build system is responsible for generating 'targets' (executable/libraries) from a raw source code that can be used by an end user. The first requirement in creating ROS packages is to create a ROS workspace. </span></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-l"
-                        "eft:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">A catkin workspace is a folder where you modify, build, and install catkin packages. The right picture shows a typical layout of a catkin workspace.</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">In the ROS distribution Indigo, we are using the </span><span style=\" font-size:12pt; font-style:italic;\">catkin</span><span style=\" font-size:12pt;\"> build system to build ROS packages. This build system is responsible for generating 'targets' (executable/libraries) from a raw source code that can be used by an end user. The first requirement in creating ROS packages is to create a ROS workspace. A catkin workspace is a folder where you modify, build, and install catkin packages. The right picture shows a typ"
+                        "ical layout of a catkin workspace.</span></p>\n"
 "<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;\"><br /></p>\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">If you have not yet create a workspace, you can click the button follows to read the official guide:</span></p></body></html>", 0));
-        commandLinkButton_3->setText(QApplication::translate("AsstMainWindow", "Next Step", 0));
-        groupBox_3->setTitle(QString());
-        checkBox_17->setText(QApplication::translate("AsstMainWindow", "I have created a catkin workspace", 0));
         groupBox_4->setTitle(QString());
 #ifndef QT_NO_TOOLTIP
         btnToRosCatkinWs->setToolTip(QApplication::translate("AsstMainWindow", "<html><head/><body><p><span style=\" font-size:12pt;\">Go To </span><span style=\" font-size:12pt; font-weight:600;\">Guide to Install </span><span style=\" font-size:12pt; font-weight:600;color:lightblue;\">ROS </span><span style=\" font-size:12pt; font-weight:600; vertical-align:super; color:lightblue;\">Indigo</span></p></body></html>", 0));
 #endif // QT_NO_TOOLTIP
         btnToRosCatkinWs->setText(QString());
-        label_title_4->setText(QApplication::translate("AsstMainWindow", "Build URDF Description", 0));
+        groupBox_5->setTitle(QString());
+        checkBox_18->setText(QApplication::translate("AsstMainWindow", "I have installed abb_driver into catkin_ws/src", 0));
+        label_title_4->setText(QApplication::translate("AsstMainWindow", "Install Package abb_driver", 0));
+        commandLinkButton_4->setText(QApplication::translate("AsstMainWindow", "Next Step", 0));
+        textBrowser_4->setHtml(QApplication::translate("AsstMainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">The industrial robot driver package for ABB robot called abb_driver. This package is responsible for interfacing with ABB industrial robot controllers. The package contains industrial robot clients and launches the file to start communicating with the controller.</span></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px;"
+                        " margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">If you have not yet install abb_driver, now you have two ways to select: </span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt;\">1. Click the XXX button to download the whole abb packages which inclusive abb_driver, and copy it into </span><span style=\" font-size:12pt; font-weight:600;\">~/(your catkin workspace)/src</span><span style=\" font-size:12pt;\"> </span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt;\">2. Click the YYY button to install abb_driver into </span><span style=\" font-size:12pt; font-weight:600;\">~/(your catkin workspace)/src </span></p></body></html>", 0));
+        groupBox_6->setTitle(QString());
+        btnToDldPkgAbb->setText(QApplication::translate("AsstMainWindow", "XXX", 0));
+        btnToRosiWiki_2->setText(QApplication::translate("AsstMainWindow", "YYY", 0));
         label_title_5->setText(QApplication::translate("AsstMainWindow", "Build Launch Files", 0));
         comboBox->clear();
         comboBox->insertItems(0, QStringList()

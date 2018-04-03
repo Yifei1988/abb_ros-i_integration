@@ -31,6 +31,7 @@ private slots:
     void on_btnToRosWiki_clicked();
     void on_btnToRosiWiki_clicked();
     void on_btnToRosCatkinWs_clicked();
+    void on_btnToDldPkgAbb_clicked();
 };
 
 #endif // ASSTMAINWINDOW_H
