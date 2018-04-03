@@ -82,23 +82,22 @@ void AsstMainWindow::on_btnToDldPkgAbb_clicked()
     //QProcess::execute("shell_script/launch_moveit_asst.sh");
 
     QProcess *process = new QProcess();
-    process->startDetached("bash", QStringList()<< "shell_script/pkg_download_abb.sh");
+    process->startDetached("bash", QStringList()<< "shell_script/download_pkg_abb.sh");
     qDebug("haha");  //找bug用，正式时可以去除
     qDebug()<<QDir::currentPath(); //可以打印出当前编译可执行文件的目录，留存待用
 }
 
 void AsstMainWindow::on_btnToCpPkgAbbdriver_clicked()
 {
-    //QProcess *process = new QProcess();
     QStringList arg;
     QString path = QDir::currentPath();
     arg.append(path);
-    //process->start("shell_script/test.sh",arg);
-    //qDebug("haha");  //找bug用，正式时可以去除
-    qDebug()<<arg; //可以打印出当前编译可执行文件的目录，留存待用
+    //qDebug()<<arg; //可以打印出当前编译可执行文件的目录，留存待用
 
+//目前cp_pkg_abb_driver.sh中用mkdir预先创建名为rosiabb的workspace文件夹，
+//之后考虑不使用mkdir，而是在bash里判断是否存在workspace，存在即复制，不存在就返回信息给qt，再由qt界面弹窗报错
     QProcess *process = new QProcess;
-    process->start("shell_script/test.sh", QStringList() << arg);
+    process->start("shell_script/cp_pkg_abb_driver.sh", QStringList() << arg);
     process->waitForFinished();
-    qDebug () << process->readAllStandardOutput();
+    qDebug () << process->readAllStandardOutput(); //可以在qt控制台打印出shell执行的一些输出结果，但效果有限
 }
