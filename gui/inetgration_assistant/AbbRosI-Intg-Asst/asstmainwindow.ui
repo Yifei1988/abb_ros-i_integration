@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1158</width>
+    <width>1207</width>
     <height>738</height>
    </rect>
   </property>
@@ -133,22 +133,6 @@ QGroupBox#groupBox_ChLst_Ubt::title, #groupBox_ChLst_Win::title{
          <number>3</number>
         </property>
         <widget class="QWidget" name="page_1">
-         <widget class="QLabel" name="label_title_1">
-          <property name="geometry">
-           <rect>
-            <x>40</x>
-            <y>10</y>
-            <width>291</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="text">
-           <string>说明</string>
-          </property>
-         </widget>
          <widget class="QLabel" name="label_1_2">
           <property name="geometry">
            <rect>
@@ -190,6 +174,53 @@ QGroupBox#groupBox_ChLst_Ubt::title, #groupBox_ChLst_Win::title{
             <height>61</height>
            </rect>
           </property>
+         </widget>
+         <widget class="QWidget" name="">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>10</y>
+            <width>556</width>
+            <height>43</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_18">
+           <item>
+            <widget class="QLabel" name="label_title_1">
+             <property name="minimumSize">
+              <size>
+               <width>380</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>说明</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCommandLinkButton" name="commandLinkButton_2">
+             <property name="minimumSize">
+              <size>
+               <width>111</width>
+               <height>41</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: italic 13pt &quot;Ubuntu&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Next Step</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </widget>
         <widget class="QWidget" name="page_2">
@@ -233,6 +264,9 @@ QGroupBox#groupBox_ChLst_Ubt::title, #groupBox_ChLst_Win::title{
                   <width>111</width>
                   <height>41</height>
                  </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">font: italic 13pt &quot;Ubuntu&quot;;</string>
@@ -457,21 +491,9 @@ QPushButton:hover {
          </layout>
         </widget>
         <widget class="QWidget" name="page_3">
-         <layout class="QGridLayout" name="gridLayout_7">
-          <property name="leftMargin">
-           <number>5</number>
-          </property>
-          <property name="topMargin">
-           <number>5</number>
-          </property>
-          <property name="rightMargin">
-           <number>5</number>
-          </property>
-          <property name="bottomMargin">
-           <number>5</number>
-          </property>
+         <layout class="QGridLayout" name="gridLayout_30">
           <item row="0" column="0">
-           <layout class="QVBoxLayout" name="verticalLayout_14">
+           <layout class="QVBoxLayout" name="verticalLayout_22">
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_11">
               <item>
@@ -498,6 +520,9 @@ QPushButton:hover {
                   <height>41</height>
                  </size>
                 </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">font: italic 13pt &quot;Ubuntu&quot;;</string>
                 </property>
@@ -509,9 +534,9 @@ QPushButton:hover {
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <layout class="QHBoxLayout" name="horizontalLayout_28">
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_13">
+               <layout class="QVBoxLayout" name="verticalLayout_21">
                 <item>
                  <widget class="QGroupBox" name="groupBox_3">
                   <property name="styleSheet">
@@ -576,7 +601,7 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item>
-                 <widget class="QGroupBox" name="groupBox_4">
+                 <widget class="QGroupBox" name="groupBox_20">
                   <property name="styleSheet">
                    <string notr="true">QPushButton {
     border-radius: 6px;
@@ -595,26 +620,11 @@ QPushButton:hover {
                   <property name="title">
                    <string/>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_6">
-                   <property name="leftMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="spacing">
-                    <number>5</number>
-                   </property>
+                  <layout class="QGridLayout" name="gridLayout_28">
                    <item row="0" column="0">
-                    <layout class="QHBoxLayout" name="horizontalLayout_14">
+                    <layout class="QHBoxLayout" name="horizontalLayout_27">
                      <item>
-                      <widget class="QTextBrowser" name="textBrowser_5">
+                      <widget class="QTextBrowser" name="textBrowser_14">
                        <property name="minimumSize">
                         <size>
                          <width>342</width>
@@ -632,30 +642,39 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/icon/attention.png&quot; style=&quot;float: left;&quot; /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; In order to simplify the process of the follow steps, we would here just name the workspace folder &amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;catkin_ws&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;&amp;quot; and it's location should be &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;/home/&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&amp;lt;username&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, so if you login as a root user, it may lead to unpredicted issues.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; In order to simplify the process of the follow steps, we would here just name the workspace folder &amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;catkin_ws&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;&amp;quot; and its location should be &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;/home/&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&amp;lt;username&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, so if you login as a root user, it may lead to unpredicted issues.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                        </property>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QPushButton" name="btnToRosCatkinWs">
-                       <property name="minimumSize">
-                        <size>
-                         <width>120</width>
-                         <height>70</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>130</width>
-                         <height>85</height>
-                        </size>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">border-image: url(:/icon/btn_catkinws.png);</string>
-                       </property>
-                       <property name="text">
+                      <widget class="QGroupBox" name="groupBox_21">
+                       <property name="title">
                         <string/>
                        </property>
+                       <layout class="QGridLayout" name="gridLayout_29">
+                        <item row="0" column="0">
+                         <widget class="QPushButton" name="btnToRosCatkinWs">
+                          <property name="minimumSize">
+                           <size>
+                            <width>120</width>
+                            <height>70</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>130</width>
+                            <height>85</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">border-image: url(:/icon/btn_catkinws.png);</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
                       </widget>
                      </item>
                     </layout>
@@ -692,9 +711,9 @@ border-image: url(:/pic/catkin_ws_layout.png);</string>
          </layout>
         </widget>
         <widget class="QWidget" name="page_4">
-         <layout class="QGridLayout" name="gridLayout_10">
+         <layout class="QGridLayout" name="gridLayout_15">
           <item row="0" column="0">
-           <layout class="QVBoxLayout" name="verticalLayout_16">
+           <layout class="QVBoxLayout" name="verticalLayout_7">
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_12">
               <item>
@@ -720,6 +739,9 @@ border-image: url(:/pic/catkin_ws_layout.png);</string>
                   <width>111</width>
                   <height>41</height>
                  </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">font: italic 13pt &quot;Ubuntu&quot;;</string>
@@ -772,21 +794,19 @@ border-image: url(:/pic/catkin_ws_layout.png);</string>
              </widget>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_13">
-              <item>
-               <widget class="QTextBrowser" name="textBrowser_4">
-                <property name="minimumSize">
-                 <size>
-                  <width>452</width>
-                  <height>192</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: transparent;
+             <widget class="QTextBrowser" name="textBrowser_4">
+              <property name="minimumSize">
+               <size>
+                <width>452</width>
+                <height>192</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;
 border: 0px;</string>
-                </property>
-                <property name="html">
-                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+              </property>
+              <property name="html">
+               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -795,9 +815,14 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;If you have not yet install abb_driver, now you have two ways to accomplish it: &lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;1. Click the &amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#21314e;&quot;&gt;Download Official &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff5222;&quot;&gt;abb&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#21314e;&quot;&gt; Package&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;&amp;quot; button to download the whole abb packages (inclusive abb_driver) to &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;~/&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, and then you can copy it into &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;~/catkin_ws/src&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; .&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;2. Click the &amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#21314e;&quot;&gt;Local Install &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff5222;&quot;&gt;abb_driver&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;&amp;quot; button to install abb_driver into &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;~/catkin_ws/src &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;locally.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </item>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_13">
+              <property name="spacing">
+               <number>15</number>
+              </property>
               <item>
                <widget class="QGroupBox" name="groupBox_6">
                 <property name="styleSheet">
@@ -820,57 +845,76 @@ QPushButton:hover {
                 <property name="title">
                  <string/>
                 </property>
-                <layout class="QGridLayout" name="gridLayout_9">
-                 <property name="leftMargin">
-                  <number>2</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>2</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
+                <layout class="QGridLayout" name="gridLayout_10">
                  <item row="0" column="0">
-                  <layout class="QVBoxLayout" name="verticalLayout_15">
-                   <property name="spacing">
-                    <number>10</number>
+                  <widget class="QPushButton" name="btnToDldPkgAbb">
+                   <property name="minimumSize">
+                    <size>
+                     <width>150</width>
+                     <height>82</height>
+                    </size>
                    </property>
-                   <item>
-                    <widget class="QPushButton" name="btnToDldPkgAbb">
-                     <property name="minimumSize">
-                      <size>
-                       <width>122</width>
-                       <height>82</height>
-                      </size>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QPushButton {border-image: url(:/icon/btn_dl_pkg_abb.png)}</string>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QPushButton" name="btnToCpPkgAbbdriver">
-                     <property name="minimumSize">
-                      <size>
-                       <width>122</width>
-                       <height>82</height>
-                      </size>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QPushButton {border-image: url(:/icon/btn_cp_pkg_abbdriver.png)}</string>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
+                   <property name="maximumSize">
+                    <size>
+                     <width>160</width>
+                     <height>82</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {border-image: url(:/icon/btn_dl_pkg_abb.png)}</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox_9">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    border: 3px solid silver;
+    border-radius: 6px;
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(214, 214, 214), stop:0.50001 rgb(236, 236, 236));
+}
+
+QPushButton:hover {
+    border: 3px solid rgb(255, 157, 68);
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(255, 174, 120), stop:0.50001 rgb(255, 220, 196));
+ }
+ QPushButton:pressed {
+    font-weight: bold;
+    border: 3px solid rgb(255, 102, 0);
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(240, 120, 70), stop:0.50001 rgb(255, 202, 146));
+ }</string>
+                </property>
+                <property name="title">
+                 <string/>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_9">
+                 <item row="0" column="0">
+                  <widget class="QPushButton" name="btnToCpPkgAbbdriver">
+                   <property name="minimumSize">
+                    <size>
+                     <width>150</width>
+                     <height>82</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>160</width>
+                     <height>82</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {border-image: url(:/icon/btn_cp_pkg_abbdriver.png)}</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </widget>
@@ -882,112 +926,119 @@ QPushButton:hover {
          </layout>
         </widget>
         <widget class="QWidget" name="page_5">
-         <widget class="QLabel" name="label_title_5">
-          <property name="geometry">
-           <rect>
-            <x>40</x>
-            <y>10</y>
-            <width>291</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="text">
-           <string>Build Launch Files</string>
-          </property>
-         </widget>
-         <widget class="QComboBox" name="comboBox">
-          <property name="geometry">
-           <rect>
-            <x>50</x>
-            <y>90</y>
-            <width>481</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <item>
-           <property name="text">
-            <string>ABB IRB 120</string>
-           </property>
+         <layout class="QGridLayout" name="gridLayout_13">
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_17">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_15">
+              <item>
+               <widget class="QLabel" name="label_title_5">
+                <property name="minimumSize">
+                 <size>
+                  <width>380</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string>Create Support Package</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCommandLinkButton" name="commandLinkButton_5">
+                <property name="minimumSize">
+                 <size>
+                  <width>111</width>
+                  <height>41</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: italic 13pt &quot;Ubuntu&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>Next Step</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_7">
+              <property name="styleSheet">
+               <string notr="true">font: 75 14pt &quot;Droid Arabic Naskh&quot;;</string>
+              </property>
+              <property name="title">
+               <string/>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_11">
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QCheckBox" name="checkBox_19">
+                 <property name="minimumSize">
+                  <size>
+                   <width>350</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="text">
+                  <string>I have created support package for my robot</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="textBrowser_6">
+              <property name="minimumSize">
+               <size>
+                <width>452</width>
+                <height>192</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;
+border: 0px;</string>
+              </property>
+              <property name="html">
+               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;The ROS-I robot support packages are a convention followed for industrial robots. The aim of these support packages are to standardize the ways of maintaining ROS packages for a wide variety of industrial robot types. A typical support package contains 4 folders as follows: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;•  &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff5222;&quot;&gt;meshes&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; that contains meshes for visualization and collision checking;&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;•  &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff5222;&quot;&gt;urdf &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;that contains the set of standardized xacro and urdf files of the robot model;&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;•  &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff5222;&quot;&gt;config&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; that contains the specific configuration files of joint names, RViz and robot model;&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;•  &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff5222;&quot;&gt;launch&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; that contains the launch file definitions of this robot.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Before you create the support package for a specific ABB robot, please check out if the environment is prepared ( with the help of &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Checklist&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; below).&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;After selecting an ABB industrial robot type, then you are able to click the &amp;quot;Create Support Package&amp;quot; Button in the lower right corner of this Window.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
-          <item>
-           <property name="text">
-            <string>ABB IRB 1200</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ABB IRB 140</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ABB IRB 1410</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ABB IRB 1600</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ABB IRB 2400</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ABB IRB 260</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ABB IRB 2600</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ABB IRB 4400</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ABB IRB 460</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ABB IRB 4600</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ABB IRB 660</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ABB IRB 6620</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ABB IRB 6640</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ABB IRB 760</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ABB IRB 8700</string>
-           </property>
-          </item>
-         </widget>
+         </layout>
         </widget>
         <widget class="QWidget" name="page_6">
          <widget class="QLabel" name="label_title_6">
@@ -1500,31 +1551,15 @@ QPushButton:hover {
     font-weight: bold;
     border: 3px solid rgb(255, 102, 0);
     background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(240, 120, 70), stop:0.50001 rgb(255, 202, 146));
- }
-</string>
+ }</string>
         </property>
         <property name="title">
          <string/>
         </property>
-        <layout class="QGridLayout" name="gridLayout">
-         <property name="leftMargin">
-          <number>15</number>
-         </property>
-         <property name="topMargin">
-          <number>0</number>
-         </property>
-         <property name="rightMargin">
-          <number>15</number>
-         </property>
-         <property name="bottomMargin">
-          <number>0</number>
-         </property>
+        <layout class="QGridLayout" name="gridLayout_14">
          <item row="0" column="0">
-          <layout class="QVBoxLayout" name="verticalLayout_7">
-           <property name="spacing">
-            <number>6</number>
-           </property>
-           <item>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="1" column="0">
             <widget class="QPushButton" name="btn_to_support">
              <property name="minimumSize">
               <size>
@@ -1543,7 +1578,7 @@ QPushButton:hover {
              </property>
             </widget>
            </item>
-           <item>
+           <item row="2" column="0">
             <widget class="QPushButton" name="btn_to_moveit">
              <property name="minimumSize">
               <size>
@@ -1559,7 +1594,7 @@ QPushButton:hover {
              </property>
             </widget>
            </item>
-           <item>
+           <item row="3" column="0">
             <widget class="QPushButton" name="btn_to_rs">
              <property name="minimumSize">
               <size>
@@ -1574,6 +1609,126 @@ QPushButton:hover {
               <string>Create Solution in RS</string>
              </property>
             </widget>
+           </item>
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_17">
+             <item>
+              <widget class="QComboBox" name="comboBox_RbtTyp">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: #21314e; padding: 0px 0px 0px 20px;</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string/>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb140</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb140t</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb120</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb120t</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb1200</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb1410</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb1600</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb2400</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb2600</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb4400</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb4600</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb6620</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb6640</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb6650s</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb6660</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb6700</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>abb_irb7600</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="toolButton">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>more</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
           </layout>
          </item>

@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
+#include <QtWidgets/QCommandLinkButton>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGridLayout>
@@ -34,15 +35,18 @@ QT_BEGIN_NAMESPACE
 class Ui_Dialog_Pkg_Support
 {
 public:
+    QGridLayout *gridLayout_3;
     QVBoxLayout *verticalLayout_5;
     QHBoxLayout *horizontalLayout;
     QListWidget *listWidget;
     QStackedWidget *stackedWidget;
     QWidget *page_1;
-    QLabel *label_title_1;
-    QLabel *label_1_2;
-    QLabel *label_1_3;
-    QTextBrowser *textBrowser;
+    QGridLayout *gridLayout_2;
+    QVBoxLayout *verticalLayout_6;
+    QHBoxLayout *horizontalLayout_4;
+    QLabel *label_title_7;
+    QCommandLinkButton *commandLinkButton_5;
+    QTextBrowser *textBrowser_6;
     QWidget *page_2;
     QLabel *label_title_2;
     QWidget *page_3;
@@ -58,11 +62,9 @@ public:
     QWidget *page_6;
     QLabel *label_title_6;
     QWidget *page_7;
-    QLabel *label_title_7;
     QWidget *page_8;
     QLabel *label_title_8;
     QFrame *line;
-    QLabel *label;
     QHBoxLayout *horizontalLayout_6;
     QHBoxLayout *horizontalLayout_5;
     QGroupBox *groupBox_ChLst_Ubt;
@@ -95,7 +97,7 @@ public:
     {
         if (Dialog_Pkg_Support->objectName().isEmpty())
             Dialog_Pkg_Support->setObjectName(QStringLiteral("Dialog_Pkg_Support"));
-        Dialog_Pkg_Support->resize(1000, 720);
+        Dialog_Pkg_Support->resize(1144, 723);
         Dialog_Pkg_Support->setStyleSheet(QLatin1String("QListWidget::item {\n"
 "    height: 40px;\n"
 "    border: 1px solid silver;\n"
@@ -134,7 +136,9 @@ public:
                         "left: 40px;\n"
 "    padding: 0px 5px 0px 5px;\n"
 "}"));
-        verticalLayout_5 = new QVBoxLayout(Dialog_Pkg_Support);
+        gridLayout_3 = new QGridLayout(Dialog_Pkg_Support);
+        gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
+        verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
@@ -153,7 +157,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(listWidget->sizePolicy().hasHeightForWidth());
         listWidget->setSizePolicy(sizePolicy);
-        listWidget->setMinimumSize(QSize(256, 400));
+        listWidget->setMinimumSize(QSize(265, 400));
         listWidget->setStyleSheet(QStringLiteral("font: 12pt \"Ubuntu\";"));
 
         horizontalLayout->addWidget(listWidget);
@@ -162,21 +166,42 @@ public:
         stackedWidget->setObjectName(QStringLiteral("stackedWidget"));
         page_1 = new QWidget();
         page_1->setObjectName(QStringLiteral("page_1"));
-        label_title_1 = new QLabel(page_1);
-        label_title_1->setObjectName(QStringLiteral("label_title_1"));
-        label_title_1->setGeometry(QRect(40, 10, 291, 31));
-        label_title_1->setStyleSheet(QStringLiteral(""));
-        label_1_2 = new QLabel(page_1);
-        label_1_2->setObjectName(QStringLiteral("label_1_2"));
-        label_1_2->setGeometry(QRect(40, 64, 651, 21));
-        label_1_2->setStyleSheet(QStringLiteral("font: 13pt \"Ubuntu\";"));
-        label_1_3 = new QLabel(page_1);
-        label_1_3->setObjectName(QStringLiteral("label_1_3"));
-        label_1_3->setGeometry(QRect(40, 190, 381, 21));
-        label_1_3->setStyleSheet(QStringLiteral("font: 13pt \"Ubuntu\";"));
-        textBrowser = new QTextBrowser(page_1);
-        textBrowser->setObjectName(QStringLiteral("textBrowser"));
-        textBrowser->setGeometry(QRect(40, 250, 561, 61));
+        gridLayout_2 = new QGridLayout(page_1);
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
+        gridLayout_2->setContentsMargins(5, 5, 5, 5);
+        verticalLayout_6 = new QVBoxLayout();
+        verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        label_title_7 = new QLabel(page_1);
+        label_title_7->setObjectName(QStringLiteral("label_title_7"));
+        label_title_7->setMinimumSize(QSize(380, 30));
+        label_title_7->setStyleSheet(QStringLiteral(""));
+
+        horizontalLayout_4->addWidget(label_title_7);
+
+        commandLinkButton_5 = new QCommandLinkButton(page_1);
+        commandLinkButton_5->setObjectName(QStringLiteral("commandLinkButton_5"));
+        commandLinkButton_5->setMinimumSize(QSize(111, 41));
+        commandLinkButton_5->setFocusPolicy(Qt::NoFocus);
+        commandLinkButton_5->setStyleSheet(QStringLiteral("font: italic 13pt \"Ubuntu\";"));
+
+        horizontalLayout_4->addWidget(commandLinkButton_5);
+
+
+        verticalLayout_6->addLayout(horizontalLayout_4);
+
+        textBrowser_6 = new QTextBrowser(page_1);
+        textBrowser_6->setObjectName(QStringLiteral("textBrowser_6"));
+        textBrowser_6->setMinimumSize(QSize(841, 351));
+        textBrowser_6->setStyleSheet(QLatin1String("background-color: transparent;\n"
+"border: 0px;"));
+
+        verticalLayout_6->addWidget(textBrowser_6);
+
+
+        gridLayout_2->addLayout(verticalLayout_6, 0, 0, 1, 1);
+
         stackedWidget->addWidget(page_1);
         page_2 = new QWidget();
         page_2->setObjectName(QStringLiteral("page_2"));
@@ -231,10 +256,6 @@ public:
         stackedWidget->addWidget(page_6);
         page_7 = new QWidget();
         page_7->setObjectName(QStringLiteral("page_7"));
-        label_title_7 = new QLabel(page_7);
-        label_title_7->setObjectName(QStringLiteral("label_title_7"));
-        label_title_7->setGeometry(QRect(40, 10, 291, 31));
-        label_title_7->setStyleSheet(QStringLiteral(""));
         stackedWidget->addWidget(page_7);
         page_8 = new QWidget();
         page_8->setObjectName(QStringLiteral("page_8"));
@@ -256,13 +277,6 @@ public:
 
         verticalLayout_5->addWidget(line);
 
-        label = new QLabel(Dialog_Pkg_Support);
-        label->setObjectName(QStringLiteral("label"));
-        label->setStyleSheet(QLatin1String("font: 16pt \"Ubuntu\";\n"
-"font-weight: bold;"));
-
-        verticalLayout_5->addWidget(label);
-
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
         horizontalLayout_6->setContentsMargins(-1, 10, -1, -1);
@@ -276,13 +290,13 @@ public:
         groupBox_ChLst_Ubt->setStyleSheet(QStringLiteral(""));
         horizontalLayout_3 = new QHBoxLayout(groupBox_ChLst_Ubt);
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        horizontalLayout_3->setContentsMargins(10, 10, 10, 10);
+        horizontalLayout_3->setContentsMargins(10, 10, 10, 0);
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 5, -1, -1);
         groupBox_ChLst_Prp = new QGroupBox(groupBox_ChLst_Ubt);
         groupBox_ChLst_Prp->setObjectName(QStringLiteral("groupBox_ChLst_Prp"));
-        groupBox_ChLst_Prp->setMinimumSize(QSize(221, 181));
+        groupBox_ChLst_Prp->setMinimumSize(QSize(220, 160));
         groupBox_ChLst_Prp->setStyleSheet(QStringLiteral("border: 0px;"));
         verticalLayout_2 = new QVBoxLayout(groupBox_ChLst_Prp);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
@@ -324,7 +338,7 @@ public:
 
         groupBox_ChLst_Pkg = new QGroupBox(groupBox_ChLst_Ubt);
         groupBox_ChLst_Pkg->setObjectName(QStringLiteral("groupBox_ChLst_Pkg"));
-        groupBox_ChLst_Pkg->setMinimumSize(QSize(221, 181));
+        groupBox_ChLst_Pkg->setMinimumSize(QSize(220, 160));
         groupBox_ChLst_Pkg->setStyleSheet(QStringLiteral("border: 0px ;"));
         verticalLayout_4 = new QVBoxLayout(groupBox_ChLst_Pkg);
         verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
@@ -375,8 +389,8 @@ public:
 
         groupBox_Btn = new QGroupBox(Dialog_Pkg_Support);
         groupBox_Btn->setObjectName(QStringLiteral("groupBox_Btn"));
-        groupBox_Btn->setMinimumSize(QSize(213, 235));
-        groupBox_Btn->setMaximumSize(QSize(213, 235));
+        groupBox_Btn->setMinimumSize(QSize(212, 180));
+        groupBox_Btn->setMaximumSize(QSize(212, 16777215));
         groupBox_Btn->setStyleSheet(QLatin1String("QPushButton {\n"
 "    border: 3px solid silver;\n"
 "    border-radius: 6px;\n"
@@ -430,9 +444,12 @@ public:
         verticalLayout_5->addLayout(horizontalLayout_6);
 
 
+        gridLayout_3->addLayout(verticalLayout_5, 0, 0, 1, 1);
+
+
         retranslateUi(Dialog_Pkg_Support);
 
-        stackedWidget->setCurrentIndex(6);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Dialog_Pkg_Support);
@@ -445,7 +462,7 @@ public:
         const bool __sortingEnabled = listWidget->isSortingEnabled();
         listWidget->setSortingEnabled(false);
         QListWidgetItem *___qlistwidgetitem = listWidget->item(0);
-        ___qlistwidgetitem->setText(QApplication::translate("Dialog_Pkg_Support", "1. Get Models from Robot Studio", 0));
+        ___qlistwidgetitem->setText(QApplication::translate("Dialog_Pkg_Support", "1. Export Models from RobotStudio", 0));
         QListWidgetItem *___qlistwidgetitem1 = listWidget->item(1);
         ___qlistwidgetitem1->setText(QApplication::translate("Dialog_Pkg_Support", "2. Create Meshes Package", 0));
         QListWidgetItem *___qlistwidgetitem2 = listWidget->item(2);
@@ -462,9 +479,34 @@ public:
         ___qlistwidgetitem7->setText(QApplication::translate("Dialog_Pkg_Support", "8. \347\225\231\347\251\272", 0));
         listWidget->setSortingEnabled(__sortingEnabled);
 
-        label_title_1->setText(QApplication::translate("Dialog_Pkg_Support", "\350\257\264\346\230\216", 0));
-        label_1_2->setText(QApplication::translate("Dialog_Pkg_Support", "\350\257\264\346\230\216\344\270\200\344\270\213\346\234\254\345\212\251\346\211\213\347\232\204\347\233\256\347\232\204\343\200\201\344\270\200\345\217\245\350\257\235\344\273\213\347\273\215\344\270\200\344\270\213ROS-I\345\222\214RS\343\200\201\344\275\277\347\224\250\347\232\204ROS\345\222\214RS\347\232\204\347\211\210\346\234\254\345\217\267\347\255\211", 0));
-        label_1_3->setText(QApplication::translate("Dialog_Pkg_Support", "You can get its documents and 3D Models here:", 0));
+        label_title_7->setText(QApplication::translate("Dialog_Pkg_Support", "Export Models from RobotStudio", 0));
+        commandLinkButton_5->setText(QApplication::translate("Dialog_Pkg_Support", "Next Step", 0));
+        textBrowser_6->setHtml(QApplication::translate("Dialog_Pkg_Support", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">In order to create meshes folder for a robot, its 3D models of robot links are required.It's recommend that, all the models are exported from ABB</span><span style=\" font-size:12pt; color:#e01212;\"> </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">RobotStudio</span><span style=\" font-size:12pt; font-weight:600; color:#000000; vertical-align:super;\">\302\256</span><span style=\" font-size:12pt;\"> . These models occupy high quality details and standardized default coordinate system, which"
+                        " will simplify the process.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600;\">Steps to export Models of a ABB Robot from </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">RobotStudio</span><span style=\" font-size:12pt; font-weight:600; color:#000000; vertical-align:super;\">\302\256</span><span style=\" font-size:12pt;\"> (take </span><span style=\" font-size:12pt; font-style:italic;\">ABB IRB 140 </span><span style=\" font-size:12pt;\">for example)</span><span style=\" font-size:12pt; font-weight:600;\">:</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; fo"
+                        "nt-weight:600;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt; font-weight:600;\">1.  </span><span style=\" font-size:12pt;\">Open RobotStudio on your </span><span style=\" font-size:12pt; font-weight:600;\">Windows </span><span style=\" font-size:12pt;\">Computer and create a new solution with the robot controller IRB140;</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><img src=\":/pic/expt_mdl_step_1.png\" /></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt; "
+                        "font-weight:600;\">2.  </span><span style=\" font-size:12pt;\">In the </span><span style=\" font-size:12pt; font-style:italic;\">Layout </span><span style=\" font-size:12pt;\">browser, right-click the station and select Export Geometry.</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><img src=\":/pic/expt_mdl_step_2.png\" /></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt; font-weight:600;\">3.  </span><span style=\" font-size:12pt;\">Select </span><span style=\" font-size:12pt; font-weight:600;\">STL</span><span style=\" font-size:12pt;\"> from the Format list on the </span><span style=\" font-siz"
+                        "e:12pt; font-style:italic;\">ExportGeometry:Station</span><span style=\" font-size:12pt;\"> pane</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><img src=\":/pic/expt_mdl_step_3.png\" /></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt; font-weight:600;\">4.  \343\200\220</span><span style=\" font-size:12pt;\">Check </span><span style=\" font-size:12pt; font-style:italic;\">Binary format</span><span style=\" font-size:12pt;\"> and</span><span style=\" font-size:12pt; font-weight:600;\">\343\200\221</span><span style=\" font-size:12pt;\"> change the value of </span><span style=\" font-size:12pt; font"
+                        "-style:italic;\">Scale</span><span style=\" font-size:12pt;\"> to </span><span style=\" font-size:12pt; font-weight:600;\">1</span><span style=\" font-size:12pt;\">. </span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><img src=\":/pic/expt_mdl_step_4.png\" /></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt; font-weight:600;\">5.  </span><span style=\" font-size:12pt;\">Click </span><span style=\" font-size:12pt; font-style:italic;\">Export</span><span style=\" font-size:12pt;\"> and select the destination folder.</span></p></body></html>", 0));
         label_title_2->setText(QApplication::translate("Dialog_Pkg_Support", "Build Meshes from Model", 0));
         label_title_3->setText(QApplication::translate("Dialog_Pkg_Support", "Create Support Package", 0));
         label_3_2->setText(QApplication::translate("Dialog_Pkg_Support", "Before creating the URDF file for the robot, let's create a ROS package in the catkin\n"
@@ -497,17 +539,15 @@ public:
          << QApplication::translate("Dialog_Pkg_Support", "ABB IRB 8700", 0)
         );
         label_title_6->setText(QApplication::translate("Dialog_Pkg_Support", "Create MoveIt Config Package", 0));
-        label_title_7->setText(QApplication::translate("Dialog_Pkg_Support", "Test", 0));
         label_title_8->setText(QApplication::translate("Dialog_Pkg_Support", "Prepair the RobotStudio", 0));
-        label->setText(QApplication::translate("Dialog_Pkg_Support", "Checklist:", 0));
-        groupBox_ChLst_Ubt->setTitle(QApplication::translate("Dialog_Pkg_Support", "Support Package", 0));
-        groupBox_ChLst_Prp->setTitle(QApplication::translate("Dialog_Pkg_Support", "Meshes & URDF:", 0));
+        groupBox_ChLst_Ubt->setTitle(QApplication::translate("Dialog_Pkg_Support", "Checklist : Support Package", 0));
+        groupBox_ChLst_Prp->setTitle(QApplication::translate("Dialog_Pkg_Support", "Meshes and URDF:", 0));
         checkBox_1->setText(QApplication::translate("Dialog_Pkg_Support", "Install ROS", 0));
         checkBox_2->setText(QApplication::translate("Dialog_Pkg_Support", "Install ROS-I", 0));
         checkBox_3->setText(QApplication::translate("Dialog_Pkg_Support", "Create Workspace", 0));
         checkBox_4->setText(QApplication::translate("Dialog_Pkg_Support", "Add ABB Driver Package", 0));
         checkBox_5->setText(QApplication::translate("Dialog_Pkg_Support", "CheckBox", 0));
-        groupBox_ChLst_Pkg->setTitle(QApplication::translate("Dialog_Pkg_Support", "Config & Launch:", 0));
+        groupBox_ChLst_Pkg->setTitle(QApplication::translate("Dialog_Pkg_Support", "Config and Launch:", 0));
         checkBox_7->setText(QApplication::translate("Dialog_Pkg_Support", "Support Package", 0));
         checkBox_9->setText(QApplication::translate("Dialog_Pkg_Support", "MoveIt Config Package", 0));
         checkBox_8->setText(QApplication::translate("Dialog_Pkg_Support", "Create Workspace", 0));

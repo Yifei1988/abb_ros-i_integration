@@ -29,6 +29,10 @@ AsstMainWindow::~AsstMainWindow()
 //当点击对应按钮时打开DialogSupportPackage
 void AsstMainWindow::on_btn_to_support_clicked() //绑定信号发射源是btn_to_support的槽函数
 {
+    QString robotType=ui->comboBox_RbtTyp->currentText();
+    qDebug () << robotType;//测试用
+
+
     dialog_sppt = new Dialog_Pkg_Support (this);
     dialog_sppt->setWindowTitle("Create Support Package");
     dialog_sppt->setModal(true);//模态对话框，打开时阻塞主窗口

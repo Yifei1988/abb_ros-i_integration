@@ -512,7 +512,11 @@ qrc_style.cpp: ../AbbRosI-Intg-Asst/style.qrc \
 
 qrc_image.cpp: ../AbbRosI-Intg-Asst/image.qrc \
 		../AbbRosI-Intg-Asst/pic/catkin_ws_layout.png \
+		../AbbRosI-Intg-Asst/pic/expt_mdl_step_2.png \
+		../AbbRosI-Intg-Asst/pic/expt_mdl_step_1.png \
 		../AbbRosI-Intg-Asst/pic/indigoigloo.png \
+		../AbbRosI-Intg-Asst/pic/expt_mdl_step_4.png \
+		../AbbRosI-Intg-Asst/pic/expt_mdl_step_3.png \
 		../AbbRosI-Intg-Asst/icon/ros_logo.png \
 		../AbbRosI-Intg-Asst/icon/rosi_logo.png \
 		../AbbRosI-Intg-Asst/icon/indigo.png \
@@ -1059,6 +1063,8 @@ asstmainwindow.o: ../AbbRosI-Intg-Asst/asstmainwindow.cpp ../AbbRosI-Intg-Asst/a
 		/opt/Qt/5.4/gcc_64/include/QtGui/qtextdocument.h \
 		/opt/Qt/5.4/gcc_64/include/QtGui/qtextcursor.h \
 		/opt/Qt/5.4/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QToolButton \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qtoolbutton.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt/5.4/gcc_64/include/QtCore/QFileInfo \
@@ -1211,6 +1217,9 @@ dialog_pkg_support.o: ../AbbRosI-Intg-Asst/dialog_pkg_support.cpp ../AbbRosI-Int
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qrubberband.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt/5.4/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/QCommandLinkButton \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qcommandlinkbutton.h \
+		/opt/Qt/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QFrame \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QGridLayout \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qgridlayout.h \
@@ -1231,7 +1240,6 @@ dialog_pkg_support.o: ../AbbRosI-Intg-Asst/dialog_pkg_support.cpp ../AbbRosI-Int
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlistwidget.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qlistview.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt/5.4/gcc_64/include/QtWidgets/qpushbutton.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QStackedWidget \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/qstackedwidget.h \
 		/opt/Qt/5.4/gcc_64/include/QtWidgets/QTextBrowser \

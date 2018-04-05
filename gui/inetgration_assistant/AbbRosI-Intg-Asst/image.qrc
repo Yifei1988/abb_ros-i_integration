@@ -9,5 +9,9 @@
         <file>icon/btn_dl_pkg_abb.png</file>
         <file>icon/btn_cp_pkg_abbdriver.png</file>
         <file>icon/attention.png</file>
+        <file>pic/expt_mdl_step_1.png</file>
+        <file>pic/expt_mdl_step_2.png</file>
+        <file>pic/expt_mdl_step_3.png</file>
+        <file>pic/expt_mdl_step_4.png</file>
     </qresource>
 </RCC>

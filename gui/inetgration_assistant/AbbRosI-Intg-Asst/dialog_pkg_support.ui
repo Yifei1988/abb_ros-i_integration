@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>720</height>
+    <width>1144</width>
+    <height>723</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -52,670 +52,758 @@ QGroupBox#groupBox_ChLst_Ubt::title, #groupBox_ChLst_Win::title{
     padding: 0px 5px 0px 5px;
 }</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_5">
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_5">
      <item>
-      <widget class="QListWidget" name="listWidget">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>256</width>
-         <height>400</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;Ubuntu&quot;;</string>
-       </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <property name="text">
-         <string>1. Get Models from Robot Studio</string>
-        </property>
+        <widget class="QListWidget" name="listWidget">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>265</width>
+           <height>400</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;Ubuntu&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1. Export Models from RobotStudio</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>2. Create Meshes Package</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3. Create URDF Package</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>4. Create Config Package</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>5. Create Launch Package</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>6. 留空</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>7. 留空</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>8. 留空</string>
+          </property>
+         </item>
+        </widget>
        </item>
        <item>
-        <property name="text">
-         <string>2. Create Meshes Package</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>3. Create URDF Package</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>4. Create Config Package</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>5. Create Launch Package</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>6. 留空</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>7. 留空</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>8. 留空</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item>
-      <widget class="QStackedWidget" name="stackedWidget">
-       <property name="currentIndex">
-        <number>6</number>
-       </property>
-       <widget class="QWidget" name="page_1">
-        <widget class="QLabel" name="label_title_1">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>10</y>
-           <width>291</width>
-           <height>31</height>
-          </rect>
+        <widget class="QStackedWidget" name="stackedWidget">
+         <property name="currentIndex">
+          <number>1</number>
          </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>说明</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_1_2">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>64</y>
-           <width>651</width>
-           <height>21</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font: 13pt &quot;Ubuntu&quot;;</string>
-         </property>
-         <property name="text">
-          <string>说明一下本助手的目的、一句话介绍一下ROS-I和RS、使用的ROS和RS的版本号等</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_1_3">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>190</y>
-           <width>381</width>
-           <height>21</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font: 13pt &quot;Ubuntu&quot;;</string>
-         </property>
-         <property name="text">
-          <string>You can get its documents and 3D Models here:</string>
-         </property>
-        </widget>
-        <widget class="QTextBrowser" name="textBrowser">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>250</y>
-           <width>561</width>
-           <height>61</height>
-          </rect>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QWidget" name="page_2">
-        <widget class="QLabel" name="label_title_2">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>10</y>
-           <width>311</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>Build Meshes from Model</string>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QWidget" name="page_3">
-        <widget class="QLabel" name="label_title_3">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>10</y>
-           <width>291</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>Create Support Package</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_3_2">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>80</y>
-           <width>651</width>
-           <height>61</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font: 13pt &quot;Ubuntu&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Before creating the URDF file for the robot, let's create a ROS package in the catkin
-workspace so that the robot model keeps using the following command:</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_3_3">
-         <property name="geometry">
-          <rect>
-           <x>90</x>
-           <y>160</y>
-           <width>491</width>
-           <height>61</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(44, 94, 230);
-font: 12pt &quot;Ubuntu Mono&quot; bold;</string>
-         </property>
-         <property name="text">
-          <string>$ catkin_create_pkg mastering_ros_robot_description_pkg roscpp tf 
-geometry_msgs urdf rviz xacro</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_3_4">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>260</y>
-           <width>661</width>
-           <height>111</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font: 13pt &quot;Ubuntu&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Before creating the urdf file for this robot, let's create three folders called urdf,
-meshes, and launch inside the package folder. The urdf folder can be used to keep the 
-urdf/xacro files that we are going to create. The meshes folder keeps the meshes that 
-we need to include in the urdf file and the launch folder keeps the ROS launch files.</string>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QWidget" name="page_4">
-        <widget class="QLabel" name="label_title_4">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>10</y>
-           <width>291</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>Build URDF Description</string>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QWidget" name="page_5">
-        <widget class="QLabel" name="label_title_5">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>10</y>
-           <width>291</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>Build Launch Files</string>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="comboBox">
-         <property name="geometry">
-          <rect>
-           <x>50</x>
-           <y>90</y>
-           <width>481</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <item>
-          <property name="text">
-           <string>ABB IRB 120</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ABB IRB 1200</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ABB IRB 140</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ABB IRB 1410</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ABB IRB 1600</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ABB IRB 2400</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ABB IRB 260</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ABB IRB 2600</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ABB IRB 4400</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ABB IRB 460</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ABB IRB 4600</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ABB IRB 660</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ABB IRB 6620</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ABB IRB 6640</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ABB IRB 760</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ABB IRB 8700</string>
-          </property>
-         </item>
-        </widget>
-       </widget>
-       <widget class="QWidget" name="page_6">
-        <widget class="QLabel" name="label_title_6">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>10</y>
-           <width>291</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>Create MoveIt Config Package</string>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QWidget" name="page_7">
-        <widget class="QLabel" name="label_title_7">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>10</y>
-           <width>291</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>Test</string>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QWidget" name="page_8">
-        <widget class="QLabel" name="label_title_8">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>10</y>
-           <width>291</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>Prepair the RobotStudio</string>
-         </property>
-        </widget>
-       </widget>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <widget class="Line" name="line">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="label">
-     <property name="styleSheet">
-      <string notr="true">font: 16pt &quot;Ubuntu&quot;;
-font-weight: bold;</string>
-     </property>
-     <property name="text">
-      <string>Checklist:</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_6">
-     <property name="topMargin">
-      <number>10</number>
-     </property>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_5">
-       <property name="spacing">
-        <number>10</number>
-       </property>
-       <property name="leftMargin">
-        <number>10</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>10</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QGroupBox" name="groupBox_ChLst_Ubt">
-         <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="title">
-          <string>Support Package</string>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <property name="leftMargin">
-           <number>10</number>
-          </property>
-          <property name="topMargin">
-           <number>10</number>
-          </property>
-          <property name="rightMargin">
-           <number>10</number>
-          </property>
-          <property name="bottomMargin">
-           <number>10</number>
-          </property>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <property name="leftMargin">
-             <number>0</number>
-            </property>
-            <property name="topMargin">
-             <number>5</number>
-            </property>
+         <widget class="QWidget" name="page_1">
+          <layout class="QGridLayout" name="gridLayout_2">
+           <property name="leftMargin">
+            <number>5</number>
+           </property>
+           <property name="topMargin">
+            <number>5</number>
+           </property>
+           <property name="rightMargin">
+            <number>5</number>
+           </property>
+           <property name="bottomMargin">
+            <number>5</number>
+           </property>
+           <item row="0" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="QLabel" name="label_title_7">
+                 <property name="minimumSize">
+                  <size>
+                   <width>380</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>Export Models from RobotStudio</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCommandLinkButton" name="commandLinkButton_5">
+                 <property name="minimumSize">
+                  <size>
+                   <width>111</width>
+                   <height>41</height>
+                  </size>
+                 </property>
+                 <property name="focusPolicy">
+                  <enum>Qt::NoFocus</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: italic 13pt &quot;Ubuntu&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>Next Step</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QTextBrowser" name="textBrowser_6">
+               <property name="minimumSize">
+                <size>
+                 <width>841</width>
+                 <height>351</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: transparent;
+border: 0px;</string>
+               </property>
+               <property name="html">
+                <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;In order to create meshes folder for a robot, its 3D models of robot links are required.It's recommend that, all the models are exported from ABB&lt;/span&gt;&lt;span style=&quot; font-size:12pt; color:#e01212;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;RobotStudio&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#000000; vertical-align:super;&quot;&gt;®&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; . These models occupy high quality details and standardized default coordinate system, which will simplify the process.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Steps to export Models of a ABB Robot from &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;RobotStudio&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#000000; vertical-align:super;&quot;&gt;®&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; (take &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;ABB IRB 140 &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;for example)&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;1.  &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Open RobotStudio on your &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Windows &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Computer and create a new solution with the robot controller IRB140;&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;img src=&quot;:/pic/expt_mdl_step_1.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;2.  &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;In the &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Layout &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;browser, right-click the station and select Export Geometry.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;img src=&quot;:/pic/expt_mdl_step_2.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;3.  &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Select &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;STL&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; from the Format list on the &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;ExportGeometry:Station&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; pane&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;img src=&quot;:/pic/expt_mdl_step_3.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;4.  【&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Check &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Binary format&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; and&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;】&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; change the value of &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Scale&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; to &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;img src=&quot;:/pic/expt_mdl_step_4.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;5.  &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Click &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Export&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; and select the destination folder.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;6.  &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Repeat this process for the rest of links in the robot (Base ~ Link6).&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_2">
+          <widget class="QTextBrowser" name="textBrowser_7">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>60</y>
+             <width>841</width>
+             <height>411</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>841</width>
+             <height>351</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: transparent;
+border: 0px;</string>
+           </property>
+           <property name="html">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;In order to create meshes folder for a robot, its 3D models of robot links are required.It's recommend that, all the models are exported from ABB&lt;/span&gt;&lt;span style=&quot; font-size:12pt; color:#e01212;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;RobotStudio&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#000000; vertical-align:super;&quot;&gt;®&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; . These models occupy high quality details and standardized default coordinate system, which will simplify the process.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Steps to export Models of a ABB Robot from &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;RobotStudio&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#000000; vertical-align:super;&quot;&gt;®&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; (take &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;ABB IRB 140 &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;for example)&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;1.  &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Open RobotStudio on your &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Windows &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Computer and create a new solution with the robot controller IRB140;&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;img src=&quot;:/pic/expt_mdl_step_1.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;2.  &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;In the &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Layout &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;browser, right-click the station and select Export Geometry.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;img src=&quot;:/pic/expt_mdl_step_2.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;3.  &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Select &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;STL&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; from the Format list on the &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;ExportGeometry:Station&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; pane&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;img src=&quot;:/pic/expt_mdl_step_3.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;4.  【&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Check &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Binary format&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; and&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;】&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; change the value of &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Scale&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; to &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;img src=&quot;:/pic/expt_mdl_step_4.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;5.  &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Click &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Export&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; and select the destination folder.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;6.  &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Repeat this process for the rest of links in the robot (Base ~ Link6).&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+          <widget class="QWidget" name="">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>10</y>
+             <width>556</width>
+             <height>43</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
             <item>
-             <widget class="QGroupBox" name="groupBox_ChLst_Prp">
+             <widget class="QLabel" name="label_title_2">
               <property name="minimumSize">
                <size>
-                <width>221</width>
-                <height>181</height>
+                <width>380</width>
+                <height>30</height>
                </size>
               </property>
               <property name="styleSheet">
-               <string notr="true">border: 0px;</string>
+               <string notr="true"/>
               </property>
-              <property name="title">
-               <string>Meshes &amp; URDF:</string>
+              <property name="text">
+               <string>Create Meshes Package</string>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_2">
-               <property name="leftMargin">
-                <number>5</number>
-               </property>
-               <property name="topMargin">
-                <number>15</number>
-               </property>
-               <property name="rightMargin">
-                <number>10</number>
-               </property>
-               <property name="bottomMargin">
-                <number>10</number>
-               </property>
-               <item>
-                <layout class="QVBoxLayout" name="verticalLayout">
-                 <property name="spacing">
-                  <number>10</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>5</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>5</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>5</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>5</number>
-                 </property>
-                 <item>
-                  <widget class="QCheckBox" name="checkBox_1">
-                   <property name="text">
-                    <string>Install ROS</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QCheckBox" name="checkBox_2">
-                   <property name="text">
-                    <string>Install ROS-I</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QCheckBox" name="checkBox_3">
-                   <property name="text">
-                    <string>Create Workspace</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QCheckBox" name="checkBox_4">
-                   <property name="text">
-                    <string>Add ABB Driver Package</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QCheckBox" name="checkBox_5">
-                   <property name="text">
-                    <string>CheckBox</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </item>
-              </layout>
              </widget>
             </item>
             <item>
-             <widget class="QGroupBox" name="groupBox_ChLst_Pkg">
+             <widget class="QCommandLinkButton" name="commandLinkButton_6">
               <property name="minimumSize">
                <size>
-                <width>221</width>
-                <height>181</height>
+                <width>111</width>
+                <height>41</height>
                </size>
               </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
               <property name="styleSheet">
-               <string notr="true">border: 0px ;</string>
+               <string notr="true">font: italic 13pt &quot;Ubuntu&quot;;</string>
               </property>
-              <property name="title">
-               <string>Config &amp; Launch:</string>
+              <property name="text">
+               <string>Next Step</string>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_4">
-               <property name="leftMargin">
-                <number>5</number>
-               </property>
-               <property name="topMargin">
-                <number>15</number>
-               </property>
-               <property name="rightMargin">
-                <number>10</number>
-               </property>
-               <property name="bottomMargin">
-                <number>10</number>
-               </property>
-               <item>
-                <layout class="QVBoxLayout" name="verticalLayout_3">
-                 <property name="spacing">
-                  <number>10</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>5</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>5</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>5</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>5</number>
-                 </property>
-                 <item>
-                  <widget class="QCheckBox" name="checkBox_7">
-                   <property name="text">
-                    <string>Support Package</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QCheckBox" name="checkBox_9">
-                   <property name="text">
-                    <string>MoveIt Config Package</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QCheckBox" name="checkBox_8">
-                   <property name="text">
-                    <string>Create Workspace</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QCheckBox" name="checkBox_10">
-                   <property name="text">
-                    <string>Add ABB Driver Package</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QCheckBox" name="checkBox_6">
-                   <property name="text">
-                    <string>CheckBox</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </item>
-              </layout>
              </widget>
             </item>
            </layout>
-          </item>
-         </layout>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_3">
+          <widget class="QLabel" name="label_title_3">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>10</y>
+             <width>291</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Create Support Package</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_3_2">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>80</y>
+             <width>651</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 13pt &quot;Ubuntu&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Before creating the URDF file for the robot, let's create a ROS package in the catkin
+workspace so that the robot model keeps using the following command:</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_3_3">
+           <property name="geometry">
+            <rect>
+             <x>90</x>
+             <y>160</y>
+             <width>491</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(44, 94, 230);
+font: 12pt &quot;Ubuntu Mono&quot; bold;</string>
+           </property>
+           <property name="text">
+            <string>$ catkin_create_pkg mastering_ros_robot_description_pkg roscpp tf 
+geometry_msgs urdf rviz xacro</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_3_4">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>260</y>
+             <width>661</width>
+             <height>111</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 13pt &quot;Ubuntu&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Before creating the urdf file for this robot, let's create three folders called urdf,
+meshes, and launch inside the package folder. The urdf folder can be used to keep the 
+urdf/xacro files that we are going to create. The meshes folder keeps the meshes that 
+we need to include in the urdf file and the launch folder keeps the ROS launch files.</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_4">
+          <widget class="QLabel" name="label_title_4">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>10</y>
+             <width>291</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Build URDF Description</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_5">
+          <widget class="QLabel" name="label_title_5">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>10</y>
+             <width>291</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Build Launch Files</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>90</y>
+             <width>481</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>ABB IRB 120</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ABB IRB 1200</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ABB IRB 140</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ABB IRB 1410</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ABB IRB 1600</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ABB IRB 2400</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ABB IRB 260</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ABB IRB 2600</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ABB IRB 4400</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ABB IRB 460</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ABB IRB 4600</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ABB IRB 660</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ABB IRB 6620</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ABB IRB 6640</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ABB IRB 760</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ABB IRB 8700</string>
+            </property>
+           </item>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_6">
+          <widget class="QLabel" name="label_title_6">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>10</y>
+             <width>291</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Create MoveIt Config Package</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_7"/>
+         <widget class="QWidget" name="page_8">
+          <widget class="QLabel" name="label_title_8">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>10</y>
+             <width>291</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Prepair the RobotStudio</string>
+           </property>
+          </widget>
+         </widget>
         </widget>
        </item>
       </layout>
      </item>
      <item>
-      <widget class="QGroupBox" name="groupBox_Btn">
-       <property name="minimumSize">
-        <size>
-         <width>213</width>
-         <height>235</height>
-        </size>
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
-       <property name="maximumSize">
-        <size>
-         <width>213</width>
-         <height>235</height>
-        </size>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <property name="topMargin">
+        <number>10</number>
        </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton {
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QGroupBox" name="groupBox_ChLst_Ubt">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="title">
+            <string>Checklist : Support Package</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
+            <property name="topMargin">
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <item>
+               <widget class="QGroupBox" name="groupBox_ChLst_Prp">
+                <property name="minimumSize">
+                 <size>
+                  <width>220</width>
+                  <height>160</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border: 0px;</string>
+                </property>
+                <property name="title">
+                 <string>Meshes and URDF:</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_2">
+                 <property name="leftMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>15</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>10</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>10</number>
+                 </property>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout">
+                   <property name="spacing">
+                    <number>10</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>5</number>
+                   </property>
+                   <item>
+                    <widget class="QCheckBox" name="checkBox_1">
+                     <property name="text">
+                      <string>Install ROS</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="checkBox_2">
+                     <property name="text">
+                      <string>Install ROS-I</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="checkBox_3">
+                     <property name="text">
+                      <string>Create Workspace</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="checkBox_4">
+                     <property name="text">
+                      <string>Add ABB Driver Package</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="checkBox_5">
+                     <property name="text">
+                      <string>CheckBox</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox_ChLst_Pkg">
+                <property name="minimumSize">
+                 <size>
+                  <width>220</width>
+                  <height>160</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border: 0px ;</string>
+                </property>
+                <property name="title">
+                 <string>Config and Launch:</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_4">
+                 <property name="leftMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>15</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>10</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>10</number>
+                 </property>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_3">
+                   <property name="spacing">
+                    <number>10</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>5</number>
+                   </property>
+                   <item>
+                    <widget class="QCheckBox" name="checkBox_7">
+                     <property name="text">
+                      <string>Support Package</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="checkBox_9">
+                     <property name="text">
+                      <string>MoveIt Config Package</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="checkBox_8">
+                     <property name="text">
+                      <string>Create Workspace</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="checkBox_10">
+                     <property name="text">
+                      <string>Add ABB Driver Package</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="checkBox_6">
+                     <property name="text">
+                      <string>CheckBox</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_Btn">
+         <property name="minimumSize">
+          <size>
+           <width>212</width>
+           <height>180</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>212</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
     border: 3px solid silver;
     border-radius: 6px;
     background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(214, 214, 214), stop:0.50001 rgb(236, 236, 236));
@@ -731,80 +819,82 @@ QPushButton:hover {
     background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(240, 120, 70), stop:0.50001 rgb(255, 202, 146));
  }
 </string>
-       </property>
-       <property name="title">
-        <string/>
-       </property>
-       <layout class="QGridLayout" name="gridLayout">
-        <property name="leftMargin">
-         <number>15</number>
-        </property>
-        <property name="topMargin">
-         <number>0</number>
-        </property>
-        <property name="rightMargin">
-         <number>15</number>
-        </property>
-        <property name="bottomMargin">
-         <number>0</number>
-        </property>
-        <item row="0" column="0">
-         <layout class="QVBoxLayout" name="verticalLayout_7">
-          <property name="spacing">
-           <number>6</number>
+         </property>
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <property name="leftMargin">
+           <number>15</number>
           </property>
-          <item>
-           <widget class="QPushButton" name="pushButton_1">
-            <property name="minimumSize">
-             <size>
-              <width>100</width>
-              <height>50</height>
-             </size>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>15</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <property name="spacing">
+             <number>6</number>
             </property>
-            <property name="focusPolicy">
-             <enum>Qt::NoFocus</enum>
-            </property>
-            <property name="text">
-             <string>PushButton</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_2">
-            <property name="minimumSize">
-             <size>
-              <width>100</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="focusPolicy">
-             <enum>Qt::NoFocus</enum>
-            </property>
-            <property name="text">
-             <string>PushButton</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_3">
-            <property name="minimumSize">
-             <size>
-              <width>100</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="focusPolicy">
-             <enum>Qt::NoFocus</enum>
-            </property>
-            <property name="text">
-             <string>PushButton</string>
-            </property>
-           </widget>
+            <item>
+             <widget class="QPushButton" name="pushButton_1">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string>PushButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_2">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string>PushButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_3">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string>PushButton</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
          </layout>
-        </item>
-       </layout>
-      </widget>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </item>
