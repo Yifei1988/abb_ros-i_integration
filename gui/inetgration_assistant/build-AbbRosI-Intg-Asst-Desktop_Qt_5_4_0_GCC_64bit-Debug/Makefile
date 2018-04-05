@@ -511,19 +511,26 @@ qrc_style.cpp: ../AbbRosI-Intg-Asst/style.qrc \
 	/opt/Qt/5.4/gcc_64/bin/rcc -name style ../AbbRosI-Intg-Asst/style.qrc -o qrc_style.cpp
 
 qrc_image.cpp: ../AbbRosI-Intg-Asst/image.qrc \
+		../AbbRosI-Intg-Asst/pic/meshlab_step_5.png \
 		../AbbRosI-Intg-Asst/pic/catkin_ws_layout.png \
 		../AbbRosI-Intg-Asst/pic/expt_mdl_step_2.png \
+		../AbbRosI-Intg-Asst/pic/meshlab_step_4.png \
 		../AbbRosI-Intg-Asst/pic/expt_mdl_step_1.png \
+		../AbbRosI-Intg-Asst/pic/meshlab_step_3.png \
 		../AbbRosI-Intg-Asst/pic/indigoigloo.png \
+		../AbbRosI-Intg-Asst/pic/meshes_layout.png \
 		../AbbRosI-Intg-Asst/pic/expt_mdl_step_4.png \
+		../AbbRosI-Intg-Asst/pic/meshlab_step_2.png \
 		../AbbRosI-Intg-Asst/pic/expt_mdl_step_3.png \
+		../AbbRosI-Intg-Asst/pic/meshlab_step_1.png \
 		../AbbRosI-Intg-Asst/icon/ros_logo.png \
 		../AbbRosI-Intg-Asst/icon/rosi_logo.png \
 		../AbbRosI-Intg-Asst/icon/indigo.png \
 		../AbbRosI-Intg-Asst/icon/btn_cp_pkg_abbdriver.png \
 		../AbbRosI-Intg-Asst/icon/btn_dl_pkg_abb.png \
 		../AbbRosI-Intg-Asst/icon/btn_catkinws.png \
-		../AbbRosI-Intg-Asst/icon/attention.png
+		../AbbRosI-Intg-Asst/icon/attention.png \
+		../AbbRosI-Intg-Asst/icon/meshlab_logo.png
 	/opt/Qt/5.4/gcc_64/bin/rcc -name image ../AbbRosI-Intg-Asst/image.qrc -o qrc_image.cpp
 
 compiler_moc_header_make_all: moc_asstmainwindow.cpp moc_dialog_pkg_support.cpp

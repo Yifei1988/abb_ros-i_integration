@@ -13,5 +13,12 @@
         <file>pic/expt_mdl_step_2.png</file>
         <file>pic/expt_mdl_step_3.png</file>
         <file>pic/expt_mdl_step_4.png</file>
+        <file>pic/meshes_layout.png</file>
+        <file>icon/meshlab_logo.png</file>
+        <file>pic/meshlab_step_1.png</file>
+        <file>pic/meshlab_step_2.png</file>
+        <file>pic/meshlab_step_3.png</file>
+        <file>pic/meshlab_step_4.png</file>
+        <file>pic/meshlab_step_5.png</file>
     </qresource>
 </RCC>

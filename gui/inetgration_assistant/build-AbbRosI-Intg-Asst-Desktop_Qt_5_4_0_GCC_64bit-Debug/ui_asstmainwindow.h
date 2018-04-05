@@ -46,7 +46,7 @@ public:
     QLabel *label_1_2;
     QLabel *label_1_3;
     QTextBrowser *textBrowser;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout_18;
     QLabel *label_title_1;
     QCommandLinkButton *commandLinkButton_2;
@@ -176,7 +176,7 @@ public:
     {
         if (AsstMainWindow->objectName().isEmpty())
             AsstMainWindow->setObjectName(QStringLiteral("AsstMainWindow"));
-        AsstMainWindow->resize(1207, 738);
+        AsstMainWindow->resize(1207, 763);
         AsstMainWindow->setStyleSheet(QLatin1String("QListWidget::item {\n"
 "    height: 40px;\n"
 "    border: 1px solid silver;\n"
@@ -265,22 +265,22 @@ public:
         textBrowser = new QTextBrowser(page_1);
         textBrowser->setObjectName(QStringLiteral("textBrowser"));
         textBrowser->setGeometry(QRect(40, 250, 561, 61));
-        widget = new QWidget(page_1);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(40, 10, 556, 43));
-        horizontalLayout_18 = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(page_1);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(40, 10, 556, 43));
+        horizontalLayout_18 = new QHBoxLayout(layoutWidget);
         horizontalLayout_18->setSpacing(6);
         horizontalLayout_18->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_18->setObjectName(QStringLiteral("horizontalLayout_18"));
         horizontalLayout_18->setContentsMargins(0, 0, 0, 0);
-        label_title_1 = new QLabel(widget);
+        label_title_1 = new QLabel(layoutWidget);
         label_title_1->setObjectName(QStringLiteral("label_title_1"));
         label_title_1->setMinimumSize(QSize(380, 30));
         label_title_1->setStyleSheet(QStringLiteral(""));
 
         horizontalLayout_18->addWidget(label_title_1);
 
-        commandLinkButton_2 = new QCommandLinkButton(widget);
+        commandLinkButton_2 = new QCommandLinkButton(layoutWidget);
         commandLinkButton_2->setObjectName(QStringLiteral("commandLinkButton_2"));
         commandLinkButton_2->setMinimumSize(QSize(111, 41));
         commandLinkButton_2->setFocusPolicy(Qt::NoFocus);

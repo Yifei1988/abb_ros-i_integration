@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1207</width>
-    <height>738</height>
+    <height>763</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -175,7 +175,7 @@ QGroupBox#groupBox_ChLst_Ubt::title, #groupBox_ChLst_Win::title{
            </rect>
           </property>
          </widget>
-         <widget class="QWidget" name="">
+         <widget class="QWidget" name="layoutWidget">
           <property name="geometry">
            <rect>
             <x>40</x>
