@@ -130,7 +130,7 @@ QGroupBox#groupBox_ChLst_Ubt::title, #groupBox_ChLst_Win::title{
 }</string>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>4</number>
         </property>
         <widget class="QWidget" name="page_1">
          <widget class="QLabel" name="label_1_2">
@@ -699,7 +699,7 @@ p, li { white-space: pre-wrap; }
                            <number>5</number>
                           </property>
                           <item row="0" column="0">
-                           <widget class="QPushButton" name="btnMkCatkinWs">
+                           <widget class="QPushButton" name="btnToMkCatkinWs">
                             <property name="minimumSize">
                              <size>
                               <width>130</width>
@@ -1080,7 +1080,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;•  &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff5222;&quot;&gt;config&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; that contains the specific configuration files of joint names, RViz and robot model;&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;•  &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff5222;&quot;&gt;launch&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; that contains the launch file definitions of this robot.&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Before you create the support package for a specific ABB robot, please check out if the environment is prepared ( with the help of &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Checklist&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; below).&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;After selecting an ABB industrial robot type, then you are able to click the &amp;quot;Create Support Package&amp;quot; Button in the lower right corner of this Window.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;After selecting an ABB industrial robot type, then you are able to click the &amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#21314e;&quot;&gt;Create Support Package&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;&amp;quot; Button in the lower right corner of this Window.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
@@ -1586,6 +1586,7 @@ font-weight: bold;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton {
+    color: #21314E;
     border: 3px solid silver;
     border-radius: 6px;
     background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(214, 214, 214), stop:0.50001 rgb(236, 236, 236));
@@ -1617,9 +1618,6 @@ QPushButton:hover {
              </property>
              <property name="focusPolicy">
               <enum>Qt::NoFocus</enum>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
              </property>
              <property name="text">
               <string>Create Support Pkg</string>

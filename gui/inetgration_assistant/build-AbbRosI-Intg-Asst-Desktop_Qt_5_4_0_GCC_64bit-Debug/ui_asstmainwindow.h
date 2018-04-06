@@ -93,7 +93,7 @@ public:
     QPushButton *btnToRosCatkinWs;
     QGroupBox *groupBox_22;
     QGridLayout *gridLayout_30;
-    QPushButton *btnMkCatkinWs;
+    QPushButton *btnToMkCatkinWs;
     QGraphicsView *graphic_wsLayout;
     QWidget *page_4;
     QGridLayout *gridLayout_15;
@@ -555,13 +555,13 @@ public:
         gridLayout_30->setContentsMargins(11, 11, 11, 11);
         gridLayout_30->setObjectName(QStringLiteral("gridLayout_30"));
         gridLayout_30->setContentsMargins(5, 5, 5, 5);
-        btnMkCatkinWs = new QPushButton(groupBox_22);
-        btnMkCatkinWs->setObjectName(QStringLiteral("btnMkCatkinWs"));
-        btnMkCatkinWs->setMinimumSize(QSize(130, 70));
-        btnMkCatkinWs->setMaximumSize(QSize(130, 85));
-        btnMkCatkinWs->setStyleSheet(QStringLiteral("border-image: url(:/icon/btn_mk_catkinws.png);"));
+        btnToMkCatkinWs = new QPushButton(groupBox_22);
+        btnToMkCatkinWs->setObjectName(QStringLiteral("btnToMkCatkinWs"));
+        btnToMkCatkinWs->setMinimumSize(QSize(130, 70));
+        btnToMkCatkinWs->setMaximumSize(QSize(130, 85));
+        btnToMkCatkinWs->setStyleSheet(QStringLiteral("border-image: url(:/icon/btn_mk_catkinws.png);"));
 
-        gridLayout_30->addWidget(btnMkCatkinWs, 0, 0, 1, 1);
+        gridLayout_30->addWidget(btnToMkCatkinWs, 0, 0, 1, 1);
 
 
         horizontalLayout_10->addWidget(groupBox_22);
@@ -1022,6 +1022,7 @@ public:
         groupBox_Btn->setMaximumSize(QSize(213, 235));
         groupBox_Btn->setFocusPolicy(Qt::NoFocus);
         groupBox_Btn->setStyleSheet(QLatin1String("QPushButton {\n"
+"    color: #21314E;\n"
 "    border: 3px solid silver;\n"
 "    border-radius: 6px;\n"
 "    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(214, 214, 214), stop:0.50001 rgb(236, 236, 236));\n"
@@ -1047,7 +1048,6 @@ public:
         btn_to_support->setObjectName(QStringLiteral("btn_to_support"));
         btn_to_support->setMinimumSize(QSize(100, 50));
         btn_to_support->setFocusPolicy(Qt::NoFocus);
-        btn_to_support->setStyleSheet(QStringLiteral(""));
 
         gridLayout->addWidget(btn_to_support, 1, 0, 1, 1);
 
@@ -1098,7 +1098,7 @@ public:
         retranslateUi(AsstMainWindow);
         QObject::connect(listWidget, SIGNAL(currentRowChanged(int)), stackedWidget, SLOT(setCurrentIndex(int)));
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(AsstMainWindow);
@@ -1183,7 +1183,7 @@ public:
         groupBox_21->setTitle(QString());
         btnToRosCatkinWs->setText(QString());
         groupBox_22->setTitle(QString());
-        btnMkCatkinWs->setText(QString());
+        btnToMkCatkinWs->setText(QString());
         label_title_4->setText(QApplication::translate("AsstMainWindow", "Install Package abb_driver", 0));
         commandLinkButton_4->setText(QApplication::translate("AsstMainWindow", "Next Step", 0));
         groupBox_5->setTitle(QString());
@@ -1221,7 +1221,7 @@ public:
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt; font-weight:600;\">\342\200\242  </span><span style=\" font-size:12pt; font-weight:600; color:#ff5222;\">launch</span><span style=\" font-size:12pt;\"> that contains the launch file definitions of this robot.</span></p>\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">Before you create the support package for a specific ABB robot, please check out if the environment is prepared ( with the help of </span><span style=\" font-size:12pt; font-weight:600;\">Checklist</span><span style=\" font-size:12pt;\"> below).</span></p>\n"
 "<p align=\""
-                        "justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">After selecting an ABB industrial robot type, then you are able to click the &quot;Create Support Package&quot; Button in the lower right corner of this Window.</span></p></body></html>", 0));
+                        "justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">After selecting an ABB industrial robot type, then you are able to click the &quot;</span><span style=\" font-size:12pt; font-weight:600; color:#21314e;\">Create Support Package</span><span style=\" font-size:12pt;\">&quot; Button in the lower right corner of this Window.</span></p></body></html>", 0));
         label_title_6->setText(QApplication::translate("AsstMainWindow", "Create MoveIt Config Package", 0));
         label_3_5->setText(QApplication::translate("AsstMainWindow", "Before creating the urdf file for this robot, let's create three folders called urdf,\n"
 "meshes, and launch inside the package folder. The urdf folder can be used to keep the \n"

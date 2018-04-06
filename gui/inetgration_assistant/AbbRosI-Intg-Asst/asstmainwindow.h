@@ -33,7 +33,7 @@ private slots:
     void on_btnToRosCatkinWs_clicked();
     void on_btnToDldPkgAbb_clicked();
     void on_btnToCpPkgAbbdriver_clicked();
-    void on_btnMkCatkinWs_clicked();
+    void on_btnToMkCatkinWs_clicked();
 };
 
 #endif // ASSTMAINWINDOW_H

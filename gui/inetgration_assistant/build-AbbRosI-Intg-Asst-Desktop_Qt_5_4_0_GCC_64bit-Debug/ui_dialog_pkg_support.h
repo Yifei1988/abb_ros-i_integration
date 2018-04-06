@@ -41,37 +41,37 @@ public:
     QListWidget *listWidget;
     QStackedWidget *stackedWidget;
     QWidget *page_1;
+    QWidget *layoutWidget1;
+    QHBoxLayout *horizontalLayout_9;
+    QLabel *label_title_1;
+    QCommandLinkButton *commandLinkButton_8;
+    QWidget *page_2;
     QGridLayout *gridLayout_2;
     QVBoxLayout *verticalLayout_6;
     QHBoxLayout *horizontalLayout_4;
-    QLabel *label_title_7;
+    QLabel *label_title_2;
     QCommandLinkButton *commandLinkButton_5;
     QTextBrowser *textBrowser_6;
-    QWidget *page_2;
+    QWidget *page_3;
     QGridLayout *gridLayout_4;
     QVBoxLayout *verticalLayout_8;
     QHBoxLayout *horizontalLayout_7;
-    QLabel *label_title_2;
+    QLabel *label_title_3;
     QCommandLinkButton *commandLinkButton_6;
     QTextBrowser *textBrowser_7;
-    QWidget *page_3;
-    QLabel *label_3_2;
-    QLabel *label_3_3;
-    QLabel *label_3_4;
-    QWidget *widget;
-    QHBoxLayout *horizontalLayout_8;
-    QLabel *label_title_3;
-    QCommandLinkButton *commandLinkButton_7;
     QWidget *page_4;
+    QWidget *layoutWidget;
+    QHBoxLayout *horizontalLayout_8;
     QLabel *label_title_4;
+    QCommandLinkButton *commandLinkButton_7;
+    QTextBrowser *textBrowser_8;
     QWidget *page_5;
     QLabel *label_title_5;
-    QComboBox *comboBox;
     QWidget *page_6;
     QLabel *label_title_6;
+    QComboBox *comboBox;
     QWidget *page_7;
-    QWidget *page_8;
-    QLabel *label_title_8;
+    QLabel *label_title_7;
     QFrame *line;
     QHBoxLayout *horizontalLayout_6;
     QHBoxLayout *horizontalLayout_5;
@@ -158,7 +158,6 @@ public:
         new QListWidgetItem(listWidget);
         new QListWidgetItem(listWidget);
         new QListWidgetItem(listWidget);
-        new QListWidgetItem(listWidget);
         listWidget->setObjectName(QStringLiteral("listWidget"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
@@ -174,21 +173,45 @@ public:
         stackedWidget->setObjectName(QStringLiteral("stackedWidget"));
         page_1 = new QWidget();
         page_1->setObjectName(QStringLiteral("page_1"));
-        gridLayout_2 = new QGridLayout(page_1);
+        layoutWidget1 = new QWidget(page_1);
+        layoutWidget1->setObjectName(QStringLiteral("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(30, 10, 573, 43));
+        horizontalLayout_9 = new QHBoxLayout(layoutWidget1);
+        horizontalLayout_9->setObjectName(QStringLiteral("horizontalLayout_9"));
+        horizontalLayout_9->setContentsMargins(0, 0, 0, 0);
+        label_title_1 = new QLabel(layoutWidget1);
+        label_title_1->setObjectName(QStringLiteral("label_title_1"));
+        label_title_1->setMinimumSize(QSize(380, 30));
+        label_title_1->setStyleSheet(QStringLiteral(""));
+
+        horizontalLayout_9->addWidget(label_title_1);
+
+        commandLinkButton_8 = new QCommandLinkButton(layoutWidget1);
+        commandLinkButton_8->setObjectName(QStringLiteral("commandLinkButton_8"));
+        commandLinkButton_8->setMinimumSize(QSize(111, 41));
+        commandLinkButton_8->setFocusPolicy(Qt::NoFocus);
+        commandLinkButton_8->setStyleSheet(QStringLiteral("font: italic 13pt \"Ubuntu\";"));
+
+        horizontalLayout_9->addWidget(commandLinkButton_8);
+
+        stackedWidget->addWidget(page_1);
+        page_2 = new QWidget();
+        page_2->setObjectName(QStringLiteral("page_2"));
+        gridLayout_2 = new QGridLayout(page_2);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         gridLayout_2->setContentsMargins(5, 5, 5, 5);
         verticalLayout_6 = new QVBoxLayout();
         verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
-        label_title_7 = new QLabel(page_1);
-        label_title_7->setObjectName(QStringLiteral("label_title_7"));
-        label_title_7->setMinimumSize(QSize(380, 30));
-        label_title_7->setStyleSheet(QStringLiteral(""));
+        label_title_2 = new QLabel(page_2);
+        label_title_2->setObjectName(QStringLiteral("label_title_2"));
+        label_title_2->setMinimumSize(QSize(380, 30));
+        label_title_2->setStyleSheet(QStringLiteral(""));
 
-        horizontalLayout_4->addWidget(label_title_7);
+        horizontalLayout_4->addWidget(label_title_2);
 
-        commandLinkButton_5 = new QCommandLinkButton(page_1);
+        commandLinkButton_5 = new QCommandLinkButton(page_2);
         commandLinkButton_5->setObjectName(QStringLiteral("commandLinkButton_5"));
         commandLinkButton_5->setMinimumSize(QSize(111, 41));
         commandLinkButton_5->setFocusPolicy(Qt::NoFocus);
@@ -199,7 +222,7 @@ public:
 
         verticalLayout_6->addLayout(horizontalLayout_4);
 
-        textBrowser_6 = new QTextBrowser(page_1);
+        textBrowser_6 = new QTextBrowser(page_2);
         textBrowser_6->setObjectName(QStringLiteral("textBrowser_6"));
         textBrowser_6->setMinimumSize(QSize(841, 351));
         textBrowser_6->setStyleSheet(QLatin1String("background-color: transparent;\n"
@@ -210,24 +233,24 @@ public:
 
         gridLayout_2->addLayout(verticalLayout_6, 0, 0, 1, 1);
 
-        stackedWidget->addWidget(page_1);
-        page_2 = new QWidget();
-        page_2->setObjectName(QStringLiteral("page_2"));
-        gridLayout_4 = new QGridLayout(page_2);
+        stackedWidget->addWidget(page_2);
+        page_3 = new QWidget();
+        page_3->setObjectName(QStringLiteral("page_3"));
+        gridLayout_4 = new QGridLayout(page_3);
         gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
         gridLayout_4->setContentsMargins(5, 5, 5, 5);
         verticalLayout_8 = new QVBoxLayout();
         verticalLayout_8->setObjectName(QStringLiteral("verticalLayout_8"));
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
-        label_title_2 = new QLabel(page_2);
-        label_title_2->setObjectName(QStringLiteral("label_title_2"));
-        label_title_2->setMinimumSize(QSize(380, 30));
-        label_title_2->setStyleSheet(QStringLiteral(""));
+        label_title_3 = new QLabel(page_3);
+        label_title_3->setObjectName(QStringLiteral("label_title_3"));
+        label_title_3->setMinimumSize(QSize(380, 30));
+        label_title_3->setStyleSheet(QStringLiteral(""));
 
-        horizontalLayout_7->addWidget(label_title_2);
+        horizontalLayout_7->addWidget(label_title_3);
 
-        commandLinkButton_6 = new QCommandLinkButton(page_2);
+        commandLinkButton_6 = new QCommandLinkButton(page_3);
         commandLinkButton_6->setObjectName(QStringLiteral("commandLinkButton_6"));
         commandLinkButton_6->setMinimumSize(QSize(111, 41));
         commandLinkButton_6->setFocusPolicy(Qt::NoFocus);
@@ -238,7 +261,7 @@ public:
 
         verticalLayout_8->addLayout(horizontalLayout_7);
 
-        textBrowser_7 = new QTextBrowser(page_2);
+        textBrowser_7 = new QTextBrowser(page_3);
         textBrowser_7->setObjectName(QStringLiteral("textBrowser_7"));
         textBrowser_7->setMinimumSize(QSize(841, 351));
         textBrowser_7->setStyleSheet(QLatin1String("background-color: transparent;\n"
@@ -250,36 +273,23 @@ public:
 
         gridLayout_4->addLayout(verticalLayout_8, 0, 0, 1, 1);
 
-        stackedWidget->addWidget(page_2);
-        page_3 = new QWidget();
-        page_3->setObjectName(QStringLiteral("page_3"));
-        label_3_2 = new QLabel(page_3);
-        label_3_2->setObjectName(QStringLiteral("label_3_2"));
-        label_3_2->setGeometry(QRect(40, 80, 651, 61));
-        label_3_2->setStyleSheet(QStringLiteral("font: 13pt \"Ubuntu\";"));
-        label_3_3 = new QLabel(page_3);
-        label_3_3->setObjectName(QStringLiteral("label_3_3"));
-        label_3_3->setGeometry(QRect(90, 160, 491, 61));
-        label_3_3->setStyleSheet(QLatin1String("color: rgb(44, 94, 230);\n"
-"font: 12pt \"Ubuntu Mono\" bold;"));
-        label_3_4 = new QLabel(page_3);
-        label_3_4->setObjectName(QStringLiteral("label_3_4"));
-        label_3_4->setGeometry(QRect(40, 260, 661, 111));
-        label_3_4->setStyleSheet(QStringLiteral("font: 13pt \"Ubuntu\";"));
-        widget = new QWidget(page_3);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(40, 10, 556, 43));
-        horizontalLayout_8 = new QHBoxLayout(widget);
+        stackedWidget->addWidget(page_3);
+        page_4 = new QWidget();
+        page_4->setObjectName(QStringLiteral("page_4"));
+        layoutWidget = new QWidget(page_4);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(40, 10, 556, 43));
+        horizontalLayout_8 = new QHBoxLayout(layoutWidget);
         horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
         horizontalLayout_8->setContentsMargins(0, 0, 0, 0);
-        label_title_3 = new QLabel(widget);
-        label_title_3->setObjectName(QStringLiteral("label_title_3"));
-        label_title_3->setMinimumSize(QSize(380, 30));
-        label_title_3->setStyleSheet(QStringLiteral(""));
+        label_title_4 = new QLabel(layoutWidget);
+        label_title_4->setObjectName(QStringLiteral("label_title_4"));
+        label_title_4->setMinimumSize(QSize(380, 30));
+        label_title_4->setStyleSheet(QStringLiteral(""));
 
-        horizontalLayout_8->addWidget(label_title_3);
+        horizontalLayout_8->addWidget(label_title_4);
 
-        commandLinkButton_7 = new QCommandLinkButton(widget);
+        commandLinkButton_7 = new QCommandLinkButton(layoutWidget);
         commandLinkButton_7->setObjectName(QStringLiteral("commandLinkButton_7"));
         commandLinkButton_7->setMinimumSize(QSize(111, 41));
         commandLinkButton_7->setFocusPolicy(Qt::NoFocus);
@@ -287,13 +297,13 @@ public:
 
         horizontalLayout_8->addWidget(commandLinkButton_7);
 
-        stackedWidget->addWidget(page_3);
-        page_4 = new QWidget();
-        page_4->setObjectName(QStringLiteral("page_4"));
-        label_title_4 = new QLabel(page_4);
-        label_title_4->setObjectName(QStringLiteral("label_title_4"));
-        label_title_4->setGeometry(QRect(40, 10, 291, 31));
-        label_title_4->setStyleSheet(QStringLiteral(""));
+        textBrowser_8 = new QTextBrowser(page_4);
+        textBrowser_8->setObjectName(QStringLiteral("textBrowser_8"));
+        textBrowser_8->setGeometry(QRect(30, 70, 841, 411));
+        textBrowser_8->setMinimumSize(QSize(841, 351));
+        textBrowser_8->setStyleSheet(QLatin1String("background-color: transparent;\n"
+"border: 0px;"));
+        textBrowser_8->setOpenExternalLinks(true);
         stackedWidget->addWidget(page_4);
         page_5 = new QWidget();
         page_5->setObjectName(QStringLiteral("page_5"));
@@ -301,9 +311,6 @@ public:
         label_title_5->setObjectName(QStringLiteral("label_title_5"));
         label_title_5->setGeometry(QRect(40, 10, 291, 31));
         label_title_5->setStyleSheet(QStringLiteral(""));
-        comboBox = new QComboBox(page_5);
-        comboBox->setObjectName(QStringLiteral("comboBox"));
-        comboBox->setGeometry(QRect(50, 90, 481, 31));
         stackedWidget->addWidget(page_5);
         page_6 = new QWidget();
         page_6->setObjectName(QStringLiteral("page_6"));
@@ -311,17 +318,17 @@ public:
         label_title_6->setObjectName(QStringLiteral("label_title_6"));
         label_title_6->setGeometry(QRect(40, 10, 291, 31));
         label_title_6->setStyleSheet(QStringLiteral(""));
+        comboBox = new QComboBox(page_6);
+        comboBox->setObjectName(QStringLiteral("comboBox"));
+        comboBox->setGeometry(QRect(50, 90, 481, 31));
         stackedWidget->addWidget(page_6);
         page_7 = new QWidget();
         page_7->setObjectName(QStringLiteral("page_7"));
+        label_title_7 = new QLabel(page_7);
+        label_title_7->setObjectName(QStringLiteral("label_title_7"));
+        label_title_7->setGeometry(QRect(40, 10, 291, 31));
+        label_title_7->setStyleSheet(QStringLiteral(""));
         stackedWidget->addWidget(page_7);
-        page_8 = new QWidget();
-        page_8->setObjectName(QStringLiteral("page_8"));
-        label_title_8 = new QLabel(page_8);
-        label_title_8->setObjectName(QStringLiteral("label_title_8"));
-        label_title_8->setGeometry(QRect(40, 10, 291, 31));
-        label_title_8->setStyleSheet(QStringLiteral(""));
-        stackedWidget->addWidget(page_8);
 
         horizontalLayout->addWidget(stackedWidget);
 
@@ -508,7 +515,7 @@ public:
         retranslateUi(Dialog_Pkg_Support);
         QObject::connect(listWidget, SIGNAL(currentRowChanged(int)), stackedWidget, SLOT(setCurrentIndex(int)));
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Dialog_Pkg_Support);
@@ -521,24 +528,24 @@ public:
         const bool __sortingEnabled = listWidget->isSortingEnabled();
         listWidget->setSortingEnabled(false);
         QListWidgetItem *___qlistwidgetitem = listWidget->item(0);
-        ___qlistwidgetitem->setText(QApplication::translate("Dialog_Pkg_Support", "1. Export Models from RobotStudio", 0));
+        ___qlistwidgetitem->setText(QApplication::translate("Dialog_Pkg_Support", "1. Orgnize Support Folder Structure", 0));
         QListWidgetItem *___qlistwidgetitem1 = listWidget->item(1);
-        ___qlistwidgetitem1->setText(QApplication::translate("Dialog_Pkg_Support", "2. Create Meshes Folder", 0));
+        ___qlistwidgetitem1->setText(QApplication::translate("Dialog_Pkg_Support", "2. Export Models from RobotStudio", 0));
         QListWidgetItem *___qlistwidgetitem2 = listWidget->item(2);
-        ___qlistwidgetitem2->setText(QApplication::translate("Dialog_Pkg_Support", "3. Create URDF Folder", 0));
+        ___qlistwidgetitem2->setText(QApplication::translate("Dialog_Pkg_Support", "3. Create Meshes Folder", 0));
         QListWidgetItem *___qlistwidgetitem3 = listWidget->item(3);
-        ___qlistwidgetitem3->setText(QApplication::translate("Dialog_Pkg_Support", "4. Create Config Folder", 0));
+        ___qlistwidgetitem3->setText(QApplication::translate("Dialog_Pkg_Support", "4. Create URDF Folder", 0));
         QListWidgetItem *___qlistwidgetitem4 = listWidget->item(4);
-        ___qlistwidgetitem4->setText(QApplication::translate("Dialog_Pkg_Support", "5. Create Launch Folder", 0));
+        ___qlistwidgetitem4->setText(QApplication::translate("Dialog_Pkg_Support", "5. Create Config Folder", 0));
         QListWidgetItem *___qlistwidgetitem5 = listWidget->item(5);
-        ___qlistwidgetitem5->setText(QApplication::translate("Dialog_Pkg_Support", "6. \347\225\231\347\251\272", 0));
+        ___qlistwidgetitem5->setText(QApplication::translate("Dialog_Pkg_Support", "6. Create Launch Folder", 0));
         QListWidgetItem *___qlistwidgetitem6 = listWidget->item(6);
         ___qlistwidgetitem6->setText(QApplication::translate("Dialog_Pkg_Support", "7. \347\225\231\347\251\272", 0));
-        QListWidgetItem *___qlistwidgetitem7 = listWidget->item(7);
-        ___qlistwidgetitem7->setText(QApplication::translate("Dialog_Pkg_Support", "8. \347\225\231\347\251\272", 0));
         listWidget->setSortingEnabled(__sortingEnabled);
 
-        label_title_7->setText(QApplication::translate("Dialog_Pkg_Support", "Export Models from RobotStudio", 0));
+        label_title_1->setText(QApplication::translate("Dialog_Pkg_Support", "Orgnize Support Folder Structure", 0));
+        commandLinkButton_8->setText(QApplication::translate("Dialog_Pkg_Support", "Next Step", 0));
+        label_title_2->setText(QApplication::translate("Dialog_Pkg_Support", "Export Models from RobotStudio", 0));
         commandLinkButton_5->setText(QApplication::translate("Dialog_Pkg_Support", "Next Step", 0));
         textBrowser_6->setHtml(QApplication::translate("Dialog_Pkg_Support", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -570,7 +577,7 @@ public:
                         "k </span><span style=\" font-size:12pt; font-style:italic;\">Export</span><span style=\" font-size:12pt;\"> and select the destination folder.</span></p>\n"
 "<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-size:12pt;\"><br /></p>\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt; font-weight:600;\">Step 6.  </span><span style=\" font-size:12pt;\">Repeat this process for the rest of links in the robot (Base ~ Link6).</span></p></body></html>", 0));
-        label_title_2->setText(QApplication::translate("Dialog_Pkg_Support", "Create Meshes Folder", 0));
+        label_title_3->setText(QApplication::translate("Dialog_Pkg_Support", "Create Meshes Folder", 0));
         commandLinkButton_6->setText(QApplication::translate("Dialog_Pkg_Support", "Next Step", 0));
         textBrowser_7->setHtml(QApplication::translate("Dialog_Pkg_Support", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -624,18 +631,62 @@ public:
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px"
                         "; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:14pt; font-weight:600;\">Step 4.</span><span style=\" font-size:12pt; font-weight:600;\">  </span><span style=\" font-size:12pt;\">Copy the </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">meshes</span><span style=\" font-size:12pt;\"> folder from your </span><span style=\" font-size:12pt; font-weight:600;\">Windows</span><span style=\" font-size:12pt;\"> computer to </span><span style=\" font-size:12pt; font-weight:600;\">Linux-Ubuntu</span><span style=\" font-size:12pt;\"> computer as this path: </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">~</span><span style=\" font-size:12pt; font-weight:600;\">/</span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">catkin_ws</span><span style=\" font-size:12pt; font-weight:600;\">/</span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">src</span><span style=\" font-size:12pt; font-weight:60"
                         "0;\">/</span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">&lt;your support package&gt;</span><span style=\" font-size:12pt; font-weight:600;\">/</span><span style=\" font-size:12pt;\">, for example: </span><span style=\" font-size:12pt; font-weight:600;\">~/catkin_ws/src/abb_irb140_support/meshes</span></p></body></html>", 0));
-        label_3_2->setText(QApplication::translate("Dialog_Pkg_Support", "Before creating the URDF file for the robot, let's create a ROS package in the catkin\n"
-"workspace so that the robot model keeps using the following command:", 0));
-        label_3_3->setText(QApplication::translate("Dialog_Pkg_Support", "$ catkin_create_pkg mastering_ros_robot_description_pkg roscpp tf \n"
-"geometry_msgs urdf rviz xacro", 0));
-        label_3_4->setText(QApplication::translate("Dialog_Pkg_Support", "Before creating the urdf file for this robot, let's create three folders called urdf,\n"
-"meshes, and launch inside the package folder. The urdf folder can be used to keep the \n"
-"urdf/xacro files that we are going to create. The meshes folder keeps the meshes that \n"
-"we need to include in the urdf file and the launch folder keeps the ROS launch files.", 0));
-        label_title_3->setText(QApplication::translate("Dialog_Pkg_Support", "Create URDF Folder", 0));
+        label_title_4->setText(QApplication::translate("Dialog_Pkg_Support", "Create URDF Folder", 0));
         commandLinkButton_7->setText(QApplication::translate("Dialog_Pkg_Support", "Next Step", 0));
-        label_title_4->setText(QApplication::translate("Dialog_Pkg_Support", "Build URDF Description", 0));
-        label_title_5->setText(QApplication::translate("Dialog_Pkg_Support", "Build Launch Files", 0));
+        textBrowser_8->setHtml(QApplication::translate("Dialog_Pkg_Support", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">Meshes</span><span style=\" font-size:12pt;\"> folder contains two child directories: </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">visual </span><span style=\" font-size:12pt;\">(uesd for visualization) and </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">collision </span><span style=\" font-size:12pt;\">(used for collision checking). </span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; m"
+                        "argin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600;\">Steps to create </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">meshes</span><span style=\" font-size:12pt; font-weight:600;\"> folder:</span></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:14pt; font-weight:600;\">Step 1.</span><span style=\" font-size:12pt; font-weight:600;\">  </span><span style=\" font-size:12pt;\">Rename all STL files in ROS style as follows:</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><span style=\" font-size:12pt;\">B"
+                        "ase.stl  </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> base_link.stl</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><span style=\" font-size:12pt;\">Link1.stl </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> link_1.stl</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><span style=\" font-size:12pt;\">Link2.stl </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> link_2.stl</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><span style=\" font-size:12pt;\">Link3.stl </span><span style=\" font-size:12pt; font-weight:600;\""
+                        ">\342\206\222</span><span style=\" font-size:12pt;\"> link_3.stl</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><span style=\" font-size:12pt;\">Link4.stl </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> link_4.stl</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><span style=\" font-size:12pt;\">Link5.stl </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> link_5.stl</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><span style=\" font-size:12pt;\">Link6.stl </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> link_6.stl</sp"
+                        "an></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-size:12pt;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:14pt; font-weight:600;\">Step 2.</span><span style=\" font-size:12pt; font-weight:600;\">  </span><span style=\" font-size:12pt;\">Organize the </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">meshes</span><span style=\" font-size:12pt;\"> folder as follows (take ABB IRB 140 for example):</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><img src=\":/pic/meshes_layout.png\" /></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-bloc"
+                        "k-indent:0; text-indent:20px; font-size:12pt;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt;\">Now you have already creted a valid </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">meshes</span><span style=\" font-size:12pt;\"> folder. But in order to promote the efficiency of collision checking, it's very recommended to remove the mesh details of the STL files in </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">collision </span><span style=\" font-size:12pt;\">folder with tools such as </span><span style=\" font-size:12pt; font-weight:600; color:#820202;\">Meshlab</span><span style=\" font-size:12pt;\">.</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt; font-weight:600; color:#820202;\">Mesh"
+                        "lab</span><img src=\":/icon/meshlab_logo.png\" /><span style=\" font-size:12pt;\"> is an open source software for processing and editing 3D triangular meshes. You can find its download links here: </span><a href=\"http://www.meshlab.net/#download\"><span style=\" font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;\">http://www.meshlab.net/#download</span></a></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-weight:600; text-decoration: underline; color:#0000ff;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:14pt; font-weight:600;\">Step 3(optional).</span><span style=\" font-size:12pt; font-weight:600;\">  </span><span style=\" font-size:12pt;\">Open </span><span style=\" font-size:12pt; font-weight:600; color:#820202;\">Meshla"
+                        "b</span><span style=\" font-size:12pt;\"> and import a mesh (take base_link.stl of ABB IRB 140 for example):</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><img src=\":/pic/meshlab_step_1.png\" /></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-size:12pt;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt;\">Use the option: </span><span style=\" font-size:12pt; font-style:italic;\">Filters</span><span style=\" font-size:12pt;\"> </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> </span><span style=\" font-size:12pt; font-style:italic;\">Remeshing, Simplification and Reconstruction</sp"
+                        "an><span style=\" font-size:12pt;\"> </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> </span><span style=\" font-size:12pt; font-style:italic;\">Convex Hull</span><span style=\" font-size:12pt;\">:</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><img src=\":/pic/meshlab_step_2.png\" /></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt;\">Click </span><span style=\" font-size:12pt; font-style:italic;\">Apply</span><span style=\" font-size:12pt;\">:</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0"
+                        "px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><img src=\":/pic/meshlab_step_3.png\" /></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt;\">Remesh finished:</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><img src=\":/pic/meshlab_step_4.png\" /></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" "
+                        "font-size:12pt;\">Now you can save the new mesh also as STL file, and then choose the saving options as follows:</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><img src=\":/pic/meshlab_step_5.png\" /></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt;\">Repeat this process for the rest of STL files (base_link.stl ~ link_6.stl).</span></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-size:12pt;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px"
+                        "; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:14pt; font-weight:600;\">Step 4.</span><span style=\" font-size:12pt; font-weight:600;\">  </span><span style=\" font-size:12pt;\">Copy the </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">meshes</span><span style=\" font-size:12pt;\"> folder from your </span><span style=\" font-size:12pt; font-weight:600;\">Windows</span><span style=\" font-size:12pt;\"> computer to </span><span style=\" font-size:12pt; font-weight:600;\">Linux-Ubuntu</span><span style=\" font-size:12pt;\"> computer as this path: </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">~</span><span style=\" font-size:12pt; font-weight:600;\">/</span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">catkin_ws</span><span style=\" font-size:12pt; font-weight:600;\">/</span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">src</span><span style=\" font-size:12pt; font-weight:60"
+                        "0;\">/</span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">&lt;your support package&gt;</span><span style=\" font-size:12pt; font-weight:600;\">/</span><span style=\" font-size:12pt;\">, for example: </span><span style=\" font-size:12pt; font-weight:600;\">~/catkin_ws/src/abb_irb140_support/meshes</span></p></body></html>", 0));
+        label_title_5->setText(QApplication::translate("Dialog_Pkg_Support", "Create Config Folder", 0));
+        label_title_6->setText(QApplication::translate("Dialog_Pkg_Support", "Create Launch Folder", 0));
         comboBox->clear();
         comboBox->insertItems(0, QStringList()
          << QApplication::translate("Dialog_Pkg_Support", "ABB IRB 120", 0)
@@ -655,8 +706,7 @@ public:
          << QApplication::translate("Dialog_Pkg_Support", "ABB IRB 760", 0)
          << QApplication::translate("Dialog_Pkg_Support", "ABB IRB 8700", 0)
         );
-        label_title_6->setText(QApplication::translate("Dialog_Pkg_Support", "Create MoveIt Config Package", 0));
-        label_title_8->setText(QApplication::translate("Dialog_Pkg_Support", "Prepair the RobotStudio", 0));
+        label_title_7->setText(QApplication::translate("Dialog_Pkg_Support", "Prepair \347\225\231\347\251\272", 0));
         groupBox_ChLst_Ubt->setTitle(QApplication::translate("Dialog_Pkg_Support", "Checklist : Support Package", 0));
         groupBox_ChLst_Prp->setTitle(QApplication::translate("Dialog_Pkg_Support", "Meshes and URDF:", 0));
         checkBox_1->setText(QApplication::translate("Dialog_Pkg_Support", "Install ROS", 0));

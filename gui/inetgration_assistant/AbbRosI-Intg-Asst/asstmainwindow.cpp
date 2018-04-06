@@ -71,22 +71,19 @@ void AsstMainWindow::on_btnToRosiWiki_clicked()
 {
     QDesktopServices::openUrl(QUrl("http://aeswiki.datasys.swri.edu/rositraining/Indigo%20PC%20Setup"));
 }
-
+//点击此按钮打开指导建立catkin_ws的网页
 void AsstMainWindow::on_btnToRosCatkinWs_clicked()
 {
     QDesktopServices::openUrl(QUrl("http://wiki.ros.org/catkin/Tutorials/create_a_workspace"));
 }
-
-void AsstMainWindow::on_btnMkCatkinWs_clicked()
+//点击此按钮调用shell脚本直接在本地建立catkin_ws
+void AsstMainWindow::on_btnToMkCatkinWs_clicked()
 {
     QProcess *process = new QProcess();
-    //process->startDetached("gnome-terminal", QStringList()<< "shell_script/mk_catkin_ws.sh");
-    //process->start("gnome-terminal -e 'ls; exec bash;'");
-    //system("gnome-terminal -t 'Create & Build catkin_ws' -x bash -c 'sh ./shell_script/mk_catkin_ws.sh; exec bash;' ");
     process->startDetached("bash", QStringList()<< "shell_script/mk_catkin_ws.sh");
-    //qDebug()<<process->StandardOutput;
+    process->waitForFinished();
 }
-
+//点击此按钮克隆Github上托管的abb包
 void AsstMainWindow::on_btnToDldPkgAbb_clicked()
 {
     //留存，以后或许有用
@@ -100,7 +97,7 @@ void AsstMainWindow::on_btnToDldPkgAbb_clicked()
     qDebug("haha");  //找bug用，正式时可以去除
     qDebug()<<QDir::currentPath(); //可以打印出当前编译可执行文件的目录，留存待用
 }
-
+//点击此按钮调用shell脚本直接将abb_driver复制到本地的catkin_ws
 void AsstMainWindow::on_btnToCpPkgAbbdriver_clicked()
 {
     QStringList arg;

@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_AsstMainWindow_t {
     QByteArrayData data[11];
-    char stringdata[220];
+    char stringdata[222];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,7 +39,7 @@ QT_MOC_LITERAL(6, 85, 24), // "on_btnToRosiWiki_clicked"
 QT_MOC_LITERAL(7, 110, 27), // "on_btnToRosCatkinWs_clicked"
 QT_MOC_LITERAL(8, 138, 25), // "on_btnToDldPkgAbb_clicked"
 QT_MOC_LITERAL(9, 164, 30), // "on_btnToCpPkgAbbdriver_clicked"
-QT_MOC_LITERAL(10, 195, 24) // "on_btnMkCatkinWs_clicked"
+QT_MOC_LITERAL(10, 195, 26) // "on_btnToMkCatkinWs_clicked"
 
     },
     "AsstMainWindow\0on_btn_to_support_clicked\0"
@@ -48,7 +48,7 @@ QT_MOC_LITERAL(10, 195, 24) // "on_btnMkCatkinWs_clicked"
     "on_btnToRosCatkinWs_clicked\0"
     "on_btnToDldPkgAbb_clicked\0"
     "on_btnToCpPkgAbbdriver_clicked\0"
-    "on_btnMkCatkinWs_clicked"
+    "on_btnToMkCatkinWs_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -100,7 +100,7 @@ void AsstMainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 4: _t->on_btnToRosCatkinWs_clicked(); break;
         case 5: _t->on_btnToDldPkgAbb_clicked(); break;
         case 6: _t->on_btnToCpPkgAbbdriver_clicked(); break;
-        case 7: _t->on_btnMkCatkinWs_clicked(); break;
+        case 7: _t->on_btnToMkCatkinWs_clicked(); break;
         default: ;
         }
     }
