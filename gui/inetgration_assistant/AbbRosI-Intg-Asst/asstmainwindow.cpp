@@ -77,6 +77,16 @@ void AsstMainWindow::on_btnToRosCatkinWs_clicked()
     QDesktopServices::openUrl(QUrl("http://wiki.ros.org/catkin/Tutorials/create_a_workspace"));
 }
 
+void AsstMainWindow::on_btnMkCatkinWs_clicked()
+{
+    QProcess *process = new QProcess();
+    //process->startDetached("gnome-terminal", QStringList()<< "shell_script/mk_catkin_ws.sh");
+    //process->start("gnome-terminal -e 'ls; exec bash;'");
+    //system("gnome-terminal -t 'Create & Build catkin_ws' -x bash -c 'sh ./shell_script/mk_catkin_ws.sh; exec bash;' ");
+    process->startDetached("bash", QStringList()<< "shell_script/mk_catkin_ws.sh");
+    //qDebug()<<process->StandardOutput;
+}
+
 void AsstMainWindow::on_btnToDldPkgAbb_clicked()
 {
     //留存，以后或许有用
@@ -105,3 +115,5 @@ void AsstMainWindow::on_btnToCpPkgAbbdriver_clicked()
     process->waitForFinished();
     qDebug () << process->readAllStandardOutput(); //可以在qt控制台打印出shell执行的一些输出结果，但效果有限
 }
+
+

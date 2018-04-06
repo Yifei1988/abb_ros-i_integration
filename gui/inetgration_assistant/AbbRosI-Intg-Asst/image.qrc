@@ -4,7 +4,6 @@
         <file>icon/rosi_logo.png</file>
         <file>icon/indigo.png</file>
         <file>pic/catkin_ws_layout.png</file>
-        <file>icon/btn_catkinws.png</file>
         <file>pic/indigoigloo.png</file>
         <file>icon/btn_dl_pkg_abb.png</file>
         <file>icon/btn_cp_pkg_abbdriver.png</file>
@@ -20,5 +19,7 @@
         <file>pic/meshlab_step_3.png</file>
         <file>pic/meshlab_step_4.png</file>
         <file>pic/meshlab_step_5.png</file>
+        <file>icon/btn_mk_catkinws.png</file>
+        <file>icon/btn_catkinws_tut.png</file>
     </qresource>
 </RCC>

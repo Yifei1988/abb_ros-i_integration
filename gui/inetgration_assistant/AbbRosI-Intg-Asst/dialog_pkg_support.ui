@@ -81,22 +81,22 @@ QGroupBox#groupBox_ChLst_Ubt::title, #groupBox_ChLst_Win::title{
          </item>
          <item>
           <property name="text">
-           <string>2. Create Meshes Package</string>
+           <string>2. Create Meshes Folder</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>3. Create URDF Package</string>
+           <string>3. Create URDF Folder</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>4. Create Config Package</string>
+           <string>4. Create Config Folder</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>5. Create Launch Package</string>
+           <string>5. Create Launch Folder</string>
           </property>
          </item>
          <item>
@@ -222,6 +222,18 @@ p, li { white-space: pre-wrap; }
          </widget>
          <widget class="QWidget" name="page_2">
           <layout class="QGridLayout" name="gridLayout_4">
+           <property name="leftMargin">
+            <number>5</number>
+           </property>
+           <property name="topMargin">
+            <number>5</number>
+           </property>
+           <property name="rightMargin">
+            <number>5</number>
+           </property>
+           <property name="bottomMargin">
+            <number>5</number>
+           </property>
            <item row="0" column="0">
             <layout class="QVBoxLayout" name="verticalLayout_8">
              <item>
@@ -238,7 +250,7 @@ p, li { white-space: pre-wrap; }
                   <string notr="true"/>
                  </property>
                  <property name="text">
-                  <string>Create Meshes Package</string>
+                  <string>Create Meshes Folder</string>
                  </property>
                 </widget>
                </item>
@@ -327,22 +339,6 @@ p, li { white-space: pre-wrap; }
           </layout>
          </widget>
          <widget class="QWidget" name="page_3">
-          <widget class="QLabel" name="label_title_3">
-           <property name="geometry">
-            <rect>
-             <x>40</x>
-             <y>10</y>
-             <width>291</width>
-             <height>31</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="text">
-            <string>Create Support Package</string>
-           </property>
-          </widget>
           <widget class="QLabel" name="label_3_2">
            <property name="geometry">
             <rect>
@@ -396,6 +392,53 @@ meshes, and launch inside the package folder. The urdf folder can be used to kee
 urdf/xacro files that we are going to create. The meshes folder keeps the meshes that 
 we need to include in the urdf file and the launch folder keeps the ROS launch files.</string>
            </property>
+          </widget>
+          <widget class="QWidget" name="">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>10</y>
+             <width>556</width>
+             <height>43</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <item>
+             <widget class="QLabel" name="label_title_3">
+              <property name="minimumSize">
+               <size>
+                <width>380</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>Create URDF Folder</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCommandLinkButton" name="commandLinkButton_7">
+              <property name="minimumSize">
+               <size>
+                <width>111</width>
+                <height>41</height>
+               </size>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font: italic 13pt &quot;Ubuntu&quot;;</string>
+              </property>
+              <property name="text">
+               <string>Next Step</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </widget>
          <widget class="QWidget" name="page_4">

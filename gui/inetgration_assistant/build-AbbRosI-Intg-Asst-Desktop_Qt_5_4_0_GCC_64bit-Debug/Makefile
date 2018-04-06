@@ -525,10 +525,11 @@ qrc_image.cpp: ../AbbRosI-Intg-Asst/image.qrc \
 		../AbbRosI-Intg-Asst/pic/meshlab_step_1.png \
 		../AbbRosI-Intg-Asst/icon/ros_logo.png \
 		../AbbRosI-Intg-Asst/icon/rosi_logo.png \
+		../AbbRosI-Intg-Asst/icon/btn_mk_catkinws.png \
 		../AbbRosI-Intg-Asst/icon/indigo.png \
 		../AbbRosI-Intg-Asst/icon/btn_cp_pkg_abbdriver.png \
 		../AbbRosI-Intg-Asst/icon/btn_dl_pkg_abb.png \
-		../AbbRosI-Intg-Asst/icon/btn_catkinws.png \
+		../AbbRosI-Intg-Asst/icon/btn_catkinws_tut.png \
 		../AbbRosI-Intg-Asst/icon/attention.png \
 		../AbbRosI-Intg-Asst/icon/meshlab_logo.png
 	/opt/Qt/5.4/gcc_64/bin/rcc -name image ../AbbRosI-Intg-Asst/image.qrc -o qrc_image.cpp

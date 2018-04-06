@@ -55,10 +55,13 @@ public:
     QCommandLinkButton *commandLinkButton_6;
     QTextBrowser *textBrowser_7;
     QWidget *page_3;
-    QLabel *label_title_3;
     QLabel *label_3_2;
     QLabel *label_3_3;
     QLabel *label_3_4;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_8;
+    QLabel *label_title_3;
+    QCommandLinkButton *commandLinkButton_7;
     QWidget *page_4;
     QLabel *label_title_4;
     QWidget *page_5;
@@ -212,6 +215,7 @@ public:
         page_2->setObjectName(QStringLiteral("page_2"));
         gridLayout_4 = new QGridLayout(page_2);
         gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
+        gridLayout_4->setContentsMargins(5, 5, 5, 5);
         verticalLayout_8 = new QVBoxLayout();
         verticalLayout_8->setObjectName(QStringLiteral("verticalLayout_8"));
         horizontalLayout_7 = new QHBoxLayout();
@@ -249,10 +253,6 @@ public:
         stackedWidget->addWidget(page_2);
         page_3 = new QWidget();
         page_3->setObjectName(QStringLiteral("page_3"));
-        label_title_3 = new QLabel(page_3);
-        label_title_3->setObjectName(QStringLiteral("label_title_3"));
-        label_title_3->setGeometry(QRect(40, 10, 291, 31));
-        label_title_3->setStyleSheet(QStringLiteral(""));
         label_3_2 = new QLabel(page_3);
         label_3_2->setObjectName(QStringLiteral("label_3_2"));
         label_3_2->setGeometry(QRect(40, 80, 651, 61));
@@ -266,6 +266,27 @@ public:
         label_3_4->setObjectName(QStringLiteral("label_3_4"));
         label_3_4->setGeometry(QRect(40, 260, 661, 111));
         label_3_4->setStyleSheet(QStringLiteral("font: 13pt \"Ubuntu\";"));
+        widget = new QWidget(page_3);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setGeometry(QRect(40, 10, 556, 43));
+        horizontalLayout_8 = new QHBoxLayout(widget);
+        horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
+        horizontalLayout_8->setContentsMargins(0, 0, 0, 0);
+        label_title_3 = new QLabel(widget);
+        label_title_3->setObjectName(QStringLiteral("label_title_3"));
+        label_title_3->setMinimumSize(QSize(380, 30));
+        label_title_3->setStyleSheet(QStringLiteral(""));
+
+        horizontalLayout_8->addWidget(label_title_3);
+
+        commandLinkButton_7 = new QCommandLinkButton(widget);
+        commandLinkButton_7->setObjectName(QStringLiteral("commandLinkButton_7"));
+        commandLinkButton_7->setMinimumSize(QSize(111, 41));
+        commandLinkButton_7->setFocusPolicy(Qt::NoFocus);
+        commandLinkButton_7->setStyleSheet(QStringLiteral("font: italic 13pt \"Ubuntu\";"));
+
+        horizontalLayout_8->addWidget(commandLinkButton_7);
+
         stackedWidget->addWidget(page_3);
         page_4 = new QWidget();
         page_4->setObjectName(QStringLiteral("page_4"));
@@ -502,13 +523,13 @@ public:
         QListWidgetItem *___qlistwidgetitem = listWidget->item(0);
         ___qlistwidgetitem->setText(QApplication::translate("Dialog_Pkg_Support", "1. Export Models from RobotStudio", 0));
         QListWidgetItem *___qlistwidgetitem1 = listWidget->item(1);
-        ___qlistwidgetitem1->setText(QApplication::translate("Dialog_Pkg_Support", "2. Create Meshes Package", 0));
+        ___qlistwidgetitem1->setText(QApplication::translate("Dialog_Pkg_Support", "2. Create Meshes Folder", 0));
         QListWidgetItem *___qlistwidgetitem2 = listWidget->item(2);
-        ___qlistwidgetitem2->setText(QApplication::translate("Dialog_Pkg_Support", "3. Create URDF Package", 0));
+        ___qlistwidgetitem2->setText(QApplication::translate("Dialog_Pkg_Support", "3. Create URDF Folder", 0));
         QListWidgetItem *___qlistwidgetitem3 = listWidget->item(3);
-        ___qlistwidgetitem3->setText(QApplication::translate("Dialog_Pkg_Support", "4. Create Config Package", 0));
+        ___qlistwidgetitem3->setText(QApplication::translate("Dialog_Pkg_Support", "4. Create Config Folder", 0));
         QListWidgetItem *___qlistwidgetitem4 = listWidget->item(4);
-        ___qlistwidgetitem4->setText(QApplication::translate("Dialog_Pkg_Support", "5. Create Launch Package", 0));
+        ___qlistwidgetitem4->setText(QApplication::translate("Dialog_Pkg_Support", "5. Create Launch Folder", 0));
         QListWidgetItem *___qlistwidgetitem5 = listWidget->item(5);
         ___qlistwidgetitem5->setText(QApplication::translate("Dialog_Pkg_Support", "6. \347\225\231\347\251\272", 0));
         QListWidgetItem *___qlistwidgetitem6 = listWidget->item(6);
@@ -549,7 +570,7 @@ public:
                         "k </span><span style=\" font-size:12pt; font-style:italic;\">Export</span><span style=\" font-size:12pt;\"> and select the destination folder.</span></p>\n"
 "<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-size:12pt;\"><br /></p>\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt; font-weight:600;\">Step 6.  </span><span style=\" font-size:12pt;\">Repeat this process for the rest of links in the robot (Base ~ Link6).</span></p></body></html>", 0));
-        label_title_2->setText(QApplication::translate("Dialog_Pkg_Support", "Create Meshes Package", 0));
+        label_title_2->setText(QApplication::translate("Dialog_Pkg_Support", "Create Meshes Folder", 0));
         commandLinkButton_6->setText(QApplication::translate("Dialog_Pkg_Support", "Next Step", 0));
         textBrowser_7->setHtml(QApplication::translate("Dialog_Pkg_Support", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -603,7 +624,6 @@ public:
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px"
                         "; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:14pt; font-weight:600;\">Step 4.</span><span style=\" font-size:12pt; font-weight:600;\">  </span><span style=\" font-size:12pt;\">Copy the </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">meshes</span><span style=\" font-size:12pt;\"> folder from your </span><span style=\" font-size:12pt; font-weight:600;\">Windows</span><span style=\" font-size:12pt;\"> computer to </span><span style=\" font-size:12pt; font-weight:600;\">Linux-Ubuntu</span><span style=\" font-size:12pt;\"> computer as this path: </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">~</span><span style=\" font-size:12pt; font-weight:600;\">/</span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">catkin_ws</span><span style=\" font-size:12pt; font-weight:600;\">/</span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">src</span><span style=\" font-size:12pt; font-weight:60"
                         "0;\">/</span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">&lt;your support package&gt;</span><span style=\" font-size:12pt; font-weight:600;\">/</span><span style=\" font-size:12pt;\">, for example: </span><span style=\" font-size:12pt; font-weight:600;\">~/catkin_ws/src/abb_irb140_support/meshes</span></p></body></html>", 0));
-        label_title_3->setText(QApplication::translate("Dialog_Pkg_Support", "Create Support Package", 0));
         label_3_2->setText(QApplication::translate("Dialog_Pkg_Support", "Before creating the URDF file for the robot, let's create a ROS package in the catkin\n"
 "workspace so that the robot model keeps using the following command:", 0));
         label_3_3->setText(QApplication::translate("Dialog_Pkg_Support", "$ catkin_create_pkg mastering_ros_robot_description_pkg roscpp tf \n"
@@ -612,6 +632,8 @@ public:
 "meshes, and launch inside the package folder. The urdf folder can be used to keep the \n"
 "urdf/xacro files that we are going to create. The meshes folder keeps the meshes that \n"
 "we need to include in the urdf file and the launch folder keeps the ROS launch files.", 0));
+        label_title_3->setText(QApplication::translate("Dialog_Pkg_Support", "Create URDF Folder", 0));
+        commandLinkButton_7->setText(QApplication::translate("Dialog_Pkg_Support", "Next Step", 0));
         label_title_4->setText(QApplication::translate("Dialog_Pkg_Support", "Build URDF Description", 0));
         label_title_5->setText(QApplication::translate("Dialog_Pkg_Support", "Build Launch Files", 0));
         comboBox->clear();

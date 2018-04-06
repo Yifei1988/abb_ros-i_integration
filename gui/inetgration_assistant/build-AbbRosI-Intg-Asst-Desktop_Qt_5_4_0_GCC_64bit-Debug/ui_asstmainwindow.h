@@ -72,24 +72,28 @@ public:
     QPushButton *btnToRosWiki;
     QPushButton *btnToRosiWiki;
     QWidget *page_3;
-    QGridLayout *gridLayout_30;
-    QVBoxLayout *verticalLayout_22;
+    QGridLayout *gridLayout_7;
+    QVBoxLayout *verticalLayout_14;
     QHBoxLayout *horizontalLayout_11;
     QLabel *label_title_3;
     QCommandLinkButton *commandLinkButton_3;
-    QHBoxLayout *horizontalLayout_28;
-    QVBoxLayout *verticalLayout_21;
+    QHBoxLayout *horizontalLayout_16;
+    QVBoxLayout *verticalLayout_13;
     QGroupBox *groupBox_3;
     QGridLayout *gridLayout_5;
     QCheckBox *checkBox_17;
     QTextBrowser *textBrowser_3;
     QGroupBox *groupBox_20;
-    QGridLayout *gridLayout_28;
-    QHBoxLayout *horizontalLayout_27;
+    QGridLayout *gridLayout_6;
+    QHBoxLayout *horizontalLayout_14;
     QTextBrowser *textBrowser_14;
+    QHBoxLayout *horizontalLayout_10;
     QGroupBox *groupBox_21;
     QGridLayout *gridLayout_29;
     QPushButton *btnToRosCatkinWs;
+    QGroupBox *groupBox_22;
+    QGridLayout *gridLayout_30;
+    QPushButton *btnMkCatkinWs;
     QGraphicsView *graphic_wsLayout;
     QWidget *page_4;
     QGridLayout *gridLayout_15;
@@ -176,7 +180,7 @@ public:
     {
         if (AsstMainWindow->objectName().isEmpty())
             AsstMainWindow->setObjectName(QStringLiteral("AsstMainWindow"));
-        AsstMainWindow->resize(1207, 763);
+        AsstMainWindow->resize(1414, 763);
         AsstMainWindow->setStyleSheet(QLatin1String("QListWidget::item {\n"
 "    height: 40px;\n"
 "    border: 1px solid silver;\n"
@@ -435,13 +439,13 @@ public:
         stackedWidget->addWidget(page_2);
         page_3 = new QWidget();
         page_3->setObjectName(QStringLiteral("page_3"));
-        gridLayout_30 = new QGridLayout(page_3);
-        gridLayout_30->setSpacing(6);
-        gridLayout_30->setContentsMargins(11, 11, 11, 11);
-        gridLayout_30->setObjectName(QStringLiteral("gridLayout_30"));
-        verticalLayout_22 = new QVBoxLayout();
-        verticalLayout_22->setSpacing(6);
-        verticalLayout_22->setObjectName(QStringLiteral("verticalLayout_22"));
+        gridLayout_7 = new QGridLayout(page_3);
+        gridLayout_7->setSpacing(6);
+        gridLayout_7->setContentsMargins(11, 11, 11, 11);
+        gridLayout_7->setObjectName(QStringLiteral("gridLayout_7"));
+        verticalLayout_14 = new QVBoxLayout();
+        verticalLayout_14->setSpacing(6);
+        verticalLayout_14->setObjectName(QStringLiteral("verticalLayout_14"));
         horizontalLayout_11 = new QHBoxLayout();
         horizontalLayout_11->setSpacing(6);
         horizontalLayout_11->setObjectName(QStringLiteral("horizontalLayout_11"));
@@ -461,14 +465,14 @@ public:
         horizontalLayout_11->addWidget(commandLinkButton_3);
 
 
-        verticalLayout_22->addLayout(horizontalLayout_11);
+        verticalLayout_14->addLayout(horizontalLayout_11);
 
-        horizontalLayout_28 = new QHBoxLayout();
-        horizontalLayout_28->setSpacing(6);
-        horizontalLayout_28->setObjectName(QStringLiteral("horizontalLayout_28"));
-        verticalLayout_21 = new QVBoxLayout();
-        verticalLayout_21->setSpacing(6);
-        verticalLayout_21->setObjectName(QStringLiteral("verticalLayout_21"));
+        horizontalLayout_16 = new QHBoxLayout();
+        horizontalLayout_16->setSpacing(6);
+        horizontalLayout_16->setObjectName(QStringLiteral("horizontalLayout_16"));
+        verticalLayout_13 = new QVBoxLayout();
+        verticalLayout_13->setSpacing(6);
+        verticalLayout_13->setObjectName(QStringLiteral("verticalLayout_13"));
         groupBox_3 = new QGroupBox(page_3);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
         groupBox_3->setStyleSheet(QStringLiteral("font: 75 14pt \"Droid Arabic Naskh\";"));
@@ -485,15 +489,14 @@ public:
         gridLayout_5->addWidget(checkBox_17, 0, 0, 1, 1);
 
 
-        verticalLayout_21->addWidget(groupBox_3);
+        verticalLayout_13->addWidget(groupBox_3);
 
         textBrowser_3 = new QTextBrowser(page_3);
         textBrowser_3->setObjectName(QStringLiteral("textBrowser_3"));
-        textBrowser_3->setMinimumSize(QSize(452, 192));
         textBrowser_3->setStyleSheet(QLatin1String("background-color: transparent;\n"
 "border: 0px;"));
 
-        verticalLayout_21->addWidget(textBrowser_3);
+        verticalLayout_13->addWidget(textBrowser_3);
 
         groupBox_20 = new QGroupBox(page_3);
         groupBox_20->setObjectName(QStringLiteral("groupBox_20"));
@@ -510,46 +513,70 @@ public:
 "    border: 3px solid rgb(255, 102, 0);\n"
 "    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(240, 120, 70), stop:0.50001 rgb(255, 202, 146));\n"
 " }"));
-        gridLayout_28 = new QGridLayout(groupBox_20);
-        gridLayout_28->setSpacing(6);
-        gridLayout_28->setContentsMargins(11, 11, 11, 11);
-        gridLayout_28->setObjectName(QStringLiteral("gridLayout_28"));
-        horizontalLayout_27 = new QHBoxLayout();
-        horizontalLayout_27->setSpacing(6);
-        horizontalLayout_27->setObjectName(QStringLiteral("horizontalLayout_27"));
+        gridLayout_6 = new QGridLayout(groupBox_20);
+        gridLayout_6->setSpacing(6);
+        gridLayout_6->setContentsMargins(11, 11, 11, 11);
+        gridLayout_6->setObjectName(QStringLiteral("gridLayout_6"));
+        horizontalLayout_14 = new QHBoxLayout();
+        horizontalLayout_14->setSpacing(6);
+        horizontalLayout_14->setObjectName(QStringLiteral("horizontalLayout_14"));
         textBrowser_14 = new QTextBrowser(groupBox_20);
         textBrowser_14->setObjectName(QStringLiteral("textBrowser_14"));
-        textBrowser_14->setMinimumSize(QSize(342, 95));
         textBrowser_14->setStyleSheet(QLatin1String("background-color: transparent;\n"
 "border: 0px;"));
 
-        horizontalLayout_27->addWidget(textBrowser_14);
+        horizontalLayout_14->addWidget(textBrowser_14);
 
+        horizontalLayout_10 = new QHBoxLayout();
+        horizontalLayout_10->setSpacing(6);
+        horizontalLayout_10->setObjectName(QStringLiteral("horizontalLayout_10"));
         groupBox_21 = new QGroupBox(groupBox_20);
         groupBox_21->setObjectName(QStringLiteral("groupBox_21"));
         gridLayout_29 = new QGridLayout(groupBox_21);
         gridLayout_29->setSpacing(6);
         gridLayout_29->setContentsMargins(11, 11, 11, 11);
         gridLayout_29->setObjectName(QStringLiteral("gridLayout_29"));
+        gridLayout_29->setContentsMargins(5, 5, 5, 5);
         btnToRosCatkinWs = new QPushButton(groupBox_21);
         btnToRosCatkinWs->setObjectName(QStringLiteral("btnToRosCatkinWs"));
-        btnToRosCatkinWs->setMinimumSize(QSize(120, 70));
+        btnToRosCatkinWs->setMinimumSize(QSize(130, 70));
         btnToRosCatkinWs->setMaximumSize(QSize(130, 85));
-        btnToRosCatkinWs->setStyleSheet(QStringLiteral("border-image: url(:/icon/btn_catkinws.png);"));
+        btnToRosCatkinWs->setStyleSheet(QStringLiteral("border-image: url(:/icon/btn_catkinws_tut.png);"));
 
         gridLayout_29->addWidget(btnToRosCatkinWs, 0, 0, 1, 1);
 
 
-        horizontalLayout_27->addWidget(groupBox_21);
+        horizontalLayout_10->addWidget(groupBox_21);
+
+        groupBox_22 = new QGroupBox(groupBox_20);
+        groupBox_22->setObjectName(QStringLiteral("groupBox_22"));
+        gridLayout_30 = new QGridLayout(groupBox_22);
+        gridLayout_30->setSpacing(6);
+        gridLayout_30->setContentsMargins(11, 11, 11, 11);
+        gridLayout_30->setObjectName(QStringLiteral("gridLayout_30"));
+        gridLayout_30->setContentsMargins(5, 5, 5, 5);
+        btnMkCatkinWs = new QPushButton(groupBox_22);
+        btnMkCatkinWs->setObjectName(QStringLiteral("btnMkCatkinWs"));
+        btnMkCatkinWs->setMinimumSize(QSize(130, 70));
+        btnMkCatkinWs->setMaximumSize(QSize(130, 85));
+        btnMkCatkinWs->setStyleSheet(QStringLiteral("border-image: url(:/icon/btn_mk_catkinws.png);"));
+
+        gridLayout_30->addWidget(btnMkCatkinWs, 0, 0, 1, 1);
 
 
-        gridLayout_28->addLayout(horizontalLayout_27, 0, 0, 1, 1);
+        horizontalLayout_10->addWidget(groupBox_22);
 
 
-        verticalLayout_21->addWidget(groupBox_20);
+        horizontalLayout_14->addLayout(horizontalLayout_10);
 
 
-        horizontalLayout_28->addLayout(verticalLayout_21);
+        gridLayout_6->addLayout(horizontalLayout_14, 0, 0, 1, 1);
+
+
+        verticalLayout_13->addWidget(groupBox_20);
+
+
+        horizontalLayout_16->addLayout(verticalLayout_13);
 
         graphic_wsLayout = new QGraphicsView(page_3);
         graphic_wsLayout->setObjectName(QStringLiteral("graphic_wsLayout"));
@@ -558,13 +585,13 @@ public:
         graphic_wsLayout->setStyleSheet(QLatin1String("border-radius: 6px;\n"
 "border-image: url(:/pic/catkin_ws_layout.png);"));
 
-        horizontalLayout_28->addWidget(graphic_wsLayout);
+        horizontalLayout_16->addWidget(graphic_wsLayout);
 
 
-        verticalLayout_22->addLayout(horizontalLayout_28);
+        verticalLayout_14->addLayout(horizontalLayout_16);
 
 
-        gridLayout_30->addLayout(verticalLayout_22, 0, 0, 1, 1);
+        gridLayout_7->addLayout(verticalLayout_14, 0, 0, 1, 1);
 
         stackedWidget->addWidget(page_3);
         page_4 = new QWidget();
@@ -1071,7 +1098,7 @@ public:
         retranslateUi(AsstMainWindow);
         QObject::connect(listWidget, SIGNAL(currentRowChanged(int)), stackedWidget, SLOT(setCurrentIndex(int)));
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(AsstMainWindow);
@@ -1116,11 +1143,11 @@ public:
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:12pt;\">For the purpose of the itegration of ABB</span><span style=\" font-family:'DejaVu Sans'; font-size:12pt; font-style:italic;\"> </span><span style=\" font-family:'DejaVu Sans'; font-size:12pt;\">Robot and ROS-Industrial, a Linux-Ubuntu machine with </span><span style=\" font-family:'DejaVu Sans'; font-size:12pt; font-weight:600;\">ROS</span><span style=\" font-family:'DejaVu Sans'; font-size:12pt;\"> and </span><span style=\" font-family:'DejaVu Sans'; font-size:12pt; font-weight:600;\">R"
-                        "OS-Industrial</span><span style=\" font-family:'DejaVu Sans'; font-size:12pt;\"> installed is required. Within the frame of this project, ROS Indigo Igloo is the selected ROS distribution release and is primarily targeted at the Ubuntu 14.04 LTS </span><span style=\" font-family:'DejaVu Sans'; font-size:12pt; font-style:italic;\">Trusty</span><span style=\" font-family:'DejaVu Sans'; font-size:12pt;\"> release.</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:12pt;\">For the purpose of the itegration of ABB</span><span style=\" font-family:'DejaVu Sans'; font-size:12pt; font-style:italic;\"> </span><span style=\" font-family:'DejaVu Sans'; font-size:12pt;\">Robot and ROS-Industrial, a Linux-Ubuntu machine with </span><span style=\" font-size:12pt; font-weight:600; color:#21314e;\">ROS</span><span style=\" font-family:'DejaVu Sans'; font-size:12pt;\"> and </span><span style=\" font-size:12pt; font-weight:600; color:#21314e;\">ROS-Industrial</span><spa"
+                        "n style=\" font-family:'DejaVu Sans'; font-size:12pt;\"> installed is required. Within the frame of this project, ROS Indigo Igloo is the selected ROS distribution release and is primarily targeted at the Ubuntu 14.04 LTS </span><span style=\" font-family:'DejaVu Sans'; font-size:12pt; font-style:italic;\">Trusty</span><span style=\" font-family:'DejaVu Sans'; font-size:12pt;\"> release.</span></p>\n"
 "<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DejaVu Sans';\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:12pt;\">If you have not yet installed the ROS </span><span style=\" font-family:'DejaVu Sans'; font-size:12pt; font-weight:600; vertical-align:super;\">Indigo</span><span style=\" font-family:'DejaV"
-                        "u Sans'; font-size:12pt; font-weight:600;\"> </span><span style=\" font-family:'DejaVu Sans'; font-size:12pt;\">and ROS-I </span><span style=\" font-family:'DejaVu Sans'; font-size:12pt; font-weight:600; vertical-align:super;\">Indigo</span><span style=\" font-family:'DejaVu Sans'; font-size:12pt;\"> in your Ubuntu machine, you are able to click the right two buttons and follow the official guide to install them.</span></p></body></html>", 0));
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'DejaVu Sans'; font-size:12pt;\">If you have not yet installed the </span><span style=\" font-size:12pt; font-weight:600; color:#21314e;\">ROS </span><span style=\" font-size:12pt; font-weight:600; color:#21314e; vertical-align:super;\">Indigo</sp"
+                        "an><span style=\" font-family:'DejaVu Sans'; font-size:12pt; font-weight:600;\"> </span><span style=\" font-family:'DejaVu Sans'; font-size:12pt;\">and </span><span style=\" font-size:12pt; font-weight:600; color:#21314e;\">ROS-I </span><span style=\" font-size:12pt; font-weight:600; color:#21314e; vertical-align:super;\">Indigo</span><span style=\" font-family:'DejaVu Sans'; font-size:12pt;\"> in your Ubuntu machine, you are able to click the right two buttons and follow the official guide to install them.</span></p></body></html>", 0));
         groupBox->setTitle(QString());
 #ifndef QT_NO_TOOLTIP
         btnToRosWiki->setToolTip(QApplication::translate("AsstMainWindow", "<html><head/><body><p><span style=\" font-size:12pt;\">Go To </span><span style=\" font-size:12pt; font-weight:600;\">Guide to Install </span><span style=\" font-size:12pt; font-weight:600;color:lightblue;\">ROS </span><span style=\" font-size:12pt; font-weight:600; vertical-align:super; color:lightblue;\">Indigo</span></p></body></html>", 0));
@@ -1141,18 +1168,22 @@ public:
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">In the ROS distribution Indigo, we are using the </span><span style=\" font-size:12pt; font-style:italic;\">catkin</span><span style=\" font-size:12pt;\"> build system to build ROS packages. This build system is responsible for generating 'targets' (executable/libraries) from a raw source code that can be used by an end user. The first requirement in creating ROS packages is to create a ROS workspace. A catkin workspace is a folder where you modify, build, and install catkin packages. The right picture shows a typ"
                         "ical layout of a catkin workspace.</span></p>\n"
 "<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">If you have not yet create a workspace, you can click the button follows to read the official guide:</span></p></body></html>", 0));
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">If you have not yet create a workspace, you can click the button &quot;</span><span style=\" font-size:12pt; font-weight:600; color:#21314e;\">How To Create A catkin Workspace</span><span style=\" font-size:12pt;\">&quot; to read the official guide:</span></p></body></html>", 0));
         groupBox_20->setTitle(QString());
         textBrowser_14->setHtml(QApplication::translate("AsstMainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/icon/attention.png\" style=\"float: left;\" /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:6pt;\"> </span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\"> In order to simplify the process of the follow steps, we would here just name the workspace folder &quot;</span><span style"
-                        "=\" font-size:12pt; font-weight:600;\">catkin_ws</span><span style=\" font-size:12pt;\">&quot; and its location should be </span><span style=\" font-size:12pt; font-weight:600;\">/home/</span><span style=\" font-weight:600;\">&lt;username&gt;</span><span style=\" font-size:12pt;\">, so if you login as a root user, it may lead to unpredicted issues.</span></p></body></html>", 0));
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">   In order to simplify the process of the follow steps, it is recommended to name the workspace folder &quot;</span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">catkin_ws</span><span style=\" font-size:12pt;\">&quot; and locate it in </span><span style=\" font-size:12pt; font-weight:600;\">"
+                        "/</span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">home</span><span style=\" font-size:12pt; font-weight:600;\">/</span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">&lt;username&gt;</span><span style=\" font-size:12pt; font-weight:600;\">/</span><span style=\" font-size:12pt;\">. </span></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">  You can also click the button &quot;</span><span style=\" font-size:12pt; font-weight:600; color:#21314e;\">Create &amp; Build </span><span style=\" font-size:12pt; font-weight:600; color:#ff5222;\">catkin_ws</span><span style=\" font-size:12pt;\">&quot; to create direct a workspace with above mentioned filename.</s"
+                        "pan></p></body></html>", 0));
         groupBox_21->setTitle(QString());
         btnToRosCatkinWs->setText(QString());
+        groupBox_22->setTitle(QString());
+        btnMkCatkinWs->setText(QString());
         label_title_4->setText(QApplication::translate("AsstMainWindow", "Install Package abb_driver", 0));
         commandLinkButton_4->setText(QApplication::translate("AsstMainWindow", "Next Step", 0));
         groupBox_5->setTitle(QString());
