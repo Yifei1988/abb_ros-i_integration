@@ -18,6 +18,7 @@
 #include <QtWidgets/QCommandLinkButton>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QFrame>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
@@ -45,6 +46,7 @@ public:
     QHBoxLayout *horizontalLayout_9;
     QLabel *label_title_1;
     QCommandLinkButton *commandLinkButton_8;
+    QGraphicsView *graphic_supportLayout;
     QWidget *page_2;
     QGridLayout *gridLayout_2;
     QVBoxLayout *verticalLayout_6;
@@ -65,6 +67,9 @@ public:
     QLabel *label_title_4;
     QCommandLinkButton *commandLinkButton_7;
     QTextBrowser *textBrowser_8;
+    QGroupBox *groupBox_9;
+    QGridLayout *gridLayout_9;
+    QPushButton *btnToCrtUrdf;
     QWidget *page_5;
     QLabel *label_title_5;
     QWidget *page_6;
@@ -171,6 +176,11 @@ public:
 
         stackedWidget = new QStackedWidget(Dialog_Pkg_Support);
         stackedWidget->setObjectName(QStringLiteral("stackedWidget"));
+        stackedWidget->setStyleSheet(QLatin1String("QGroupBox{\n"
+"    border: 2px solid gray;\n"
+"    border-radius: 6px;\n"
+"    margin-top: 6px;\n"
+"}"));
         page_1 = new QWidget();
         page_1->setObjectName(QStringLiteral("page_1"));
         layoutWidget1 = new QWidget(page_1);
@@ -194,6 +204,13 @@ public:
 
         horizontalLayout_9->addWidget(commandLinkButton_8);
 
+        graphic_supportLayout = new QGraphicsView(page_1);
+        graphic_supportLayout->setObjectName(QStringLiteral("graphic_supportLayout"));
+        graphic_supportLayout->setGeometry(QRect(560, 70, 280, 381));
+        graphic_supportLayout->setMinimumSize(QSize(280, 362));
+        graphic_supportLayout->setMaximumSize(QSize(300, 400));
+        graphic_supportLayout->setStyleSheet(QLatin1String("border-radius: 6px;\n"
+"border-image: url(:/pic/pkg_support_layout.png);"));
         stackedWidget->addWidget(page_1);
         page_2 = new QWidget();
         page_2->setObjectName(QStringLiteral("page_2"));
@@ -299,11 +316,40 @@ public:
 
         textBrowser_8 = new QTextBrowser(page_4);
         textBrowser_8->setObjectName(QStringLiteral("textBrowser_8"));
-        textBrowser_8->setGeometry(QRect(30, 70, 841, 411));
-        textBrowser_8->setMinimumSize(QSize(841, 351));
+        textBrowser_8->setGeometry(QRect(20, 70, 821, 231));
+        textBrowser_8->setMinimumSize(QSize(821, 231));
         textBrowser_8->setStyleSheet(QLatin1String("background-color: transparent;\n"
 "border: 0px;"));
         textBrowser_8->setOpenExternalLinks(true);
+        groupBox_9 = new QGroupBox(page_4);
+        groupBox_9->setObjectName(QStringLiteral("groupBox_9"));
+        groupBox_9->setGeometry(QRect(160, 319, 547, 121));
+        groupBox_9->setStyleSheet(QLatin1String("QPushButton {\n"
+"    border: 3px solid silver;\n"
+"    border-radius: 6px;\n"
+"    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(214, 214, 214), stop:0.50001 rgb(236, 236, 236));\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 3px solid rgb(255, 157, 68);\n"
+"    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(255, 174, 120), stop:0.50001 rgb(255, 220, 196));\n"
+" }\n"
+" QPushButton:pressed {\n"
+"    font-weight: bold;\n"
+"    border: 3px solid rgb(255, 102, 0);\n"
+"    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(240, 120, 70), stop:0.50001 rgb(255, 202, 146));\n"
+" }"));
+        gridLayout_9 = new QGridLayout(groupBox_9);
+        gridLayout_9->setObjectName(QStringLiteral("gridLayout_9"));
+        btnToCrtUrdf = new QPushButton(groupBox_9);
+        btnToCrtUrdf->setObjectName(QStringLiteral("btnToCrtUrdf"));
+        btnToCrtUrdf->setMinimumSize(QSize(150, 82));
+        btnToCrtUrdf->setMaximumSize(QSize(160, 82));
+        btnToCrtUrdf->setFocusPolicy(Qt::NoFocus);
+        btnToCrtUrdf->setStyleSheet(QStringLiteral("QPushButton {border-image: url(:/icon/btn_crt_urdf.png)}"));
+
+        gridLayout_9->addWidget(btnToCrtUrdf, 0, 0, 1, 1);
+
         stackedWidget->addWidget(page_4);
         page_5 = new QWidget();
         page_5->setObjectName(QStringLiteral("page_5"));
@@ -515,7 +561,7 @@ public:
         retranslateUi(Dialog_Pkg_Support);
         QObject::connect(listWidget, SIGNAL(currentRowChanged(int)), stackedWidget, SLOT(setCurrentIndex(int)));
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(Dialog_Pkg_Support);
@@ -637,54 +683,14 @@ public:
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">Meshes</span><span style=\" font-size:12pt;\"> folder contains two child directories: </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">visual </span><span style=\" font-size:12pt;\">(uesd for visualization) and </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">collision </span><span style=\" font-size:12pt;\">(used for collision checking). </span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; m"
-                        "argin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600;\">Steps to create </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">meshes</span><span style=\" font-size:12pt; font-weight:600;\"> folder:</span></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:14pt; font-weight:600;\">Step 1.</span><span style=\" font-size:12pt; font-weight:600;\">  </span><span style=\" font-size:12pt;\">Rename all STL files in ROS style as follows:</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><span style=\" font-size:12pt;\">B"
-                        "ase.stl  </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> base_link.stl</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><span style=\" font-size:12pt;\">Link1.stl </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> link_1.stl</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><span style=\" font-size:12pt;\">Link2.stl </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> link_2.stl</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><span style=\" font-size:12pt;\">Link3.stl </span><span style=\" font-size:12pt; font-weight:600;\""
-                        ">\342\206\222</span><span style=\" font-size:12pt;\"> link_3.stl</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><span style=\" font-size:12pt;\">Link4.stl </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> link_4.stl</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><span style=\" font-size:12pt;\">Link5.stl </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> link_5.stl</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><span style=\" font-size:12pt;\">Link6.stl </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> link_6.stl</sp"
-                        "an></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-size:12pt;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:14pt; font-weight:600;\">Step 2.</span><span style=\" font-size:12pt; font-weight:600;\">  </span><span style=\" font-size:12pt;\">Organize the </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">meshes</span><span style=\" font-size:12pt;\"> folder as follows (take ABB IRB 140 for example):</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;\"><img src=\":/pic/meshes_layout.png\" /></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-bloc"
-                        "k-indent:0; text-indent:20px; font-size:12pt;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt;\">Now you have already creted a valid </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">meshes</span><span style=\" font-size:12pt;\"> folder. But in order to promote the efficiency of collision checking, it's very recommended to remove the mesh details of the STL files in </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">collision </span><span style=\" font-size:12pt;\">folder with tools such as </span><span style=\" font-size:12pt; font-weight:600; color:#820202;\">Meshlab</span><span style=\" font-size:12pt;\">.</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt; font-weight:600; color:#820202;\">Mesh"
-                        "lab</span><img src=\":/icon/meshlab_logo.png\" /><span style=\" font-size:12pt;\"> is an open source software for processing and editing 3D triangular meshes. You can find its download links here: </span><a href=\"http://www.meshlab.net/#download\"><span style=\" font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;\">http://www.meshlab.net/#download</span></a></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-weight:600; text-decoration: underline; color:#0000ff;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:14pt; font-weight:600;\">Step 3(optional).</span><span style=\" font-size:12pt; font-weight:600;\">  </span><span style=\" font-size:12pt;\">Open </span><span style=\" font-size:12pt; font-weight:600; color:#820202;\">Meshla"
-                        "b</span><span style=\" font-size:12pt;\"> and import a mesh (take base_link.stl of ABB IRB 140 for example):</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><img src=\":/pic/meshlab_step_1.png\" /></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-size:12pt;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt;\">Use the option: </span><span style=\" font-size:12pt; font-style:italic;\">Filters</span><span style=\" font-size:12pt;\"> </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> </span><span style=\" font-size:12pt; font-style:italic;\">Remeshing, Simplification and Reconstruction</sp"
-                        "an><span style=\" font-size:12pt;\"> </span><span style=\" font-size:12pt; font-weight:600;\">\342\206\222</span><span style=\" font-size:12pt;\"> </span><span style=\" font-size:12pt; font-style:italic;\">Convex Hull</span><span style=\" font-size:12pt;\">:</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><img src=\":/pic/meshlab_step_2.png\" /></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt;\">Click </span><span style=\" font-size:12pt; font-style:italic;\">Apply</span><span style=\" font-size:12pt;\">:</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0"
-                        "px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><img src=\":/pic/meshlab_step_3.png\" /></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt;\">Remesh finished:</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><img src=\":/pic/meshlab_step_4.png\" /></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" "
-                        "font-size:12pt;\">Now you can save the new mesh also as STL file, and then choose the saving options as follows:</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><img src=\":/pic/meshlab_step_5.png\" /></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:12pt;\">Repeat this process for the rest of STL files (base_link.stl ~ link_6.stl).</span></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-size:12pt;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px"
-                        "; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;\"><span style=\" font-size:14pt; font-weight:600;\">Step 4.</span><span style=\" font-size:12pt; font-weight:600;\">  </span><span style=\" font-size:12pt;\">Copy the </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">meshes</span><span style=\" font-size:12pt;\"> folder from your </span><span style=\" font-size:12pt; font-weight:600;\">Windows</span><span style=\" font-size:12pt;\"> computer to </span><span style=\" font-size:12pt; font-weight:600;\">Linux-Ubuntu</span><span style=\" font-size:12pt;\"> computer as this path: </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">~</span><span style=\" font-size:12pt; font-weight:600;\">/</span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">catkin_ws</span><span style=\" font-size:12pt; font-weight:600;\">/</span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">src</span><span style=\" font-size:12pt; font-weight:60"
-                        "0;\">/</span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">&lt;your support package&gt;</span><span style=\" font-size:12pt; font-weight:600;\">/</span><span style=\" font-size:12pt;\">, for example: </span><span style=\" font-size:12pt; font-weight:600;\">~/catkin_ws/src/abb_irb140_support/meshes</span></p></body></html>", 0));
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">Now we will create a </span><span style=\" font-size:12pt; font-weight:600; color:#f9711d;\">urdf</span><span style=\" font-size:12pt;\"> folder and store our description file(s) of  the robot in this folder.</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">The robot description in ROS is performed using </span><span style=\" font-size:12pt; font-weight:600;\">URDF</span><span"
+                        " style=\" font-size:12pt;\"> (.urdf), which is based on XML. We can define a robot model, sensors, and a working environment using URDF and can parse it using URDF parsers. We can only describe a robot in URDF that has a tree-like structure in its links, that is, the robot will have rigid links and will be connected using joints.</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">In practice we also use </span><span style=\" font-size:12pt; font-weight:600;\">Xacro</span><span style=\" font-size:12pt;\"> (.xacro) to simplify URDF. Xacro is the cleaned up version of URDF. What it does is, it creates macros inside the robot description and reuses the macros. This can reduce the code length. Also, it can include macros from other files and make the code more readable, simpler, and modular. A Xacro file can be converted to URDF file with the ROS tool '</span><span style=\" font-s"
+                        "ize:12pt; font-weight:600;\">xacro.py</span><span style=\" font-size:12pt;\">'.</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">Click the button follows to create a urdf folder with your robot description:</span></p></body></html>", 0));
+        groupBox_9->setTitle(QString());
+        btnToCrtUrdf->setText(QString());
         label_title_5->setText(QApplication::translate("Dialog_Pkg_Support", "Create Config Folder", 0));
         label_title_6->setText(QApplication::translate("Dialog_Pkg_Support", "Create Launch Folder", 0));
         comboBox->clear();

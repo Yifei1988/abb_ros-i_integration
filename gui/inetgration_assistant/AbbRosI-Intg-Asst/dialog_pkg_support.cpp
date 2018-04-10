@@ -18,3 +18,11 @@ void Dialog_Pkg_Support::on_Dialog_Pkg_Support_finished() //绑定信号发射�
     bool state = false;
     emit sendState(state);//使用emit关键词，发射数据
 }
+
+void Dialog_Pkg_Support::on_btnToCrtUrdf_clicked()
+{
+    dialog_urdf = new Dialog_Generate_URDF (this);
+    dialog_urdf->setWindowTitle("Generate URDF");
+    dialog_urdf->setModal(true);//模态对话框，打开时阻塞主窗口
+    dialog_urdf->show();
+}

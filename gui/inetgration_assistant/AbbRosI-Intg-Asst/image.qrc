@@ -21,5 +21,7 @@
         <file>pic/meshlab_step_5.png</file>
         <file>icon/btn_mk_catkinws.png</file>
         <file>icon/btn_catkinws_tut.png</file>
+        <file>pic/pkg_support_layout.png</file>
+        <file>icon/btn_crt_urdf.png</file>
     </qresource>
 </RCC>

@@ -113,8 +113,15 @@ QGroupBox#groupBox_ChLst_Ubt::title, #groupBox_ChLst_Win::title{
        </item>
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
+         <property name="styleSheet">
+          <string notr="true">QGroupBox{
+    border: 2px solid gray;
+    border-radius: 6px;
+    margin-top: 6px;
+}</string>
+         </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>3</number>
          </property>
          <widget class="QWidget" name="page_1">
           <widget class="QWidget" name="layoutWidget1">
@@ -163,6 +170,32 @@ QGroupBox#groupBox_ChLst_Ubt::title, #groupBox_ChLst_Win::title{
              </widget>
             </item>
            </layout>
+          </widget>
+          <widget class="QGraphicsView" name="graphic_supportLayout">
+           <property name="geometry">
+            <rect>
+             <x>560</x>
+             <y>70</y>
+             <width>280</width>
+             <height>381</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>280</width>
+             <height>362</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>300</width>
+             <height>400</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius: 6px;
+border-image: url(:/pic/pkg_support_layout.png);</string>
+           </property>
           </widget>
          </widget>
          <widget class="QWidget" name="page_2">
@@ -433,16 +466,16 @@ p, li { white-space: pre-wrap; }
           <widget class="QTextBrowser" name="textBrowser_8">
            <property name="geometry">
             <rect>
-             <x>30</x>
+             <x>20</x>
              <y>70</y>
-             <width>841</width>
-             <height>411</height>
+             <width>821</width>
+             <height>231</height>
             </rect>
            </property>
            <property name="minimumSize">
             <size>
-             <width>841</width>
-             <height>351</height>
+             <width>821</width>
+             <height>231</height>
             </size>
            </property>
            <property name="styleSheet">
@@ -454,46 +487,71 @@ border: 0px;</string>
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;Meshes&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; folder contains two child directories: &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;visual &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;(uesd for visualization) and &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;collision &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;(used for collision checking). &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Steps to create &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;meshes&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt; folder:&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Step 1.&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Rename all STL files in ROS style as follows:&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Base.stl  &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;→&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; base_link.stl&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Link1.stl &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;→&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; link_1.stl&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Link2.stl &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;→&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; link_2.stl&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Link3.stl &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;→&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; link_3.stl&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Link4.stl &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;→&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; link_4.stl&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Link5.stl &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;→&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; link_5.stl&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Link6.stl &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;→&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; link_6.stl&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Step 2.&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Organize the &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;meshes&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; folder as follows (take ABB IRB 140 for example):&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:50px;&quot;&gt;&lt;img src=&quot;:/pic/meshes_layout.png&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Now you have already creted a valid &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;meshes&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; folder. But in order to promote the efficiency of collision checking, it's very recommended to remove the mesh details of the STL files in &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;collision &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;folder with tools such as &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#820202;&quot;&gt;Meshlab&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#820202;&quot;&gt;Meshlab&lt;/span&gt;&lt;img src=&quot;:/icon/meshlab_logo.png&quot; /&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; is an open source software for processing and editing 3D triangular meshes. You can find its download links here: &lt;/span&gt;&lt;a href=&quot;http://www.meshlab.net/#download&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.meshlab.net/#download&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Step 3(optional).&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Open &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#820202;&quot;&gt;Meshlab&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; and import a mesh (take base_link.stl of ABB IRB 140 for example):&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;img src=&quot;:/pic/meshlab_step_1.png&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Use the option: &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Filters&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;→&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Remeshing, Simplification and Reconstruction&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;→&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Convex Hull&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;img src=&quot;:/pic/meshlab_step_2.png&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Click &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Apply&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;img src=&quot;:/pic/meshlab_step_3.png&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Remesh finished:&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;img src=&quot;:/pic/meshlab_step_4.png&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Now you can save the new mesh also as STL file, and then choose the saving options as follows:&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;img src=&quot;:/pic/meshlab_step_5.png&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Repeat this process for the rest of STL files (base_link.stl ~ link_6.stl).&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:20px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Step 4.&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Copy the &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;meshes&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; folder from your &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Windows&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; computer to &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Linux-Ubuntu&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; computer as this path: &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;~&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;/&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;catkin_ws&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;/&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;src&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;/&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;&amp;lt;your support package&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;/&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, for example: &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;~/catkin_ws/src/abb_irb140_support/meshes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Now we will create a &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#f9711d;&quot;&gt;urdf&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; folder and store our description file(s) of  the robot in this folder.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;The robot description in ROS is performed using &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;URDF&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; (.urdf), which is based on XML. We can define a robot model, sensors, and a working environment using URDF and can parse it using URDF parsers. We can only describe a robot in URDF that has a tree-like structure in its links, that is, the robot will have rigid links and will be connected using joints.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;In practice we also use &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Xacro&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; (.xacro) to simplify URDF. Xacro is the cleaned up version of URDF. What it does is, it creates macros inside the robot description and reuses the macros. This can reduce the code length. Also, it can include macros from other files and make the code more readable, simpler, and modular. A Xacro file can be converted to URDF file with the ROS tool '&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;xacro.py&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;'.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:10px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Click the button follows to create a urdf folder with your robot description:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="openExternalLinks">
             <bool>true</bool>
            </property>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_9">
+           <property name="geometry">
+            <rect>
+             <x>160</x>
+             <y>319</y>
+             <width>547</width>
+             <height>121</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    border: 3px solid silver;
+    border-radius: 6px;
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(214, 214, 214), stop:0.50001 rgb(236, 236, 236));
+}
+
+QPushButton:hover {
+    border: 3px solid rgb(255, 157, 68);
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(255, 174, 120), stop:0.50001 rgb(255, 220, 196));
+ }
+ QPushButton:pressed {
+    font-weight: bold;
+    border: 3px solid rgb(255, 102, 0);
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(240, 120, 70), stop:0.50001 rgb(255, 202, 146));
+ }</string>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_9">
+            <item row="0" column="0">
+             <widget class="QPushButton" name="btnToCrtUrdf">
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>82</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>160</width>
+                <height>82</height>
+               </size>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton {border-image: url(:/icon/btn_crt_urdf.png)}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </widget>
          <widget class="QWidget" name="page_5">

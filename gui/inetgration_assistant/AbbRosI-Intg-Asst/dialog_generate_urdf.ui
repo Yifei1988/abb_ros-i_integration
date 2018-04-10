@@ -1,0 +1,1336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog_Generate_URDF</class>
+ <widget class="QDialog" name="Dialog_Generate_URDF">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1380</width>
+    <height>708</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QGroupBox{
+    font: 14px;
+    font-weight: bold;
+    border: 2px solid gray;
+    border-radius: 6px;
+    margin-top: 6px;
+}
+
+QGroupBox#groupBox_Links, #groupBox_Joints {
+    font: 18px;
+    font-weight: bold;
+}
+
+QGroupBox::title{
+    subcontrol-origin: margin;
+    left: 60px;
+    padding: 0px 5px 0px 5px;
+}
+
+QGroupBox#groupBox_Links::title, #groupBox_Joints::title {
+    left: 40px;
+}</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox_Links">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>50</y>
+     <width>390</width>
+     <height>363</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Links</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_8">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_8">
+      <item>
+       <widget class="QGroupBox" name="groupBox_bl">
+        <property name="title">
+         <string>Base Link</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>4</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_1">
+           <item>
+            <widget class="QLabel" name="label_bl_origin">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Origin(x y z)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_bl_origin">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>26</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_l1">
+        <property name="title">
+         <string>Link 1</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>4</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_l1_origin">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Origin(x y z)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_l1_origin">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>26</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_l2">
+        <property name="title">
+         <string>Link 2</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>4</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_l2_origin">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Origin(x y z)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_l2_origin">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>26</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_l3">
+        <property name="title">
+         <string>Link 3</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>4</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_l3_origin">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Origin(x y z)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_l3_origin">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>26</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_l4">
+        <property name="title">
+         <string>Link 4</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>4</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QLabel" name="label_l4_origin">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Origin(x y z)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_l4_origin">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>26</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_l5">
+        <property name="title">
+         <string>Link 5</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_7">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>4</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_l5_origin">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Origin(x y z)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_l5_origin">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>26</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_l6">
+        <property name="title">
+         <string>Link 6</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>4</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QLabel" name="label_l6_origin">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Origin(x y z)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_l6_origin">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>26</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>20</y>
+     <width>254</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_0">
+    <item>
+     <widget class="QLabel" name="label_robotname">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Robot Name</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_robotname"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_Joints">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>20</y>
+     <width>758</width>
+     <height>624</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Joints</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_15">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_7">
+      <item>
+       <widget class="QGroupBox" name="groupBox_j1">
+        <property name="title">
+         <string>Joint1</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_9">
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QLabel" name="label_j1_origin">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Origin(x y z)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j1_origin">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j1_axis">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Axis(x y z)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j1_axis">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <item>
+              <widget class="QLabel" name="label_j1_limit_l">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Lower Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j1_limit_l">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j1_limit_u">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Upper Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j1_limit_u">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j1_limit_v">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>speed Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j1_limit_v">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_j2">
+        <property name="title">
+         <string>Joint2</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_10">
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QLabel" name="label_j2_origin">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Origin(x y z)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j2_origin">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j2_axis">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Axis(x y z)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j2_axis">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <widget class="QLabel" name="label_j2_limit_l">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Lower Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j2_limit_l">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j2_limit_u">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Upper Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j2_limit_u">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j2_limit_v">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>speed Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j2_limit_v">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_j3">
+        <property name="title">
+         <string>Joint3</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_12">
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_14">
+             <item>
+              <widget class="QLabel" name="label_j3_origin">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Origin(x y z)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j3_origin">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j3_axis">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Axis(x y z)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j3_axis">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_15">
+             <item>
+              <widget class="QLabel" name="label_j3_limit_l">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Lower Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j3_limit_l">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j3_limit_u">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Upper Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j3_limit_u">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j3_limit_v">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>speed Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j3_limit_v">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_j4">
+        <property name="title">
+         <string>Joint4</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_11">
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_12">
+             <item>
+              <widget class="QLabel" name="label_j4_origin">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Origin(x y z)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j4_origin">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j4_axis">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Axis(x y z)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j4_axis">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_13">
+             <item>
+              <widget class="QLabel" name="label_j4_limit_l">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Lower Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j4_limit_l">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j4_limit_u">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Upper Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j4_limit_u">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j4_limit_v">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>speed Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j4_limit_v">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_j5">
+        <property name="title">
+         <string>Joint5</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_13">
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <item>
+              <widget class="QLabel" name="label_j5_origin">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Origin(x y z)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j5_origin">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j5_axis">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Axis(x y z)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j5_axis">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_17">
+             <item>
+              <widget class="QLabel" name="label_j5_limit_l">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Lower Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j5_limit_l">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j5_limit_u">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Upper Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j5_limit_u">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j5_limit_v">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>speed Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j5_limit_v">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_j6">
+        <property name="title">
+         <string>Joint6</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_14">
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_18">
+             <item>
+              <widget class="QLabel" name="label_j6_origin6">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Origin(x y z)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j6_origin">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j6_axis">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Axis(x y z)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j6_axis">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_19">
+             <item>
+              <widget class="QLabel" name="label_j6_limit_l">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Lower Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j6_limit_l">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j6_limit_u">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Upper Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j6_limit_u">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_j6_limit_v">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>speed Limit</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_j6_limit_v">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>26</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>460</y>
+     <width>291</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    border: 3px solid silver;
+    border-radius: 6px;
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(214, 214, 214), stop:0.50001 rgb(236, 236, 236));
+}
+
+QPushButton:hover {
+    border: 3px solid rgb(255, 157, 68);
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(255, 174, 120), stop:0.50001 rgb(255, 220, 196));
+ }
+ QPushButton:pressed {
+    font-weight: bold;
+    border: 3px solid rgb(255, 102, 0);
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:180, stop:0.49999 rgb(240, 120, 70), stop:0.50001 rgb(255, 202, 146));
+ }
+</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QPushButton" name="pushButton_xacro_to_urdf">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>120</y>
+      <width>176</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="text">
+     <string>Convert Xacro to URDF</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_generate_xacro">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>50</y>
+      <width>176</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="text">
+     <string>Generate Xacro File</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
